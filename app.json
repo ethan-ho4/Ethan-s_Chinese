@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Ethan's Chinese",
+    "slug": "ethans-chinese",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "scheme": "ethanschinese",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ethanho.ethanschinese",
+      "deploymentTarget": "16.0",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.ethanho.ethanschinese"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
