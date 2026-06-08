@@ -12,18 +12,26 @@
       "bundleIdentifier": "com.ethanho.ethanschinese",
       "deploymentTarget": "16.0",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": "This app uses the camera to identify objects and unlock Chinese vocabulary words in your Chindex collection."
       }
     },
     "android": {
-      "package": "com.ethanho.ethanschinese"
+      "package": "com.ethanho.ethanschinese",
+      "permissions": ["android.permission.CAMERA"]
     },
     "web": {
       "bundler": "metro",
       "output": "static"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "This app uses the camera to identify objects and unlock Chinese vocabulary words in your Chindex collection."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

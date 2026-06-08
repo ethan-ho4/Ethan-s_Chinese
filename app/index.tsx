@@ -1,7 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
-import { ComponentProps, useMemo, useRef } from 'react';
+import { ComponentProps, useCallback, useMemo, useRef } from 'react';
 import {
   ActivityIndicator,
   Animated,
@@ -17,10 +17,11 @@ import Svg, { Circle, Path } from 'react-native-svg';
 import { DailyChineseCard } from '@/components/DailyChineseCard';
 import { KoiScrollScene } from '@/components/KoiScrollScene';
 import { getDailyDateLabel, getDailyEntry, getModeLabel } from '@/services/dailyEntry';
+import { useCollection } from '@/store/collection';
 import { usePreferences } from '@/store/preferences';
 import { COLORS, FONTS, RADIUS, SHADOWS, SPACING } from '@/theme';
 
-type NavTarget = '/modes' | '/flashcards' | '/widget-preview';
+type NavTarget = '/modes' | '/flashcards' | '/widget-preview' | '/chindex';
 
 type NavCardProps = {
   description: string;
@@ -35,23 +36,30 @@ type HomeAction = Omit<NavCardProps, 'scrollY'>;
 
 const HOME_ACTIONS: HomeAction[] = [
   {
+    description: 'Photograph objects to discover and collect Chinese vocabulary.',
+    icon: 'grid',
+    index: 0,
+    title: 'Chindex',
+    route: '/chindex',
+  },
+  {
     description: 'Choose whether your daily Mandarin shows words, phrases, or topics.',
     icon: 'options',
-    index: 0,
+    index: 1,
     title: 'Mode',
     route: '/modes',
   },
   {
     description: "Preview how today's Chinese will look in your future iOS widgets.",
     icon: 'albums',
-    index: 1,
+    index: 2,
     title: 'Widgets',
     route: '/widget-preview',
   },
   {
     description: 'Review saved words and phrases with flashcards by topic.',
     icon: 'school',
-    index: 2,
+    index: 3,
     title: 'Practice',
     route: '/flashcards',
   },
@@ -232,12 +240,26 @@ function NavCard({ description, icon, index, scrollY, title, route }: NavCardPro
 }
 
 export default function HomeScreen() {
+  const router = useRouter();
   const scrollY = useRef(new Animated.Value(0)).current;
   const { height } = useWindowDimensions();
   const { isLoaded, selectedMode } = usePreferences();
+  const { isUnlocked, unlockEntry } = useCollection();
   const entry = useMemo(() => getDailyEntry(selectedMode), [selectedMode]);
   const modeLabel = getModeLabel(selectedMode);
   const dateLabel = getDailyDateLabel();
+
+  const handleDailyInteract = useCallback(async () => {
+    if (entry.isChindexEntry && !isUnlocked(entry.id)) {
+      await unlockEntry(entry.id);
+      setTimeout(() => {
+        router.push({
+          pathname: '/chindex',
+          params: { newlyUnlocked: entry.id },
+        });
+      }, 600);
+    }
+  }, [entry, isUnlocked, unlockEntry, router]);
   const introViewportStyle = useMemo(
     () => ({
       minHeight: Math.max(700, height - 72),
@@ -326,6 +348,9 @@ export default function HomeScreen() {
                   dateLabel={dateLabel}
                   modeLabel={modeLabel}
                   variant="compact"
+                  onInteract={handleDailyInteract}
+                  isChindexEntry={entry.isChindexEntry}
+                  isUnlocked={isUnlocked(entry.id)}
                 />
               )}
             </Animated.View>

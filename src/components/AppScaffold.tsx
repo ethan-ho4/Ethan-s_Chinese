@@ -1,6 +1,6 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import { PropsWithChildren, useRef } from 'react';
-import { Animated, StyleSheet, Text, View } from 'react-native';
+import { PropsWithChildren, RefObject, useRef } from 'react';
+import { Animated, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { KoiScrollScene } from '@/components/KoiScrollScene';
@@ -10,9 +10,10 @@ type AppScaffoldProps = PropsWithChildren<{
   eyebrow?: string;
   title: string;
   subtitle?: string;
+  scrollViewRef?: RefObject<ScrollView>;
 }>;
 
-export function AppScaffold({ children, eyebrow, title, subtitle }: AppScaffoldProps) {
+export function AppScaffold({ children, eyebrow, title, subtitle, scrollViewRef }: AppScaffoldProps) {
   const scrollY = useRef(new Animated.Value(0)).current;
 
   return (
@@ -25,6 +26,7 @@ export function AppScaffold({ children, eyebrow, title, subtitle }: AppScaffoldP
       <KoiScrollScene scrollY={scrollY} variant="subtle" />
       <SafeAreaView style={styles.safe}>
         <Animated.ScrollView
+          ref={scrollViewRef as RefObject<Animated.ScrollView>}
           contentContainerStyle={styles.content}
           onScroll={Animated.event(
             [{ nativeEvent: { contentOffset: { y: scrollY } } }],

@@ -30,7 +30,8 @@ function isEntryTopic(value: string | null): value is EntryTopic {
     value === 'family' ||
     value === 'school' ||
     value === 'time' ||
-    value === 'shopping'
+    value === 'shopping' ||
+    value === 'animals'
   );
 }
 

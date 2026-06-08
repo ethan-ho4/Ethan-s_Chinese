@@ -10,7 +10,8 @@ export type EntryTopic =
   | 'family'
   | 'school'
   | 'time'
-  | 'shopping';
+  | 'shopping'
+  | 'animals';
 
 export type ModeId =
   | 'all'
@@ -20,6 +21,8 @@ export type ModeId =
   | 'conversation'
   | 'food'
   | 'travel';
+
+export type ChindexCategory = 'food' | 'animals';
 
 export type ChineseEntry = {
   id: string;
@@ -33,6 +36,9 @@ export type ChineseEntry = {
   example?: string;
   examplePinyin?: string;
   exampleEnglish?: string;
+  mlLabels?: string[];
+  chindexCategory?: ChindexCategory;
+  isChindexEntry?: boolean;
 };
 
 export type ContentMode = {
@@ -45,4 +51,13 @@ export type TopicGroup = {
   id: EntryTopic;
   label: string;
   description: string;
+};
+
+export type CollectionState = {
+  unlockedIds: string[];
+  totalDiscovered: number;
+  lastUnlocked?: {
+    id: string;
+    timestamp: number;
+  };
 };
