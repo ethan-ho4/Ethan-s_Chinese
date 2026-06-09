@@ -2,6 +2,8 @@ import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
+import { getChinese } from '@/services/script';
+import { usePreferences } from '@/store/preferences';
 import { COLORS, FONTS, RADIUS, SHADOWS, SPACING } from '@/theme';
 import { ChineseEntry } from '@/types';
 
@@ -12,9 +14,12 @@ type FlashcardProps = {
 };
 
 export function Flashcard({ entry, isRevealed, onToggleReveal }: FlashcardProps) {
+  const { script } = usePreferences();
+  const displayMandarin = getChinese(entry, script);
+
   const speakMandarin = () => {
     Speech.stop();
-    Speech.speak(entry.mandarin, {
+    Speech.speak(displayMandarin, {
       language: 'zh-CN',
       rate: 0.82,
     });
@@ -36,7 +41,7 @@ export function Flashcard({ entry, isRevealed, onToggleReveal }: FlashcardProps)
           </TouchableOpacity>
         </View>
 
-        <Text style={styles.mandarin}>{entry.mandarin}</Text>
+        <Text style={styles.mandarin}>{displayMandarin}</Text>
         <Text style={styles.pinyin}>{entry.pinyin}</Text>
 
         <View style={styles.divider} />

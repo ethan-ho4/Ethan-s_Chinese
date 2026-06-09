@@ -3,6 +3,8 @@ import * as Speech from 'expo-speech';
 import { useEffect, useRef } from 'react';
 import { Animated, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
+import { getChinese, getChineseExample } from '@/services/script';
+import { usePreferences } from '@/store/preferences';
 import { COLORS, FONTS, RADIUS, SHADOWS, SPACING } from '@/theme';
 import { ChineseEntry } from '@/types';
 
@@ -25,8 +27,11 @@ export function DailyChineseCard({
   isChindexEntry = false,
   isUnlocked = true,
 }: DailyChineseCardProps) {
+  const { script } = usePreferences();
   const isCompact = variant === 'compact';
   const canUnlock = isChindexEntry && !isUnlocked;
+  const displayMandarin = getChinese(entry, script);
+  const displayExample = getChineseExample(entry, script);
   const definition =
     isCompact && entry.definition.length > 74
       ? `${entry.definition.slice(0, 71).trim()}...`
@@ -75,7 +80,7 @@ export function DailyChineseCard({
 
   const speakMandarin = () => {
     Speech.stop();
-    Speech.speak(entry.mandarin, {
+    Speech.speak(displayMandarin, {
       language: 'zh-CN',
       rate: 0.82,
     });
@@ -108,7 +113,7 @@ export function DailyChineseCard({
         </View>
 
         <Text style={[styles.mandarin, isCompact && styles.compactMandarin]}>
-          {entry.mandarin}
+          {displayMandarin}
         </Text>
         <Text style={[styles.pinyin, isCompact && styles.compactPinyin]}>{entry.pinyin}</Text>
         <Text style={[styles.english, isCompact && styles.compactEnglish]}>
@@ -124,7 +129,7 @@ export function DailyChineseCard({
         {!isCompact && entry.example ? (
           <View style={styles.exampleBox}>
             <Text style={styles.exampleLabel}>Example</Text>
-            <Text style={styles.exampleMandarin}>{entry.example}</Text>
+            <Text style={styles.exampleMandarin}>{displayExample}</Text>
             <Text style={styles.examplePinyin}>{entry.examplePinyin}</Text>
             <Text style={styles.exampleEnglish}>{entry.exampleEnglish}</Text>
           </View>

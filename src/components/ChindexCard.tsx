@@ -3,8 +3,10 @@ import * as Speech from 'expo-speech';
 import { useEffect, useRef } from 'react';
 import { Animated, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
+import { getChinese } from '@/services/script';
+import { usePreferences } from '@/store/preferences';
 import { COLORS, FONTS, RADIUS, SHADOWS, SPACING } from '@/theme';
-import { ChineseEntry, ChindexCategory } from '@/types';
+import { ChineseEntry, EntryTopic } from '@/types';
 
 type ChindexCardProps = {
   entry: ChineseEntry;
@@ -14,20 +16,46 @@ type ChindexCardProps = {
   onUndiscover?: () => void;
 };
 
-const CATEGORY_ICONS: Record<ChindexCategory, keyof typeof Ionicons.glyphMap> = {
+const TOPIC_ICONS: Record<EntryTopic, keyof typeof Ionicons.glyphMap> = {
+  numbers: 'calculator',
+  time: 'time',
+  people: 'people',
   food: 'restaurant',
-  animals: 'paw',
+  transport: 'car',
+  places: 'location',
+  shopping: 'cart',
+  weather: 'cloudy',
+  body: 'body',
+  home: 'home',
+  nature: 'leaf',
+  actions: 'flash',
+  descriptors: 'color-palette',
+  grammar: 'book',
 };
 
-const CATEGORY_COLORS: Record<ChindexCategory, string> = {
+const TOPIC_COLORS: Record<EntryTopic, string> = {
+  numbers: '#6366F1',
+  time: '#8B5CF6',
+  people: '#EC4899',
   food: COLORS.koiOrange,
-  animals: COLORS.lotusLeafGreen,
+  transport: '#0EA5E9',
+  places: '#14B8A6',
+  shopping: '#F59E0B',
+  weather: '#06B6D4',
+  body: '#EF4444',
+  home: '#84CC16',
+  nature: COLORS.lotusLeafGreen,
+  actions: '#F97316',
+  descriptors: '#A855F7',
+  grammar: '#64748B',
 };
 
 export function ChindexCard({ entry, isUnlocked, isHighlighted = false, onPress, onUndiscover }: ChindexCardProps) {
-  const category = entry.chindexCategory ?? 'food';
-  const categoryIcon = CATEGORY_ICONS[category];
-  const categoryColor = CATEGORY_COLORS[category];
+  const { script } = usePreferences();
+  const displayMandarin = getChinese(entry, script);
+  const topic = entry.topic;
+  const topicIcon = TOPIC_ICONS[topic];
+  const topicColor = TOPIC_COLORS[topic];
   const pulseAnim = useRef(new Animated.Value(1)).current;
   const glowAnim = useRef(new Animated.Value(0)).current;
 
@@ -70,7 +98,7 @@ export function ChindexCard({ entry, isUnlocked, isHighlighted = false, onPress,
   const speakMandarin = () => {
     if (!isUnlocked) return;
     Speech.stop();
-    Speech.speak(entry.mandarin, {
+    Speech.speak(displayMandarin, {
       language: 'zh-CN',
       rate: 0.82,
     });
@@ -84,8 +112,8 @@ export function ChindexCard({ entry, isUnlocked, isHighlighted = false, onPress,
         activeOpacity={0.7}
       >
         <View style={styles.lockedContent}>
-          <View style={[styles.categoryBadge, { backgroundColor: 'rgba(255,255,255,0.1)' }]}>
-            <Ionicons name={categoryIcon} size={14} color="rgba(255,255,255,0.4)" />
+          <View style={[styles.topicBadge, { backgroundColor: 'rgba(255,255,255,0.1)' }]}>
+            <Ionicons name={topicIcon} size={14} color="rgba(255,255,255,0.4)" />
           </View>
           <View style={styles.mysteryIcon}>
             <Ionicons name="help" size={32} color="rgba(255,255,255,0.3)" />
@@ -129,8 +157,8 @@ export function ChindexCard({ entry, isUnlocked, isHighlighted = false, onPress,
       >
         <View style={styles.unlockedContent}>
           <View style={styles.headerRow}>
-            <View style={[styles.categoryBadge, { backgroundColor: categoryColor }]}>
-              <Ionicons name={categoryIcon} size={12} color={COLORS.warmWhite} />
+            <View style={[styles.topicBadge, { backgroundColor: topicColor }]}>
+              <Ionicons name={topicIcon} size={12} color={COLORS.warmWhite} />
             </View>
             <View style={styles.headerActions}>
               {onUndiscover && (
@@ -159,7 +187,7 @@ export function ChindexCard({ entry, isUnlocked, isHighlighted = false, onPress,
           </View>
 
           <Text style={styles.mandarin} numberOfLines={1} adjustsFontSizeToFit>
-            {entry.mandarin}
+            {displayMandarin}
           </Text>
           <Text style={styles.pinyin} numberOfLines={1}>
             {entry.pinyin}
@@ -170,6 +198,7 @@ export function ChindexCard({ entry, isUnlocked, isHighlighted = false, onPress,
           <Text style={styles.english} numberOfLines={2}>
             {entry.english}
           </Text>
+          <Text style={styles.hskLevel}>HSK {entry.hskLevel}</Text>
         </View>
       </TouchableOpacity>
     </Animated.View>
@@ -238,7 +267,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 6,
   },
-  categoryBadge: {
+  topicBadge: {
     alignItems: 'center',
     borderRadius: RADIUS.full,
     height: 22,
@@ -289,6 +318,12 @@ const styles = StyleSheet.create({
     fontSize: 12,
     lineHeight: 16,
     textTransform: 'capitalize',
+  },
+  hskLevel: {
+    color: COLORS.textMuted,
+    fontFamily: FONTS.medium,
+    fontSize: 10,
+    marginTop: 2,
   },
   lockedText: {
     color: 'rgba(255,255,255,0.4)',

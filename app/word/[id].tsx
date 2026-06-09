@@ -5,25 +5,53 @@ import { useMemo } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import { AppScaffold } from '@/components/AppScaffold';
-import { CHINESE_ENTRIES } from '@/data/chineseEntries';
+import { ScriptToggle } from '@/components/ScriptToggle';
+import { CHINESE_ENTRIES, TOPIC_GROUPS } from '@/data/chineseEntries';
+import { getChinese, getChineseExample } from '@/services/script';
 import { useCollection } from '@/store/collection';
+import { usePreferences } from '@/store/preferences';
 import { COLORS, FONTS, RADIUS, SHADOWS, SPACING } from '@/theme';
-import { ChindexCategory } from '@/types';
+import { EntryTopic } from '@/types';
 
-const CATEGORY_ICONS: Record<ChindexCategory, keyof typeof Ionicons.glyphMap> = {
+const TOPIC_ICONS: Record<EntryTopic, keyof typeof Ionicons.glyphMap> = {
+  numbers: 'calculator',
+  time: 'time',
+  people: 'people',
   food: 'restaurant',
-  animals: 'paw',
+  transport: 'car',
+  places: 'location',
+  shopping: 'cart',
+  weather: 'cloudy',
+  body: 'body',
+  home: 'home',
+  nature: 'leaf',
+  actions: 'flash',
+  descriptors: 'color-palette',
+  grammar: 'book',
 };
 
-const CATEGORY_LABELS: Record<ChindexCategory, string> = {
-  food: 'Food',
-  animals: 'Animals',
+const TOPIC_COLORS: Record<EntryTopic, string> = {
+  numbers: '#6366F1',
+  time: '#8B5CF6',
+  people: '#EC4899',
+  food: COLORS.koiOrange,
+  transport: '#0EA5E9',
+  places: '#14B8A6',
+  shopping: '#F59E0B',
+  weather: '#06B6D4',
+  body: '#EF4444',
+  home: '#84CC16',
+  nature: COLORS.lotusLeafGreen,
+  actions: '#F97316',
+  descriptors: '#A855F7',
+  grammar: '#64748B',
 };
 
 export default function WordDetailScreen() {
   const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
   const { isUnlocked } = useCollection();
+  const { script } = usePreferences();
 
   const entry = useMemo(() => {
     return CHINESE_ENTRIES.find((e) => e.id === id);
@@ -49,22 +77,25 @@ export default function WordDetailScreen() {
   }
 
   const unlocked = isUnlocked(entry.id);
-  const category = entry.chindexCategory;
-  const categoryIcon = category ? CATEGORY_ICONS[category] : undefined;
-  const categoryLabel = category ? CATEGORY_LABELS[category] : undefined;
+  const topic = entry.topic;
+  const topicIcon = TOPIC_ICONS[topic];
+  const topicColor = TOPIC_COLORS[topic];
+  const topicLabel = TOPIC_GROUPS.find((t) => t.id === topic)?.label || topic;
+  const displayMandarin = getChinese(entry, script);
+  const displayExample = getChineseExample(entry, script);
 
   const speakMandarin = () => {
     Speech.stop();
-    Speech.speak(entry.mandarin, {
+    Speech.speak(displayMandarin, {
       language: 'zh-CN',
       rate: 0.82,
     });
   };
 
   const speakExample = () => {
-    if (!entry.example) return;
+    if (!displayExample) return;
     Speech.stop();
-    Speech.speak(entry.example, {
+    Speech.speak(displayExample, {
       language: 'zh-CN',
       rate: 0.75,
     });
@@ -102,7 +133,7 @@ export default function WordDetailScreen() {
 
   return (
     <AppScaffold
-      eyebrow={entry.topic.toUpperCase()}
+      eyebrow={topicLabel.toUpperCase()}
       title={entry.english}
       subtitle={entry.definition}
     >
@@ -117,18 +148,19 @@ export default function WordDetailScreen() {
 
       <View style={[styles.mainCard, SHADOWS.pondTile]}>
         <View style={styles.cardHeader}>
-          {category && categoryIcon && (
-            <View style={styles.categoryBadge}>
-              <Ionicons name={categoryIcon} size={14} color={COLORS.warmWhite} />
-              <Text style={styles.categoryLabel}>{categoryLabel}</Text>
+          <View style={[styles.topicBadge, { backgroundColor: topicColor }]}>
+            <Ionicons name={topicIcon} size={14} color={COLORS.warmWhite} />
+            <Text style={styles.topicLabel}>{topicLabel}</Text>
+          </View>
+          <View style={styles.headerRight}>
+            <ScriptToggle />
+            <View style={styles.levelBadge}>
+              <Text style={styles.levelText}>HSK {entry.hskLevel}</Text>
             </View>
-          )}
-          <View style={styles.levelBadge}>
-            <Text style={styles.levelText}>{entry.level}</Text>
           </View>
         </View>
 
-        <Text style={styles.mandarin}>{entry.mandarin}</Text>
+        <Text style={styles.mandarin}>{displayMandarin}</Text>
         <Text style={styles.pinyin}>{entry.pinyin}</Text>
 
         <TouchableOpacity
@@ -162,7 +194,7 @@ export default function WordDetailScreen() {
                   <Ionicons name="volume-medium" size={16} color={COLORS.koiOrange} />
                 </TouchableOpacity>
               </View>
-              <Text style={styles.exampleMandarin}>{entry.example}</Text>
+              <Text style={styles.exampleMandarin}>{displayExample}</Text>
               {entry.examplePinyin && (
                 <Text style={styles.examplePinyin}>{entry.examplePinyin}</Text>
               )}
@@ -181,11 +213,11 @@ export default function WordDetailScreen() {
         </View>
         <View style={styles.metaItem}>
           <Text style={styles.metaLabel}>Level</Text>
-          <Text style={styles.metaValue}>{entry.level}</Text>
+          <Text style={styles.metaValue}>HSK {entry.hskLevel}</Text>
         </View>
         <View style={styles.metaItem}>
           <Text style={styles.metaLabel}>Topic</Text>
-          <Text style={styles.metaValue}>{entry.topic}</Text>
+          <Text style={styles.metaValue}>{topicLabel}</Text>
         </View>
       </View>
     </AppScaffold>
@@ -275,19 +307,23 @@ const styles = StyleSheet.create({
     gap: SPACING.sm,
     justifyContent: 'space-between',
   },
-  categoryBadge: {
+  topicBadge: {
     alignItems: 'center',
-    backgroundColor: COLORS.lotusLeafGreen,
     borderRadius: RADIUS.full,
     flexDirection: 'row',
     gap: 6,
     paddingHorizontal: 12,
     paddingVertical: 6,
   },
-  categoryLabel: {
+  topicLabel: {
     color: COLORS.warmWhite,
     fontFamily: FONTS.bold,
     fontSize: 12,
+  },
+  headerRight: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    gap: SPACING.sm,
   },
   levelBadge: {
     backgroundColor: 'rgba(14,90,96,0.2)',

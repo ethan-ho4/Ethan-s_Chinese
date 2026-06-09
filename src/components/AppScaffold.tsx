@@ -10,7 +10,7 @@ type AppScaffoldProps = PropsWithChildren<{
   eyebrow?: string;
   title: string;
   subtitle?: string;
-  scrollViewRef?: RefObject<ScrollView>;
+  scrollViewRef?: RefObject<ScrollView | null>;
 }>;
 
 export function AppScaffold({ children, eyebrow, title, subtitle, scrollViewRef }: AppScaffoldProps) {
@@ -26,7 +26,7 @@ export function AppScaffold({ children, eyebrow, title, subtitle, scrollViewRef 
       <KoiScrollScene scrollY={scrollY} variant="subtle" />
       <SafeAreaView style={styles.safe}>
         <Animated.ScrollView
-          ref={scrollViewRef as RefObject<Animated.ScrollView>}
+          ref={scrollViewRef as RefObject<ScrollView>}
           contentContainerStyle={styles.content}
           onScroll={Animated.event(
             [{ nativeEvent: { contentOffset: { y: scrollY } } }],

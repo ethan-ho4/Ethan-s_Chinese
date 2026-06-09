@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native';
 import Svg, { Circle, Ellipse, Path } from 'react-native-svg';
 
+import { getChinese } from '@/services/script';
+import { usePreferences } from '@/store/preferences';
 import { COLORS, FONTS, RADIUS, SHADOWS, SPACING } from '@/theme';
 import { ChineseEntry } from '@/types';
 
@@ -96,6 +98,8 @@ function WidgetPondDepth({ size }: { size: WidgetSize }) {
 }
 
 export function WidgetPreviewCard({ entry, modeLabel, size }: WidgetPreviewCardProps) {
+  const { script } = usePreferences();
+  const displayMandarin = getChinese(entry, script);
   return (
     <View style={[styles.wrapper, size === 'small' && styles.smallWrapper]}>
       <Text style={styles.sizeLabel}>{SIZE_LABELS[size]}</Text>
@@ -109,7 +113,7 @@ export function WidgetPreviewCard({ entry, modeLabel, size }: WidgetPreviewCardP
             <Text style={styles.kind}>{entry.kind}</Text>
           </View>
           <Text style={[styles.mandarin, size === 'small' && styles.smallMandarin]}>
-            {entry.mandarin}
+            {displayMandarin}
           </Text>
           <Text style={styles.pinyin}>{entry.pinyin}</Text>
           {size !== 'small' ? <Text style={styles.english}>{entry.english}</Text> : null}

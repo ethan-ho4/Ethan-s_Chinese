@@ -2,7 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useCallback, useEffect, useState } from 'react';
 
 import { CHINESE_ENTRIES } from '@/data/chineseEntries';
-import { CollectionState } from '@/types';
+import { CollectionState, EntryTopic } from '@/types';
 
 const COLLECTION_KEY = 'ethansChinese:collection';
 
@@ -146,25 +146,8 @@ export function useCollection() {
   };
 }
 
-export function findEntriesByMlLabel(label: string): string[] {
-  const normalizedLabel = label.toLowerCase().trim();
-
-  return CHINESE_ENTRIES.filter((entry) => {
-    if (!entry.mlLabels || !entry.isChindexEntry) return false;
-
-    return entry.mlLabels.some(
-      (mlLabel) => mlLabel.toLowerCase() === normalizedLabel
-    );
-  }).map((entry) => entry.id);
-}
-
-export function findAllMatchingEntries(labels: string[]): string[] {
-  const matchedIds = new Set<string>();
-
-  for (const label of labels) {
-    const entries = findEntriesByMlLabel(label);
-    entries.forEach((id) => matchedIds.add(id));
-  }
-
-  return Array.from(matchedIds);
+export function findEntriesByTopic(topic: EntryTopic): string[] {
+  return CHINESE_ENTRIES.filter((entry) => entry.topic === topic && entry.isChindexEntry).map(
+    (entry) => entry.id
+  );
 }

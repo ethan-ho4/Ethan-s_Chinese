@@ -2,6 +2,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { useEffect, useRef } from 'react';
 import { Animated, Easing, StyleSheet, Text, View } from 'react-native';
 
+import { getChinese } from '@/services/script';
+import { usePreferences } from '@/store/preferences';
 import { COLORS, FONTS, RADIUS, SHADOWS, SPACING } from '@/theme';
 import { ChineseEntry } from '@/types';
 
@@ -11,6 +13,8 @@ type UnlockAnimationProps = {
 };
 
 export function UnlockAnimation({ entry, onComplete }: UnlockAnimationProps) {
+  const { script } = usePreferences();
+  const displayMandarin = getChinese(entry, script);
   const scaleAnim = useRef(new Animated.Value(0)).current;
   const opacityAnim = useRef(new Animated.Value(0)).current;
   const rotateAnim = useRef(new Animated.Value(0)).current;
@@ -115,7 +119,7 @@ export function UnlockAnimation({ entry, onComplete }: UnlockAnimationProps) {
           <Ionicons name="sparkles" size={24} color={COLORS.lotusGold} />
         </View>
 
-        <Text style={styles.mandarin}>{entry.mandarin}</Text>
+        <Text style={styles.mandarin}>{displayMandarin}</Text>
         <Text style={styles.pinyin}>{entry.pinyin}</Text>
 
         <View style={styles.divider} />

@@ -12,122 +12,43 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { CHINESE_ENTRIES } from '@/data/chineseEntries';
+import { CHINESE_ENTRIES, TOPIC_GROUPS } from '@/data/chineseEntries';
+import { getChinese } from '@/services/script';
 import { useCollection } from '@/store/collection';
+import { usePreferences } from '@/store/preferences';
 import { COLORS, FONTS, RADIUS, SHADOWS, SPACING } from '@/theme';
-import { ChineseEntry, ChindexCategory } from '@/types';
+import { ChineseEntry, EntryTopic } from '@/types';
 
 type CaptureState = 'camera' | 'selecting' | 'success';
 
-type SelectableItem = {
-  id: string;
-  label: string;
-  entryIds: string[];
+const TOPIC_ICONS: Record<EntryTopic, string> = {
+  numbers: '🔢',
+  time: '⏰',
+  people: '👥',
+  food: '🍎',
+  transport: '🚗',
+  places: '📍',
+  shopping: '🛒',
+  weather: '☀️',
+  body: '💪',
+  home: '🏠',
+  nature: '🌿',
+  actions: '⚡',
+  descriptors: '🎨',
+  grammar: '📚',
 };
-
-const FOOD_ITEMS: SelectableItem[] = [
-  { id: 'banana', label: '🍌 Banana', entryIds: ['xiang-jiao'] },
-  { id: 'apple', label: '🍎 Apple', entryIds: ['ping-guo'] },
-  { id: 'orange', label: '🍊 Orange', entryIds: ['cheng-zi'] },
-  { id: 'strawberry', label: '🍓 Strawberry', entryIds: ['cao-mei'] },
-  { id: 'watermelon', label: '🍉 Watermelon', entryIds: ['xi-gua'] },
-  { id: 'grapes', label: '🍇 Grapes', entryIds: ['pu-tao'] },
-  { id: 'lemon', label: '🍋 Lemon', entryIds: ['ning-meng'] },
-  { id: 'peach', label: '🍑 Peach', entryIds: ['tao-zi'] },
-  { id: 'pear', label: '🍐 Pear', entryIds: ['li-zi'] },
-  { id: 'pineapple', label: '🍍 Pineapple', entryIds: ['bo-luo'] },
-  { id: 'mango', label: '🥭 Mango', entryIds: ['mang-guo'] },
-  { id: 'broccoli', label: '🥦 Broccoli', entryIds: ['xi-lan-hua'] },
-  { id: 'carrot', label: '🥕 Carrot', entryIds: ['hong-luo-bo'] },
-  { id: 'corn', label: '🌽 Corn', entryIds: ['yu-mi'] },
-  { id: 'tomato', label: '🍅 Tomato', entryIds: ['fan-qie'] },
-  { id: 'potato', label: '🥔 Potato', entryIds: ['tu-dou'] },
-  { id: 'mushroom', label: '🍄 Mushroom', entryIds: ['mo-gu'] },
-  { id: 'onion', label: '🧅 Onion', entryIds: ['yang-cong'] },
-  { id: 'garlic', label: '🧄 Garlic', entryIds: ['da-suan'] },
-  { id: 'cucumber', label: '🥒 Cucumber', entryIds: ['huang-gua'] },
-  { id: 'pepper', label: '🫑 Bell Pepper', entryIds: ['qing-jiao'] },
-  { id: 'pizza', label: '🍕 Pizza', entryIds: ['pi-sa'] },
-  { id: 'burger', label: '🍔 Hamburger', entryIds: ['han-bao-bao'] },
-  { id: 'hotdog', label: '🌭 Hot Dog', entryIds: ['re-gou'] },
-  { id: 'bread', label: '🍞 Bread', entryIds: ['mian-bao'] },
-  { id: 'rice', label: '🍚 Rice', entryIds: ['mi-fan'] },
-  { id: 'noodles', label: '🍜 Noodles', entryIds: ['mian-tiao'] },
-  { id: 'egg', label: '🥚 Egg', entryIds: ['ji-dan'] },
-  { id: 'cheese', label: '🧀 Cheese', entryIds: ['nai-lao'] },
-  { id: 'icecream', label: '🍦 Ice Cream', entryIds: ['bing-qi-lin'] },
-  { id: 'cake', label: '🍰 Cake', entryIds: ['dan-gao'] },
-  { id: 'chocolate', label: '🍫 Chocolate', entryIds: ['qiao-ke-li'] },
-  { id: 'coffee', label: '☕ Coffee', entryIds: ['ka-fei', 'ka-fei-bei'] },
-  { id: 'tea', label: '🍵 Tea', entryIds: ['cha'] },
-  { id: 'milk', label: '🥛 Milk', entryIds: ['nai'] },
-  { id: 'juice', label: '🧃 Juice', entryIds: ['guo-zhi'] },
-  { id: 'beer', label: '🍺 Beer', entryIds: ['pi-jiu'] },
-  { id: 'wine', label: '🍷 Wine', entryIds: ['jiu'] },
-];
-
-const ANIMAL_ITEMS: SelectableItem[] = [
-  { id: 'dog', label: '🐕 Dog', entryIds: ['gou'] },
-  { id: 'cat', label: '🐈 Cat', entryIds: ['mao'] },
-  { id: 'bird', label: '🐦 Bird', entryIds: ['niao'] },
-  { id: 'fish', label: '🐟 Fish', entryIds: ['yu', 'jin-yu'] },
-  { id: 'rabbit', label: '🐇 Rabbit', entryIds: ['tu-zi'] },
-  { id: 'hamster', label: '🐹 Hamster', entryIds: ['cang-shu'] },
-  { id: 'mouse', label: '🐭 Mouse', entryIds: ['lao-shu'] },
-  { id: 'cow', label: '🐄 Cow', entryIds: ['niu'] },
-  { id: 'pig', label: '🐷 Pig', entryIds: ['zhu'] },
-  { id: 'sheep', label: '🐑 Sheep', entryIds: ['yang'] },
-  { id: 'horse', label: '🐴 Horse', entryIds: ['ma'] },
-  { id: 'chicken', label: '🐔 Chicken', entryIds: ['ji'] },
-  { id: 'duck', label: '🦆 Duck', entryIds: ['ya-zi'] },
-  { id: 'lion', label: '🦁 Lion', entryIds: ['shi-zi'] },
-  { id: 'tiger', label: '🐯 Tiger', entryIds: ['lao-hu'] },
-  { id: 'elephant', label: '🐘 Elephant', entryIds: ['da-xiang'] },
-  { id: 'bear', label: '🐻 Bear', entryIds: ['xiong'] },
-  { id: 'panda', label: '🐼 Panda', entryIds: ['xiong-mao'] },
-  { id: 'monkey', label: '🐵 Monkey', entryIds: ['hou-zi'] },
-  { id: 'gorilla', label: '🦍 Gorilla', entryIds: ['da-xing-xing'] },
-  { id: 'zebra', label: '🦓 Zebra', entryIds: ['ban-ma'] },
-  { id: 'giraffe', label: '🦒 Giraffe', entryIds: ['chang-jing-lu'] },
-  { id: 'camel', label: '🐫 Camel', entryIds: ['luo-tuo'] },
-  { id: 'fox', label: '🦊 Fox', entryIds: ['hu-li'] },
-  { id: 'wolf', label: '🐺 Wolf', entryIds: ['lang'] },
-  { id: 'deer', label: '🦌 Deer', entryIds: ['lu'] },
-  { id: 'kangaroo', label: '🦘 Kangaroo', entryIds: ['dai-shu'] },
-  { id: 'koala', label: '🐨 Koala', entryIds: ['shu-xi'] },
-  { id: 'turtle', label: '🐢 Turtle', entryIds: ['wu-gui', 'hai-gui'] },
-  { id: 'snake', label: '🐍 Snake', entryIds: ['she'] },
-  { id: 'frog', label: '🐸 Frog', entryIds: ['qing-wa'] },
-  { id: 'crocodile', label: '🐊 Crocodile', entryIds: ['e-yu'] },
-  { id: 'shark', label: '🦈 Shark', entryIds: ['sha-yu'] },
-  { id: 'whale', label: '🐋 Whale', entryIds: ['jing-yu'] },
-  { id: 'dolphin', label: '🐬 Dolphin', entryIds: ['hai-tun'] },
-  { id: 'octopus', label: '🐙 Octopus', entryIds: ['zhang-yu'] },
-  { id: 'crab', label: '🦀 Crab', entryIds: ['pang-xie'] },
-  { id: 'lobster', label: '🦞 Lobster', entryIds: ['long-xia'] },
-  { id: 'butterfly', label: '🦋 Butterfly', entryIds: ['hu-die'] },
-  { id: 'bee', label: '🐝 Bee', entryIds: ['mi-feng'] },
-  { id: 'ant', label: '🐜 Ant', entryIds: ['ma-yi'] },
-  { id: 'spider', label: '🕷️ Spider', entryIds: ['zhi-zhu'] },
-  { id: 'snail', label: '🐌 Snail', entryIds: ['wo-niu'] },
-  { id: 'owl', label: '🦉 Owl', entryIds: ['mao-tou-ying'] },
-  { id: 'eagle', label: '🦅 Eagle', entryIds: ['lao-ying'] },
-  { id: 'penguin', label: '🐧 Penguin', entryIds: ['qi-e'] },
-  { id: 'flamingo', label: '🦩 Flamingo', entryIds: ['huo-lie-niao'] },
-  { id: 'peacock', label: '🦚 Peacock', entryIds: ['kong-que'] },
-  { id: 'parrot', label: '🦜 Parrot', entryIds: ['ying-wu'] },
-];
 
 export default function CaptureScreen() {
   const router = useRouter();
   const [permission, requestPermission] = useCameraPermissions();
   const cameraRef = useRef<CameraView>(null);
-  const { unlockMultiple, isUnlocked } = useCollection();
+  const { unlockEntry, isUnlocked } = useCollection();
+  const { script } = usePreferences();
 
   const [captureState, setCaptureState] = useState<CaptureState>('camera');
-  const [selectedCategory, setSelectedCategory] = useState<ChindexCategory | null>(null);
-  const [unlockedEntries, setUnlockedEntries] = useState<ChineseEntry[]>([]);
-  const [photoTaken, setPhotoTaken] = useState(false);
+  const [selectedTopic, setSelectedTopic] = useState<EntryTopic | null>(null);
+  const [unlockedEntry, setUnlockedEntry] = useState<ChineseEntry | null>(null);
+  const [wasNewUnlock, setWasNewUnlock] = useState(false);
 
   const takePicture = async () => {
     if (!cameraRef.current) return;
@@ -137,41 +58,36 @@ export default function CaptureScreen() {
         quality: 0.5,
         base64: false,
       });
-      setPhotoTaken(true);
       setCaptureState('selecting');
     } catch (error) {
       console.error('Photo error:', error);
     }
   };
 
-  const selectItem = async (item: SelectableItem) => {
-    const newIds = item.entryIds.filter((id) => !isUnlocked(id));
-    
-    if (newIds.length > 0) {
-      await unlockMultiple(newIds);
+  const selectWord = async (entry: ChineseEntry) => {
+    const wasNew = !isUnlocked(entry.id);
+    if (wasNew) {
+      await unlockEntry(entry.id);
     }
-    
-    const entries = item.entryIds
-      .map((id) => CHINESE_ENTRIES.find((e) => e.id === id))
-      .filter((e): e is ChineseEntry => e !== undefined);
-    
-    setUnlockedEntries(entries);
+    setWasNewUnlock(wasNew);
+    setUnlockedEntry(entry);
     setCaptureState('success');
   };
 
   const resetCapture = () => {
     setCaptureState('camera');
-    setSelectedCategory(null);
-    setUnlockedEntries([]);
-    setPhotoTaken(false);
+    setSelectedTopic(null);
+    setUnlockedEntry(null);
+    setWasNewUnlock(false);
   };
 
   const navigateToChindex = () => {
     router.push('/chindex');
   };
 
-  const currentItems = selectedCategory === 'food' ? FOOD_ITEMS : 
-                       selectedCategory === 'animals' ? ANIMAL_ITEMS : [];
+  const getTopicEntries = (topic: EntryTopic) => {
+    return CHINESE_ENTRIES.filter((e) => e.topic === topic && e.isChindexEntry);
+  };
 
   if (!permission) {
     return (
@@ -220,56 +136,59 @@ export default function CaptureScreen() {
           <View style={{ width: 44 }} />
         </View>
 
-        {!selectedCategory ? (
-          <View style={styles.categorySelection}>
+        {!selectedTopic ? (
+          <ScrollView style={styles.topicScrollView} showsVerticalScrollIndicator={false}>
             <Text style={styles.selectPrompt}>Choose a category:</Text>
-            <TouchableOpacity
-              style={styles.categoryButton}
-              onPress={() => setSelectedCategory('food')}
-              activeOpacity={0.8}
-            >
-              <Text style={styles.categoryEmoji}>🍎</Text>
-              <Text style={styles.categoryLabel}>Food</Text>
-              <Text style={styles.categoryCount}>{FOOD_ITEMS.length} items</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.categoryButton}
-              onPress={() => setSelectedCategory('animals')}
-              activeOpacity={0.8}
-            >
-              <Text style={styles.categoryEmoji}>🐕</Text>
-              <Text style={styles.categoryLabel}>Animals</Text>
-              <Text style={styles.categoryCount}>{ANIMAL_ITEMS.length} items</Text>
-            </TouchableOpacity>
-          </View>
+            <View style={styles.topicGrid}>
+              {TOPIC_GROUPS.map((topic) => {
+                const count = getTopicEntries(topic.id).length;
+                const unlockedInTopic = getTopicEntries(topic.id).filter((e) =>
+                  isUnlocked(e.id)
+                ).length;
+
+                return (
+                  <TouchableOpacity
+                    key={topic.id}
+                    style={styles.topicButton}
+                    onPress={() => setSelectedTopic(topic.id)}
+                    activeOpacity={0.8}
+                  >
+                    <Text style={styles.topicEmoji}>{TOPIC_ICONS[topic.id]}</Text>
+                    <Text style={styles.topicLabel}>{topic.label}</Text>
+                    <Text style={styles.topicCount}>
+                      {unlockedInTopic}/{count}
+                    </Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          </ScrollView>
         ) : (
           <View style={styles.itemSelection}>
             <TouchableOpacity
               style={styles.backToCategories}
-              onPress={() => setSelectedCategory(null)}
+              onPress={() => setSelectedTopic(null)}
               activeOpacity={0.8}
             >
               <Ionicons name="chevron-back" size={18} color={COLORS.textSecondary} />
               <Text style={styles.backToCategoriesText}>Back to categories</Text>
             </TouchableOpacity>
-            <Text style={styles.selectPrompt}>
-              Select what you photographed:
-            </Text>
+            <Text style={styles.selectPrompt}>Select a word to unlock:</Text>
             <ScrollView style={styles.itemList} showsVerticalScrollIndicator={false}>
               <View style={styles.itemGrid}>
-                {currentItems.map((item) => {
-                  const alreadyUnlocked = item.entryIds.every((id) => isUnlocked(id));
+                {getTopicEntries(selectedTopic).map((entry) => {
+                  const alreadyUnlocked = isUnlocked(entry.id);
                   return (
                     <TouchableOpacity
-                      key={item.id}
-                      style={[
-                        styles.itemButton,
-                        alreadyUnlocked && styles.itemButtonUnlocked,
-                      ]}
-                      onPress={() => selectItem(item)}
+                      key={entry.id}
+                      style={[styles.itemButton, alreadyUnlocked && styles.itemButtonUnlocked]}
+                      onPress={() => selectWord(entry)}
                       activeOpacity={0.8}
                     >
-                      <Text style={styles.itemLabel}>{item.label}</Text>
+                      <View style={styles.itemContent}>
+                        <Text style={styles.itemMandarin}>{getChinese(entry, script)}</Text>
+                        <Text style={styles.itemEnglish}>{entry.english}</Text>
+                      </View>
                       {alreadyUnlocked && (
                         <Ionicons name="checkmark-circle" size={16} color={COLORS.lotusLeafGreen} />
                       )}
@@ -284,7 +203,7 @@ export default function CaptureScreen() {
     );
   }
 
-  if (captureState === 'success' && unlockedEntries.length > 0) {
+  if (captureState === 'success' && unlockedEntry) {
     return (
       <SafeAreaView style={styles.container}>
         <View style={[styles.resultCard, styles.successCard, SHADOWS.glow]}>
@@ -292,15 +211,14 @@ export default function CaptureScreen() {
             <Ionicons name="checkmark-circle" size={48} color={COLORS.lotusLeafGreen} />
           </View>
           <Text style={styles.resultTitle}>
-            {unlockedEntries.length === 1 ? 'Word Discovered!' : `${unlockedEntries.length} Words Discovered!`}
+            {wasNewUnlock ? 'Word Discovered!' : 'Word Already Unlocked!'}
           </Text>
-          {unlockedEntries.map((entry) => (
-            <View key={entry.id} style={styles.entryRow}>
-              <Text style={styles.entryMandarin}>{entry.mandarin}</Text>
-              <Text style={styles.entryPinyin}>{entry.pinyin}</Text>
-              <Text style={styles.entryEnglish}>{entry.english}</Text>
-            </View>
-          ))}
+          <View style={styles.entryRow}>
+            <Text style={styles.entryMandarin}>{getChinese(unlockedEntry, script)}</Text>
+            <Text style={styles.entryPinyin}>{unlockedEntry.pinyin}</Text>
+            <Text style={styles.entryEnglish}>{unlockedEntry.english}</Text>
+          </View>
+          <Text style={styles.entryLevel}>HSK {unlockedEntry.hskLevel}</Text>
           <View style={styles.resultButtons}>
             <TouchableOpacity
               style={styles.tryAgainButton}
@@ -352,7 +270,7 @@ export default function CaptureScreen() {
           </View>
 
           <View style={styles.controls}>
-            <Text style={styles.hint}>Take a photo, then select what it is</Text>
+            <Text style={styles.hint}>Take a photo, then select the word</Text>
             <TouchableOpacity
               style={[styles.captureButton, SHADOWS.glow]}
               onPress={takePicture}
@@ -459,38 +377,45 @@ const styles = StyleSheet.create({
     bottom: 0,
     right: 0,
   },
-  categorySelection: {
+  topicScrollView: {
     flex: 1,
-    gap: SPACING.lg,
     padding: SPACING.lg,
   },
   selectPrompt: {
     color: COLORS.textSecondary,
     fontFamily: FONTS.medium,
     fontSize: 16,
+    marginBottom: SPACING.md,
     textAlign: 'center',
   },
-  categoryButton: {
+  topicGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: SPACING.sm,
+    paddingBottom: SPACING.xl,
+  },
+  topicButton: {
     alignItems: 'center',
     backgroundColor: COLORS.surfacePond,
     borderColor: COLORS.borderSoft,
-    borderRadius: RADIUS.lg,
+    borderRadius: RADIUS.md,
     borderWidth: 1.5,
-    gap: SPACING.sm,
-    padding: SPACING.xl,
+    gap: 4,
+    padding: SPACING.md,
+    width: '48%',
   },
-  categoryEmoji: {
-    fontSize: 48,
+  topicEmoji: {
+    fontSize: 32,
   },
-  categoryLabel: {
+  topicLabel: {
     color: COLORS.textPrimary,
     fontFamily: FONTS.bold,
-    fontSize: 22,
+    fontSize: 16,
   },
-  categoryCount: {
+  topicCount: {
     color: COLORS.textMuted,
     fontFamily: FONTS.regular,
-    fontSize: 14,
+    fontSize: 12,
   },
   itemSelection: {
     flex: 1,
@@ -524,7 +449,7 @@ const styles = StyleSheet.create({
     borderRadius: RADIUS.md,
     borderWidth: 1.2,
     flexDirection: 'row',
-    gap: SPACING.xs,
+    gap: SPACING.sm,
     paddingHorizontal: SPACING.md,
     paddingVertical: SPACING.sm,
   },
@@ -532,10 +457,19 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(126,159,61,0.15)',
     borderColor: COLORS.lotusLeafGreen,
   },
-  itemLabel: {
+  itemContent: {
+    flex: 1,
+    gap: 2,
+  },
+  itemMandarin: {
     color: COLORS.textPrimary,
-    fontFamily: FONTS.medium,
-    fontSize: 15,
+    fontFamily: FONTS.bold,
+    fontSize: 18,
+  },
+  itemEnglish: {
+    color: COLORS.textSecondary,
+    fontFamily: FONTS.regular,
+    fontSize: 12,
   },
   resultCard: {
     alignSelf: 'center',
@@ -585,6 +519,12 @@ const styles = StyleSheet.create({
     fontFamily: FONTS.regular,
     fontSize: 13,
     textAlign: 'right',
+  },
+  entryLevel: {
+    color: COLORS.textOnLightMuted,
+    fontFamily: FONTS.medium,
+    fontSize: 12,
+    textAlign: 'center',
   },
   resultButtons: {
     flexDirection: 'row',

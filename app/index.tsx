@@ -16,6 +16,7 @@ import Svg, { Circle, Path } from 'react-native-svg';
 
 import { DailyChineseCard } from '@/components/DailyChineseCard';
 import { KoiScrollScene } from '@/components/KoiScrollScene';
+import { ScriptToggle } from '@/components/ScriptToggle';
 import { getDailyDateLabel, getDailyEntry, getModeLabel } from '@/services/dailyEntry';
 import { useCollection } from '@/store/collection';
 import { usePreferences } from '@/store/preferences';
@@ -325,8 +326,10 @@ export default function HomeScreen() {
           <View style={[styles.introViewport, introViewportStyle]}>
             <View style={[styles.hero, heroStyle]}>
               <Text style={styles.kicker}>今日中文</Text>
-              <Text style={styles.title}>Today&apos;s Mandarin</Text>
-              <Text style={styles.scrollHint}>Scroll</Text>
+              <View style={styles.titleRow}>
+                <Text style={styles.title}>Today&apos;s Mandarin</Text>
+                <ScriptToggle variant="dark" />
+              </View>
             </View>
 
             <Animated.View
@@ -422,20 +425,18 @@ const styles = StyleSheet.create({
     letterSpacing: 4,
     lineHeight: 68,
   },
+  titleRow: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: SPACING.md,
+  },
   title: {
     color: COLORS.textSecondary,
+    flex: 1,
     fontFamily: FONTS.medium,
     fontSize: 16,
     letterSpacing: 1,
-    textTransform: 'uppercase',
-  },
-  scrollHint: {
-    alignSelf: 'flex-start',
-    color: COLORS.textMuted,
-    fontFamily: FONTS.bold,
-    fontSize: 12,
-    letterSpacing: 1.5,
-    marginTop: SPACING.lg,
     textTransform: 'uppercase',
   },
   cardMotion: {

@@ -1,28 +1,32 @@
 export type EntryKind = 'word' | 'phrase';
 
-export type EntryLevel = 'beginner' | 'intermediate';
+export type HskLevel = 1 | 2 | 3;
 
 export type EntryTopic =
-  | 'basics'
-  | 'conversation'
-  | 'food'
-  | 'travel'
-  | 'family'
-  | 'school'
+  | 'numbers'
   | 'time'
+  | 'people'
+  | 'food'
+  | 'transport'
+  | 'places'
   | 'shopping'
-  | 'animals';
+  | 'weather'
+  | 'body'
+  | 'home'
+  | 'nature'
+  | 'actions'
+  | 'descriptors'
+  | 'grammar';
 
 export type ModeId =
   | 'all'
   | 'words'
   | 'phrases'
-  | 'beginner'
-  | 'conversation'
-  | 'food'
-  | 'travel';
+  | 'hsk1'
+  | 'hsk2'
+  | 'hsk3';
 
-export type ChindexCategory = 'food' | 'animals';
+export type ChineseScript = 'simplified' | 'traditional';
 
 export type ChineseEntry = {
   id: string;
@@ -31,14 +35,14 @@ export type ChineseEntry = {
   english: string;
   definition: string;
   kind: EntryKind;
-  level: EntryLevel;
+  hskLevel: HskLevel;
   topic: EntryTopic;
   example?: string;
   examplePinyin?: string;
   exampleEnglish?: string;
-  mlLabels?: string[];
-  chindexCategory?: ChindexCategory;
-  isChindexEntry?: boolean;
+  traditional?: string;
+  exampleTraditional?: string;
+  isChindexEntry: true;
 };
 
 export type ContentMode = {

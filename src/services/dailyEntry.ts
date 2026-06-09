@@ -5,7 +5,7 @@ const DAY_MS = 24 * 60 * 60 * 1000;
 const START_DATE_UTC = Date.UTC(2026, 0, 1);
 
 export function getModeLabel(modeId: ModeId): string {
-  return CONTENT_MODES.find((mode) => mode.id === modeId)?.label ?? 'All Daily Chinese';
+  return CONTENT_MODES.find((mode) => mode.id === modeId)?.label ?? 'All Words';
 }
 
 export function filterEntriesForMode(modeId: ModeId): ChineseEntry[] {
@@ -14,14 +14,12 @@ export function filterEntriesForMode(modeId: ModeId): ChineseEntry[] {
       return CHINESE_ENTRIES.filter((entry) => entry.kind === 'word');
     case 'phrases':
       return CHINESE_ENTRIES.filter((entry) => entry.kind === 'phrase');
-    case 'beginner':
-      return CHINESE_ENTRIES.filter((entry) => entry.level === 'beginner');
-    case 'conversation':
-      return CHINESE_ENTRIES.filter((entry) => entry.topic === 'conversation');
-    case 'food':
-      return CHINESE_ENTRIES.filter((entry) => entry.topic === 'food');
-    case 'travel':
-      return CHINESE_ENTRIES.filter((entry) => entry.topic === 'travel');
+    case 'hsk1':
+      return CHINESE_ENTRIES.filter((entry) => entry.hskLevel === 1);
+    case 'hsk2':
+      return CHINESE_ENTRIES.filter((entry) => entry.hskLevel === 2);
+    case 'hsk3':
+      return CHINESE_ENTRIES.filter((entry) => entry.hskLevel === 3);
     case 'all':
     default:
       return CHINESE_ENTRIES;
