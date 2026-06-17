@@ -11,9 +11,19 @@ type AppScaffoldProps = PropsWithChildren<{
   title: string;
   subtitle?: string;
   scrollViewRef?: RefObject<ScrollView | null>;
+  scrollEnabled?: boolean;
+  showHeader?: boolean;
 }>;
 
-export function AppScaffold({ children, eyebrow, title, subtitle, scrollViewRef }: AppScaffoldProps) {
+export function AppScaffold({
+  children,
+  eyebrow,
+  title,
+  subtitle,
+  scrollViewRef,
+  scrollEnabled = true,
+  showHeader = true,
+}: AppScaffoldProps) {
   const scrollY = useRef(new Animated.Value(0)).current;
 
   return (
@@ -27,7 +37,8 @@ export function AppScaffold({ children, eyebrow, title, subtitle, scrollViewRef 
       <SafeAreaView style={styles.safe}>
         <Animated.ScrollView
           ref={scrollViewRef as RefObject<ScrollView>}
-          contentContainerStyle={styles.content}
+          contentContainerStyle={[styles.content, !scrollEnabled && styles.contentFill]}
+          scrollEnabled={scrollEnabled}
           onScroll={Animated.event(
             [{ nativeEvent: { contentOffset: { y: scrollY } } }],
             { useNativeDriver: true },
@@ -35,11 +46,13 @@ export function AppScaffold({ children, eyebrow, title, subtitle, scrollViewRef 
           scrollEventThrottle={16}
           showsVerticalScrollIndicator={false}
         >
-          <View style={styles.header}>
-            {eyebrow ? <Text style={styles.eyebrow}>{eyebrow}</Text> : null}
-            <Text style={styles.title}>{title}</Text>
-            {subtitle ? <Text style={styles.subtitle}>{subtitle}</Text> : null}
-          </View>
+          {showHeader ? (
+            <View style={styles.header}>
+              {eyebrow ? <Text style={styles.eyebrow}>{eyebrow}</Text> : null}
+              <Text style={styles.title}>{title}</Text>
+              {subtitle ? <Text style={styles.subtitle}>{subtitle}</Text> : null}
+            </View>
+          ) : null}
           {children}
         </Animated.ScrollView>
       </SafeAreaView>
@@ -59,6 +72,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: SPACING.lg,
     paddingBottom: 48,
     gap: SPACING.lg,
+  },
+  contentFill: {
+    flexGrow: 1,
   },
   header: {
     backgroundColor: 'rgba(220,224,199,0.12)',

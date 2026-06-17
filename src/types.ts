@@ -57,6 +57,26 @@ export type TopicGroup = {
   description: string;
 };
 
+export type ChineseProverb = {
+  id: string;
+  mandarin: string;
+  traditional?: string;
+  pinyin: string;
+  english: string;
+  source?: string;
+};
+
+export type SentenceExercise = {
+  id: string;
+  hskLevel: HskLevel;
+  english: string;
+  pinyin: string;
+  tokens: string[];
+  tokenEnglish: string[];
+  tokenPinyin: string[];
+  tokensTraditional?: string[];
+};
+
 export type CollectionState = {
   unlockedIds: string[];
   totalDiscovered: number;

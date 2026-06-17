@@ -4,8 +4,10 @@ import { useMemo } from 'react';
 import { ActivityIndicator, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import { AppScaffold } from '@/components/AppScaffold';
+import { ProverbWidgetPreviewCard } from '@/components/ProverbWidgetPreviewCard';
 import { WidgetPreviewCard } from '@/components/WidgetPreviewCard';
 import { getDailyEntry, getModeLabel } from '@/services/dailyEntry';
+import { getDailyProverb } from '@/services/dailyProverb';
 import { usePreferences } from '@/store/preferences';
 import { COLORS, FONTS, RADIUS, SPACING } from '@/theme';
 
@@ -13,13 +15,14 @@ export default function WidgetPreviewScreen() {
   const router = useRouter();
   const { isLoaded, selectedMode } = usePreferences();
   const entry = useMemo(() => getDailyEntry(selectedMode), [selectedMode]);
+  const proverb = useMemo(() => getDailyProverb(), []);
   const modeLabel = getModeLabel(selectedMode);
 
   return (
     <AppScaffold
       eyebrow="Widget Preview"
       title="Design the iOS widgets before native build work."
-      subtitle="These previews use the same daily entry and selected mode that the real widgets will use later."
+      subtitle="These previews use the same daily word, proverb, and selected mode that real iOS widgets will use later."
     >
       <View style={styles.actions}>
         <TouchableOpacity style={styles.backButton} onPress={() => router.back()} activeOpacity={0.8}>
@@ -38,9 +41,15 @@ export default function WidgetPreviewScreen() {
         </View>
       ) : (
         <View style={styles.previewList}>
+          <Text style={styles.sectionTitle}>Daily word widgets</Text>
           <WidgetPreviewCard entry={entry} modeLabel={modeLabel} size="small" />
           <WidgetPreviewCard entry={entry} modeLabel={modeLabel} size="medium" />
           <WidgetPreviewCard entry={entry} modeLabel={modeLabel} size="large" />
+
+          <Text style={styles.sectionTitle}>Daily proverb widgets</Text>
+          <ProverbWidgetPreviewCard proverb={proverb} size="small" />
+          <ProverbWidgetPreviewCard proverb={proverb} size="medium" />
+          <ProverbWidgetPreviewCard proverb={proverb} size="large" />
         </View>
       )}
 
@@ -100,6 +109,12 @@ const styles = StyleSheet.create({
   },
   previewList: {
     gap: SPACING.lg,
+  },
+  sectionTitle: {
+    color: COLORS.textPrimary,
+    fontFamily: FONTS.bold,
+    fontSize: 16,
+    marginTop: SPACING.sm,
   },
   note: {
     alignItems: 'flex-start',

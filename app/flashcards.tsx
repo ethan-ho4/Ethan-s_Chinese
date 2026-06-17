@@ -130,11 +130,14 @@ export default function FlashcardsScreen() {
       eyebrow="Flashcards"
       title="Practice Mandarin by topic."
       subtitle={subtitle}
+      showHeader={phase !== 'practice'}
     >
-      <TouchableOpacity style={styles.backButton} onPress={() => router.back()} activeOpacity={0.8}>
-        <Ionicons name="arrow-back" size={18} color={COLORS.textPrimary} />
-        <Text style={styles.backText}>Back to today</Text>
-      </TouchableOpacity>
+      {phase !== 'practice' ? (
+        <TouchableOpacity style={styles.backButton} onPress={() => router.back()} activeOpacity={0.8}>
+          <Ionicons name="arrow-back" size={18} color={COLORS.textPrimary} />
+          <Text style={styles.backText}>Back to today</Text>
+        </TouchableOpacity>
+      ) : null}
 
       {!isLoaded ? (
         <View style={styles.loading}>

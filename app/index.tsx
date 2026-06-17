@@ -14,15 +14,18 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Svg, { Circle, Path } from 'react-native-svg';
 
+import { DailyCarousel } from '@/components/DailyCarousel';
 import { DailyChineseCard } from '@/components/DailyChineseCard';
+import { DailyProverbCard } from '@/components/DailyProverbCard';
 import { KoiScrollScene } from '@/components/KoiScrollScene';
 import { ScriptToggle } from '@/components/ScriptToggle';
 import { getDailyDateLabel, getDailyEntry, getModeLabel } from '@/services/dailyEntry';
+import { getDailyProverb } from '@/services/dailyProverb';
 import { useCollection } from '@/store/collection';
 import { usePreferences } from '@/store/preferences';
 import { COLORS, FONTS, RADIUS, SHADOWS, SPACING } from '@/theme';
 
-type NavTarget = '/modes' | '/flashcards' | '/widget-preview' | '/chindex';
+type NavTarget = '/modes' | '/flashcards' | '/widget-preview' | '/chindex' | '/sentences';
 
 type NavCardProps = {
   description: string;
@@ -63,6 +66,13 @@ const HOME_ACTIONS: HomeAction[] = [
     index: 3,
     title: 'Practice',
     route: '/flashcards',
+  },
+  {
+    description: 'Drag words into order to build Mandarin sentences by HSK level.',
+    icon: 'text',
+    index: 4,
+    title: 'Sentences',
+    route: '/sentences',
   },
 ];
 
@@ -247,6 +257,7 @@ export default function HomeScreen() {
   const { isLoaded, selectedMode } = usePreferences();
   const { isUnlocked, unlockEntry } = useCollection();
   const entry = useMemo(() => getDailyEntry(selectedMode), [selectedMode]);
+  const proverb = useMemo(() => getDailyProverb(), []);
   const modeLabel = getModeLabel(selectedMode);
   const dateLabel = getDailyDateLabel();
 
@@ -346,14 +357,21 @@ export default function HomeScreen() {
                   <ActivityIndicator color={COLORS.accent} />
                 </View>
               ) : (
-                <DailyChineseCard
-                  entry={entry}
-                  dateLabel={dateLabel}
-                  modeLabel={modeLabel}
-                  variant="compact"
-                  onInteract={handleDailyInteract}
-                  isChindexEntry={entry.isChindexEntry}
-                  isUnlocked={isUnlocked(entry.id)}
+                <DailyCarousel
+                  wordSlide={
+                    <DailyChineseCard
+                      entry={entry}
+                      dateLabel={dateLabel}
+                      modeLabel={modeLabel}
+                      variant="compact"
+                      onInteract={handleDailyInteract}
+                      isChindexEntry={entry.isChindexEntry}
+                      isUnlocked={isUnlocked(entry.id)}
+                    />
+                  }
+                  proverbSlide={
+                    <DailyProverbCard proverb={proverb} dateLabel={dateLabel} />
+                  }
                 />
               )}
             </Animated.View>
