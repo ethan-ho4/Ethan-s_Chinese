@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createContext, PropsWithChildren, useCallback, useContext, useEffect, useState } from 'react';
 
+import { syncWidgetPreferences } from '@/services/widgetSync';
 import { ChineseScript, EntryTopic, ModeId } from '@/types';
 
 const MODE_KEY = 'ethansChinese:selectedMode';
@@ -88,6 +89,10 @@ export function PreferencesProvider({ children }: PropsWithChildren) {
         setScriptState(storedScript);
       }
 
+      const mode = isModeId(storedMode) ? storedMode : DEFAULT_MODE;
+      const script = isScript(storedScript) ? storedScript : DEFAULT_SCRIPT;
+      syncWidgetPreferences(mode, script);
+
       setIsLoaded(true);
     }
 
@@ -103,7 +108,8 @@ export function PreferencesProvider({ children }: PropsWithChildren) {
   const setSelectedMode = useCallback(async (mode: ModeId) => {
     setSelectedModeState(mode);
     await AsyncStorage.setItem(MODE_KEY, mode);
-  }, []);
+    syncWidgetPreferences(mode, script);
+  }, [script]);
 
   const setSelectedTopic = useCallback(async (topic: EntryTopic) => {
     setSelectedTopicState(topic);
@@ -113,7 +119,8 @@ export function PreferencesProvider({ children }: PropsWithChildren) {
   const setScript = useCallback(async (next: ChineseScript) => {
     setScriptState(next);
     await AsyncStorage.setItem(SCRIPT_KEY, next);
-  }, []);
+    syncWidgetPreferences(selectedMode, next);
+  }, [selectedMode]);
 
   const toggleScript = useCallback(async () => {
     let next: ChineseScript = 'simplified';
@@ -122,7 +129,8 @@ export function PreferencesProvider({ children }: PropsWithChildren) {
       return next;
     });
     await AsyncStorage.setItem(SCRIPT_KEY, next);
-  }, []);
+    syncWidgetPreferences(selectedMode, next);
+  }, [selectedMode]);
 
   return (
     <PreferencesContext.Provider

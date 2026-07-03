@@ -56,8 +56,8 @@ export default function WidgetPreviewScreen() {
       <View style={styles.note}>
         <Ionicons name="information-circle" size={22} color={COLORS.accent2} />
         <Text style={styles.noteText}>
-          Real iOS Home Screen widgets require a WidgetKit extension and a development build.
-          This Expo Go screen lets us lock the design first.
+          Add Daily Mandarin and Daily Proverb widgets from the iOS Home Screen on your TestFlight or
+          production build. Change mode or script in the app to refresh the widgets.
         </Text>
       </View>
     </AppScaffold>

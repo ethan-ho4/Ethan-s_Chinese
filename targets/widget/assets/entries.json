@@ -1,0 +1,5502 @@
+[
+  {
+    "id": "yi",
+    "mandarin": "一",
+    "traditional": null,
+    "pinyin": "yī",
+    "english": "one",
+    "definition": "The number one.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "er",
+    "mandarin": "二",
+    "traditional": null,
+    "pinyin": "èr",
+    "english": "two",
+    "definition": "The number two.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "san",
+    "mandarin": "三",
+    "traditional": null,
+    "pinyin": "sān",
+    "english": "three",
+    "definition": "The number three.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "si",
+    "mandarin": "四",
+    "traditional": null,
+    "pinyin": "sì",
+    "english": "four",
+    "definition": "The number four.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "wu",
+    "mandarin": "五",
+    "traditional": null,
+    "pinyin": "wǔ",
+    "english": "five",
+    "definition": "The number five.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "liu",
+    "mandarin": "六",
+    "traditional": null,
+    "pinyin": "liù",
+    "english": "six",
+    "definition": "The number six.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "qi",
+    "mandarin": "七",
+    "traditional": null,
+    "pinyin": "qī",
+    "english": "seven",
+    "definition": "The number seven.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "ba",
+    "mandarin": "八",
+    "traditional": null,
+    "pinyin": "bā",
+    "english": "eight",
+    "definition": "The number eight.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "jiu-nine",
+    "mandarin": "九",
+    "traditional": null,
+    "pinyin": "jiǔ",
+    "english": "nine",
+    "definition": "The number nine.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "shi-ten",
+    "mandarin": "十",
+    "traditional": null,
+    "pinyin": "shí",
+    "english": "ten",
+    "definition": "The number ten.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "ling",
+    "mandarin": "零",
+    "traditional": null,
+    "pinyin": "líng",
+    "english": "zero",
+    "definition": "The number zero.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "liang",
+    "mandarin": "两",
+    "traditional": "兩",
+    "pinyin": "liǎng",
+    "english": "two (quantity)",
+    "definition": "Two, used before measure words.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "ji-howmany",
+    "mandarin": "几",
+    "traditional": "幾",
+    "pinyin": "jǐ",
+    "english": "how many",
+    "definition": "How many (for small numbers).",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "duo",
+    "mandarin": "多",
+    "traditional": null,
+    "pinyin": "duō",
+    "english": "many/much",
+    "definition": "Many, much, more.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "shao",
+    "mandarin": "少",
+    "traditional": null,
+    "pinyin": "shǎo",
+    "english": "few/little",
+    "definition": "Few, little, less.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "ge",
+    "mandarin": "个",
+    "traditional": "個",
+    "pinyin": "gè",
+    "english": "measure word",
+    "definition": "General measure word for objects.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "sui",
+    "mandarin": "岁",
+    "traditional": "歲",
+    "pinyin": "suì",
+    "english": "years old",
+    "definition": "Age in years.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "jintian",
+    "mandarin": "今天",
+    "traditional": null,
+    "pinyin": "jīntiān",
+    "english": "today",
+    "definition": "This day, today.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "mingtian",
+    "mandarin": "明天",
+    "traditional": null,
+    "pinyin": "míngtiān",
+    "english": "tomorrow",
+    "definition": "The day after today.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zuotian",
+    "mandarin": "昨天",
+    "traditional": null,
+    "pinyin": "zuótiān",
+    "english": "yesterday",
+    "definition": "The day before today.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "nian",
+    "mandarin": "年",
+    "traditional": null,
+    "pinyin": "nián",
+    "english": "year",
+    "definition": "Year.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "yue",
+    "mandarin": "月",
+    "traditional": null,
+    "pinyin": "yuè",
+    "english": "month",
+    "definition": "Month, also moon.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "ri",
+    "mandarin": "日",
+    "traditional": null,
+    "pinyin": "rì",
+    "english": "day/sun",
+    "definition": "Day, date, or sun.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "xingqi",
+    "mandarin": "星期",
+    "traditional": null,
+    "pinyin": "xīngqī",
+    "english": "week",
+    "definition": "Week.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "dian",
+    "mandarin": "点",
+    "traditional": "點",
+    "pinyin": "diǎn",
+    "english": "o'clock",
+    "definition": "O'clock, point, dot.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "fen",
+    "mandarin": "分",
+    "traditional": null,
+    "pinyin": "fēn",
+    "english": "minute",
+    "definition": "Minute (time).",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "xianzai",
+    "mandarin": "现在",
+    "traditional": "現在",
+    "pinyin": "xiànzài",
+    "english": "now",
+    "definition": "Now, at present.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "shangwu",
+    "mandarin": "上午",
+    "traditional": null,
+    "pinyin": "shàngwǔ",
+    "english": "morning",
+    "definition": "Morning, AM.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zhongwu",
+    "mandarin": "中午",
+    "traditional": null,
+    "pinyin": "zhōngwǔ",
+    "english": "noon",
+    "definition": "Noon, midday.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "xiawu",
+    "mandarin": "下午",
+    "traditional": null,
+    "pinyin": "xiàwǔ",
+    "english": "afternoon",
+    "definition": "Afternoon, PM.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "shijian",
+    "mandarin": "时间",
+    "traditional": "時間",
+    "pinyin": "shíjiān",
+    "english": "time",
+    "definition": "Time.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "wo",
+    "mandarin": "我",
+    "traditional": null,
+    "pinyin": "wǒ",
+    "english": "I/me",
+    "definition": "First person pronoun.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "ni",
+    "mandarin": "你",
+    "traditional": null,
+    "pinyin": "nǐ",
+    "english": "you",
+    "definition": "Second person pronoun.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "ta-he",
+    "mandarin": "他",
+    "traditional": null,
+    "pinyin": "tā",
+    "english": "he/him",
+    "definition": "Third person pronoun (male).",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "ta-she",
+    "mandarin": "她",
+    "traditional": null,
+    "pinyin": "tā",
+    "english": "she/her",
+    "definition": "Third person pronoun (female).",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "women",
+    "mandarin": "我们",
+    "traditional": "我們",
+    "pinyin": "wǒmen",
+    "english": "we/us",
+    "definition": "First person plural pronoun.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "tamen",
+    "mandarin": "他们",
+    "traditional": "他們",
+    "pinyin": "tāmen",
+    "english": "they/them",
+    "definition": "Third person plural pronoun.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "ren",
+    "mandarin": "人",
+    "traditional": null,
+    "pinyin": "rén",
+    "english": "person",
+    "definition": "Person, people.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "pengyou",
+    "mandarin": "朋友",
+    "traditional": null,
+    "pinyin": "péngyou",
+    "english": "friend",
+    "definition": "Friend.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "tongxue",
+    "mandarin": "同学",
+    "traditional": "同學",
+    "pinyin": "tóngxué",
+    "english": "classmate",
+    "definition": "Classmate, schoolmate.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "laoshi",
+    "mandarin": "老师",
+    "traditional": "老師",
+    "pinyin": "lǎoshī",
+    "english": "teacher",
+    "definition": "Teacher.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "xuesheng",
+    "mandarin": "学生",
+    "traditional": "學生",
+    "pinyin": "xuésheng",
+    "english": "student",
+    "definition": "Student.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "baba",
+    "mandarin": "爸爸",
+    "traditional": null,
+    "pinyin": "bàba",
+    "english": "father",
+    "definition": "Father, dad.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "mama",
+    "mandarin": "妈妈",
+    "traditional": "媽媽",
+    "pinyin": "māma",
+    "english": "mother",
+    "definition": "Mother, mom.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "erzi",
+    "mandarin": "儿子",
+    "traditional": "兒子",
+    "pinyin": "érzi",
+    "english": "son",
+    "definition": "Son.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "nver",
+    "mandarin": "女儿",
+    "traditional": "女兒",
+    "pinyin": "nǚér",
+    "english": "daughter",
+    "definition": "Daughter.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "xiansheng",
+    "mandarin": "先生",
+    "traditional": null,
+    "pinyin": "xiānsheng",
+    "english": "Mr./sir",
+    "definition": "Mister, sir, husband.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "xiaojie",
+    "mandarin": "小姐",
+    "traditional": null,
+    "pinyin": "xiǎojiě",
+    "english": "Miss",
+    "definition": "Miss, young lady.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "yisheng",
+    "mandarin": "医生",
+    "traditional": "醫生",
+    "pinyin": "yīshēng",
+    "english": "doctor",
+    "definition": "Doctor, physician.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "chi",
+    "mandarin": "吃",
+    "traditional": null,
+    "pinyin": "chī",
+    "english": "to eat",
+    "definition": "To eat.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "he-drink",
+    "mandarin": "喝",
+    "traditional": null,
+    "pinyin": "hē",
+    "english": "to drink",
+    "definition": "To drink.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "fan",
+    "mandarin": "饭",
+    "traditional": "飯",
+    "pinyin": "fàn",
+    "english": "rice/meal",
+    "definition": "Cooked rice, meal.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "cai-dish",
+    "mandarin": "菜",
+    "traditional": null,
+    "pinyin": "cài",
+    "english": "dish/vegetable",
+    "definition": "Dish, vegetable, cuisine.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "shui",
+    "mandarin": "水",
+    "traditional": null,
+    "pinyin": "shuǐ",
+    "english": "water",
+    "definition": "Water.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "cha",
+    "mandarin": "茶",
+    "traditional": null,
+    "pinyin": "chá",
+    "english": "tea",
+    "definition": "Tea.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "kafei",
+    "mandarin": "咖啡",
+    "traditional": null,
+    "pinyin": "kāfēi",
+    "english": "coffee",
+    "definition": "Coffee.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "shuiguo",
+    "mandarin": "水果",
+    "traditional": null,
+    "pinyin": "shuǐguǒ",
+    "english": "fruit",
+    "definition": "Fruit.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "pingguo",
+    "mandarin": "苹果",
+    "traditional": "蘋果",
+    "pinyin": "píngguǒ",
+    "english": "apple",
+    "definition": "Apple.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "fanguan",
+    "mandarin": "饭馆",
+    "traditional": "飯館",
+    "pinyin": "fànguǎn",
+    "english": "restaurant",
+    "definition": "Restaurant.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zuo",
+    "mandarin": "坐",
+    "traditional": null,
+    "pinyin": "zuò",
+    "english": "to sit/by",
+    "definition": "To sit; to travel by.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "che",
+    "mandarin": "车",
+    "traditional": "車",
+    "pinyin": "chē",
+    "english": "car/vehicle",
+    "definition": "Car, vehicle.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "chuzu-che",
+    "mandarin": "出租车",
+    "traditional": "出租車",
+    "pinyin": "chūzūchē",
+    "english": "taxi",
+    "definition": "Taxi.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "feiji",
+    "mandarin": "飞机",
+    "traditional": "飛機",
+    "pinyin": "fēijī",
+    "english": "airplane",
+    "definition": "Airplane.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "huoche",
+    "mandarin": "火车",
+    "traditional": "火車",
+    "pinyin": "huǒchē",
+    "english": "train",
+    "definition": "Train.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zhan",
+    "mandarin": "站",
+    "traditional": null,
+    "pinyin": "zhàn",
+    "english": "station/stop",
+    "definition": "Station, stop.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zhongguo",
+    "mandarin": "中国",
+    "traditional": "中國",
+    "pinyin": "Zhōngguó",
+    "english": "China",
+    "definition": "China.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "beijing",
+    "mandarin": "北京",
+    "traditional": null,
+    "pinyin": "Běijīng",
+    "english": "Beijing",
+    "definition": "Beijing, capital of China.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "xuexiao",
+    "mandarin": "学校",
+    "traditional": "學校",
+    "pinyin": "xuéxiào",
+    "english": "school",
+    "definition": "School.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "yiyuan",
+    "mandarin": "医院",
+    "traditional": "醫院",
+    "pinyin": "yīyuàn",
+    "english": "hospital",
+    "definition": "Hospital.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "shangdian",
+    "mandarin": "商店",
+    "traditional": null,
+    "pinyin": "shāngdiàn",
+    "english": "shop/store",
+    "definition": "Shop, store.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "jia",
+    "mandarin": "家",
+    "traditional": null,
+    "pinyin": "jiā",
+    "english": "home/family",
+    "definition": "Home, family.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "fandian",
+    "mandarin": "饭店",
+    "traditional": "飯店",
+    "pinyin": "fàndiàn",
+    "english": "hotel/restaurant",
+    "definition": "Hotel, restaurant.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "qian-money",
+    "mandarin": "钱",
+    "traditional": "錢",
+    "pinyin": "qián",
+    "english": "money",
+    "definition": "Money.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "kuai-yuan",
+    "mandarin": "块",
+    "traditional": "塊",
+    "pinyin": "kuài",
+    "english": "yuan (spoken)",
+    "definition": "Yuan (colloquial), piece.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "mai",
+    "mandarin": "买",
+    "traditional": "買",
+    "pinyin": "mǎi",
+    "english": "to buy",
+    "definition": "To buy.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "dongxi",
+    "mandarin": "东西",
+    "traditional": "東西",
+    "pinyin": "dōngxi",
+    "english": "thing/stuff",
+    "definition": "Thing, stuff.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "tianqi",
+    "mandarin": "天气",
+    "traditional": "天氣",
+    "pinyin": "tiānqì",
+    "english": "weather",
+    "definition": "Weather.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "re",
+    "mandarin": "热",
+    "traditional": "熱",
+    "pinyin": "rè",
+    "english": "hot",
+    "definition": "Hot (temperature).",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "leng",
+    "mandarin": "冷",
+    "traditional": null,
+    "pinyin": "lěng",
+    "english": "cold",
+    "definition": "Cold (temperature).",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "xiayu",
+    "mandarin": "下雨",
+    "traditional": null,
+    "pinyin": "xià yǔ",
+    "english": "to rain",
+    "definition": "To rain.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zhuozi",
+    "mandarin": "桌子",
+    "traditional": null,
+    "pinyin": "zhuōzi",
+    "english": "table",
+    "definition": "Table, desk.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "yizi",
+    "mandarin": "椅子",
+    "traditional": null,
+    "pinyin": "yǐzi",
+    "english": "chair",
+    "definition": "Chair.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "dianshi",
+    "mandarin": "电视",
+    "traditional": "電視",
+    "pinyin": "diànshì",
+    "english": "television",
+    "definition": "Television, TV.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "diannao",
+    "mandarin": "电脑",
+    "traditional": "電腦",
+    "pinyin": "diànnǎo",
+    "english": "computer",
+    "definition": "Computer.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "dianying",
+    "mandarin": "电影",
+    "traditional": "電影",
+    "pinyin": "diànyǐng",
+    "english": "movie",
+    "definition": "Movie, film.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "shu",
+    "mandarin": "书",
+    "traditional": "書",
+    "pinyin": "shū",
+    "english": "book",
+    "definition": "Book.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "dianhua",
+    "mandarin": "电话",
+    "traditional": "電話",
+    "pinyin": "diànhuà",
+    "english": "telephone",
+    "definition": "Telephone, phone call.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "beizi",
+    "mandarin": "杯子",
+    "traditional": null,
+    "pinyin": "bēizi",
+    "english": "cup",
+    "definition": "Cup, glass.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "yifu",
+    "mandarin": "衣服",
+    "traditional": null,
+    "pinyin": "yīfu",
+    "english": "clothes",
+    "definition": "Clothes, clothing.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "tian-day",
+    "mandarin": "天",
+    "traditional": null,
+    "pinyin": "tiān",
+    "english": "day/sky",
+    "definition": "Day, sky, heaven.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "kan",
+    "mandarin": "看",
+    "traditional": null,
+    "pinyin": "kàn",
+    "english": "to see/watch",
+    "definition": "To see, look, watch, read.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "ting",
+    "mandarin": "听",
+    "traditional": "聽",
+    "pinyin": "tīng",
+    "english": "to listen",
+    "definition": "To listen, hear.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "shuo",
+    "mandarin": "说",
+    "traditional": "說",
+    "pinyin": "shuō",
+    "english": "to speak",
+    "definition": "To speak, say, talk.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "du",
+    "mandarin": "读",
+    "traditional": "讀",
+    "pinyin": "dú",
+    "english": "to read",
+    "definition": "To read aloud.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "xie",
+    "mandarin": "写",
+    "traditional": "寫",
+    "pinyin": "xiě",
+    "english": "to write",
+    "definition": "To write.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "xuexi",
+    "mandarin": "学习",
+    "traditional": "學習",
+    "pinyin": "xuéxí",
+    "english": "to study",
+    "definition": "To study, learn.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "gongzuo",
+    "mandarin": "工作",
+    "traditional": null,
+    "pinyin": "gōngzuò",
+    "english": "to work/job",
+    "definition": "To work; work, job.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zhu-live",
+    "mandarin": "住",
+    "traditional": null,
+    "pinyin": "zhù",
+    "english": "to live",
+    "definition": "To live, reside.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "qu",
+    "mandarin": "去",
+    "traditional": null,
+    "pinyin": "qù",
+    "english": "to go",
+    "definition": "To go.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "lai",
+    "mandarin": "来",
+    "traditional": "來",
+    "pinyin": "lái",
+    "english": "to come",
+    "definition": "To come.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "hui",
+    "mandarin": "回",
+    "traditional": null,
+    "pinyin": "huí",
+    "english": "to return",
+    "definition": "To return, go back.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zuo-do",
+    "mandarin": "做",
+    "traditional": null,
+    "pinyin": "zuò",
+    "english": "to do/make",
+    "definition": "To do, make.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "da",
+    "mandarin": "打",
+    "traditional": null,
+    "pinyin": "dǎ",
+    "english": "to hit/call",
+    "definition": "To hit, strike; to make a phone call.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "jiao-call",
+    "mandarin": "叫",
+    "traditional": null,
+    "pinyin": "jiào",
+    "english": "to call/named",
+    "definition": "To call, be called.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "ai",
+    "mandarin": "爱",
+    "traditional": "愛",
+    "pinyin": "ài",
+    "english": "to love",
+    "definition": "To love.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "xihuan",
+    "mandarin": "喜欢",
+    "traditional": "喜歡",
+    "pinyin": "xǐhuan",
+    "english": "to like",
+    "definition": "To like.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "xiang-think",
+    "mandarin": "想",
+    "traditional": null,
+    "pinyin": "xiǎng",
+    "english": "to want/think",
+    "definition": "To want, think, miss.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "renshi",
+    "mandarin": "认识",
+    "traditional": "認識",
+    "pinyin": "rènshi",
+    "english": "to know (person)",
+    "definition": "To know, recognize (person).",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zhidao",
+    "mandarin": "知道",
+    "traditional": null,
+    "pinyin": "zhīdào",
+    "english": "to know (fact)",
+    "definition": "To know (a fact).",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "shuijiao",
+    "mandarin": "睡觉",
+    "traditional": "睡覺",
+    "pinyin": "shuìjiào",
+    "english": "to sleep",
+    "definition": "To sleep.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "qilai",
+    "mandarin": "起来",
+    "traditional": "起來",
+    "pinyin": "qǐlái",
+    "english": "to get up",
+    "definition": "To get up, rise.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "kai",
+    "mandarin": "开",
+    "traditional": "開",
+    "pinyin": "kāi",
+    "english": "to open/drive",
+    "definition": "To open, turn on, drive.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "neng",
+    "mandarin": "能",
+    "traditional": null,
+    "pinyin": "néng",
+    "english": "can/able",
+    "definition": "Can, able to.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "hui-can",
+    "mandarin": "会",
+    "traditional": "會",
+    "pinyin": "huì",
+    "english": "can/will",
+    "definition": "Can (skill), will.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "you",
+    "mandarin": "有",
+    "traditional": null,
+    "pinyin": "yǒu",
+    "english": "to have",
+    "definition": "To have, there is.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "mei-not",
+    "mandarin": "没",
+    "traditional": "沒",
+    "pinyin": "méi",
+    "english": "not have",
+    "definition": "Not have, did not.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "shi-be",
+    "mandarin": "是",
+    "traditional": null,
+    "pinyin": "shì",
+    "english": "to be",
+    "definition": "To be, is, am, are.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "da-big",
+    "mandarin": "大",
+    "traditional": null,
+    "pinyin": "dà",
+    "english": "big",
+    "definition": "Big, large.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "xiao-small",
+    "mandarin": "小",
+    "traditional": null,
+    "pinyin": "xiǎo",
+    "english": "small",
+    "definition": "Small, little.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "hao",
+    "mandarin": "好",
+    "traditional": null,
+    "pinyin": "hǎo",
+    "english": "good",
+    "definition": "Good, well.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "gao",
+    "mandarin": "高",
+    "traditional": null,
+    "pinyin": "gāo",
+    "english": "tall/high",
+    "definition": "Tall, high.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "gaoxing",
+    "mandarin": "高兴",
+    "traditional": "高興",
+    "pinyin": "gāoxìng",
+    "english": "happy",
+    "definition": "Happy, glad.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "piaoliang",
+    "mandarin": "漂亮",
+    "traditional": null,
+    "pinyin": "piàoliang",
+    "english": "beautiful",
+    "definition": "Beautiful, pretty.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "de",
+    "mandarin": "的",
+    "traditional": null,
+    "pinyin": "de",
+    "english": "possessive particle",
+    "definition": "Possessive or descriptive particle.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "le",
+    "mandarin": "了",
+    "traditional": null,
+    "pinyin": "le",
+    "english": "completed action",
+    "definition": "Indicates completed action or change.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "ma-question",
+    "mandarin": "吗",
+    "traditional": "嗎",
+    "pinyin": "ma",
+    "english": "question particle",
+    "definition": "Question particle for yes/no questions.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "ne",
+    "mandarin": "呢",
+    "traditional": null,
+    "pinyin": "ne",
+    "english": "and you?",
+    "definition": "Question particle (and you?).",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "bu",
+    "mandarin": "不",
+    "traditional": null,
+    "pinyin": "bù",
+    "english": "not",
+    "definition": "Not, no (negation).",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "hen",
+    "mandarin": "很",
+    "traditional": null,
+    "pinyin": "hěn",
+    "english": "very",
+    "definition": "Very.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "dou",
+    "mandarin": "都",
+    "traditional": null,
+    "pinyin": "dōu",
+    "english": "all/both",
+    "definition": "All, both.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zai",
+    "mandarin": "在",
+    "traditional": null,
+    "pinyin": "zài",
+    "english": "at/in",
+    "definition": "At, in, on; to be at.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "he-and",
+    "mandarin": "和",
+    "traditional": null,
+    "pinyin": "hé",
+    "english": "and",
+    "definition": "And, with.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zhe-this",
+    "mandarin": "这",
+    "traditional": "這",
+    "pinyin": "zhè",
+    "english": "this",
+    "definition": "This.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "na",
+    "mandarin": "那",
+    "traditional": null,
+    "pinyin": "nà",
+    "english": "that",
+    "definition": "That.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "nali",
+    "mandarin": "哪里",
+    "traditional": "哪裡",
+    "pinyin": "nǎlǐ",
+    "english": "where",
+    "definition": "Where.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "shenme",
+    "mandarin": "什么",
+    "traditional": "什麼",
+    "pinyin": "shénme",
+    "english": "what",
+    "definition": "What.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "shei",
+    "mandarin": "谁",
+    "traditional": "誰",
+    "pinyin": "shéi",
+    "english": "who",
+    "definition": "Who.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zenme",
+    "mandarin": "怎么",
+    "traditional": "怎麼",
+    "pinyin": "zěnme",
+    "english": "how",
+    "definition": "How, why.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zenmeyang",
+    "mandarin": "怎么样",
+    "traditional": "怎麼樣",
+    "pinyin": "zěnmeyàng",
+    "english": "how about",
+    "definition": "How about, how is it.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "weishenme",
+    "mandarin": "为什么",
+    "traditional": "為什麼",
+    "pinyin": "wèishénme",
+    "english": "why",
+    "definition": "Why.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "qian-front",
+    "mandarin": "前",
+    "traditional": null,
+    "pinyin": "qián",
+    "english": "before/front",
+    "definition": "Before, front, ago.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "hou",
+    "mandarin": "后",
+    "traditional": "後",
+    "pinyin": "hòu",
+    "english": "after/back",
+    "definition": "After, back, behind.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "shang",
+    "mandarin": "上",
+    "traditional": null,
+    "pinyin": "shàng",
+    "english": "up/on",
+    "definition": "Up, on, above.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "xia",
+    "mandarin": "下",
+    "traditional": null,
+    "pinyin": "xià",
+    "english": "down/under",
+    "definition": "Down, under, below.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "li",
+    "mandarin": "里",
+    "traditional": "裡",
+    "pinyin": "lǐ",
+    "english": "inside",
+    "definition": "Inside, in.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zheli",
+    "mandarin": "这里",
+    "traditional": "這裡",
+    "pinyin": "zhèlǐ",
+    "english": "here",
+    "definition": "Here.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "nali-there",
+    "mandarin": "那里",
+    "traditional": "那裡",
+    "pinyin": "nàlǐ",
+    "english": "there",
+    "definition": "There.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "duibuqi",
+    "mandarin": "对不起",
+    "traditional": "對不起",
+    "pinyin": "duìbuqǐ",
+    "english": "sorry",
+    "definition": "Sorry, excuse me.",
+    "kind": "phrase",
+    "hskLevel": 1
+  },
+  {
+    "id": "meiguanxi",
+    "mandarin": "没关系",
+    "traditional": "沒關係",
+    "pinyin": "méi guānxi",
+    "english": "it's okay",
+    "definition": "It's okay, no problem.",
+    "kind": "phrase",
+    "hskLevel": 1
+  },
+  {
+    "id": "xiexie",
+    "mandarin": "谢谢",
+    "traditional": "謝謝",
+    "pinyin": "xièxie",
+    "english": "thank you",
+    "definition": "Thank you.",
+    "kind": "phrase",
+    "hskLevel": 1
+  },
+  {
+    "id": "bukeqi",
+    "mandarin": "不客气",
+    "traditional": "不客氣",
+    "pinyin": "bú kèqi",
+    "english": "you're welcome",
+    "definition": "You're welcome.",
+    "kind": "phrase",
+    "hskLevel": 1
+  },
+  {
+    "id": "zaijian",
+    "mandarin": "再见",
+    "traditional": "再見",
+    "pinyin": "zàijiàn",
+    "english": "goodbye",
+    "definition": "Goodbye.",
+    "kind": "phrase",
+    "hskLevel": 1
+  },
+  {
+    "id": "nihao",
+    "mandarin": "你好",
+    "traditional": null,
+    "pinyin": "nǐ hǎo",
+    "english": "hello",
+    "definition": "Hello.",
+    "kind": "phrase",
+    "hskLevel": 1
+  },
+  {
+    "id": "qing-please",
+    "mandarin": "请",
+    "traditional": "請",
+    "pinyin": "qǐng",
+    "english": "please",
+    "definition": "Please, to invite.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "qingwen",
+    "mandarin": "请问",
+    "traditional": "請問",
+    "pinyin": "qǐngwèn",
+    "english": "may I ask",
+    "definition": "May I ask, excuse me.",
+    "kind": "phrase",
+    "hskLevel": 1
+  },
+  {
+    "id": "mingzi",
+    "mandarin": "名字",
+    "traditional": null,
+    "pinyin": "míngzi",
+    "english": "name",
+    "definition": "Name.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "hanyu",
+    "mandarin": "汉语",
+    "traditional": "漢語",
+    "pinyin": "Hànyǔ",
+    "english": "Chinese language",
+    "definition": "Chinese language.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zi",
+    "mandarin": "字",
+    "traditional": null,
+    "pinyin": "zì",
+    "english": "character",
+    "definition": "Character, word.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "nar",
+    "mandarin": "哪儿",
+    "traditional": "哪兒",
+    "pinyin": "nǎr",
+    "english": "where",
+    "definition": "Where (colloquial).",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "zher",
+    "mandarin": "这儿",
+    "traditional": "這兒",
+    "pinyin": "zhèr",
+    "english": "here",
+    "definition": "Here (colloquial).",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "nar-there",
+    "mandarin": "那儿",
+    "traditional": "那兒",
+    "pinyin": "nàr",
+    "english": "there",
+    "definition": "There (colloquial).",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "tai",
+    "mandarin": "太",
+    "traditional": null,
+    "pinyin": "tài",
+    "english": "too/very",
+    "definition": "Too, very, extremely.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "dui",
+    "mandarin": "对",
+    "traditional": "對",
+    "pinyin": "duì",
+    "english": "right/correct",
+    "definition": "Right, correct.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "yidian",
+    "mandarin": "一点",
+    "traditional": "一點",
+    "pinyin": "yìdiǎn",
+    "english": "a little",
+    "definition": "A little, a bit.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "yixia",
+    "mandarin": "一下",
+    "traditional": null,
+    "pinyin": "yíxià",
+    "english": "a moment",
+    "definition": "A moment, briefly.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "yiqi",
+    "mandarin": "一起",
+    "traditional": null,
+    "pinyin": "yìqǐ",
+    "english": "together",
+    "definition": "Together.",
+    "kind": "word",
+    "hskLevel": 1
+  },
+  {
+    "id": "bai-hundred",
+    "mandarin": "百",
+    "traditional": null,
+    "pinyin": "bǎi",
+    "english": "hundred",
+    "definition": "Hundred.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "qian-thousand",
+    "mandarin": "千",
+    "traditional": null,
+    "pinyin": "qiān",
+    "english": "thousand",
+    "definition": "Thousand.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "di",
+    "mandarin": "第",
+    "traditional": null,
+    "pinyin": "dì",
+    "english": "ordinal prefix",
+    "definition": "Ordinal number prefix (1st, 2nd...).",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "ci",
+    "mandarin": "次",
+    "traditional": null,
+    "pinyin": "cì",
+    "english": "time (frequency)",
+    "definition": "Time (occurrence), order.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "xiaoshi",
+    "mandarin": "小时",
+    "traditional": "小時",
+    "pinyin": "xiǎoshí",
+    "english": "hour",
+    "definition": "Hour.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "ban",
+    "mandarin": "半",
+    "traditional": null,
+    "pinyin": "bàn",
+    "english": "half",
+    "definition": "Half.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "ke",
+    "mandarin": "刻",
+    "traditional": null,
+    "pinyin": "kè",
+    "english": "quarter hour",
+    "definition": "Quarter (15 minutes).",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "zao",
+    "mandarin": "早",
+    "traditional": null,
+    "pinyin": "zǎo",
+    "english": "early/morning",
+    "definition": "Early, morning.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "wan-evening",
+    "mandarin": "晚",
+    "traditional": null,
+    "pinyin": "wǎn",
+    "english": "late/evening",
+    "definition": "Late, evening.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "wanshang",
+    "mandarin": "晚上",
+    "traditional": null,
+    "pinyin": "wǎnshang",
+    "english": "evening/night",
+    "definition": "Evening, night.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "zaoshang",
+    "mandarin": "早上",
+    "traditional": null,
+    "pinyin": "zǎoshang",
+    "english": "morning",
+    "definition": "Morning (early).",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "qunian",
+    "mandarin": "去年",
+    "traditional": null,
+    "pinyin": "qùnián",
+    "english": "last year",
+    "definition": "Last year.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "jinnian",
+    "mandarin": "今年",
+    "traditional": null,
+    "pinyin": "jīnnián",
+    "english": "this year",
+    "definition": "This year.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "mingnian",
+    "mandarin": "明年",
+    "traditional": null,
+    "pinyin": "míngnián",
+    "english": "next year",
+    "definition": "Next year.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "meitian",
+    "mandarin": "每天",
+    "traditional": null,
+    "pinyin": "měitiān",
+    "english": "every day",
+    "definition": "Every day, daily.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "yijing",
+    "mandarin": "已经",
+    "traditional": "已經",
+    "pinyin": "yǐjīng",
+    "english": "already",
+    "definition": "Already.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "gang",
+    "mandarin": "刚",
+    "traditional": "剛",
+    "pinyin": "gāng",
+    "english": "just now",
+    "definition": "Just now, just.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "gege",
+    "mandarin": "哥哥",
+    "traditional": null,
+    "pinyin": "gēge",
+    "english": "older brother",
+    "definition": "Older brother.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "jiejie",
+    "mandarin": "姐姐",
+    "traditional": null,
+    "pinyin": "jiějie",
+    "english": "older sister",
+    "definition": "Older sister.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "didi",
+    "mandarin": "弟弟",
+    "traditional": null,
+    "pinyin": "dìdi",
+    "english": "younger brother",
+    "definition": "Younger brother.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "meimei",
+    "mandarin": "妹妹",
+    "traditional": null,
+    "pinyin": "mèimei",
+    "english": "younger sister",
+    "definition": "Younger sister.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "zhangfu",
+    "mandarin": "丈夫",
+    "traditional": null,
+    "pinyin": "zhàngfu",
+    "english": "husband",
+    "definition": "Husband.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "qizi",
+    "mandarin": "妻子",
+    "traditional": null,
+    "pinyin": "qīzi",
+    "english": "wife",
+    "definition": "Wife.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "haizi",
+    "mandarin": "孩子",
+    "traditional": null,
+    "pinyin": "háizi",
+    "english": "child",
+    "definition": "Child, children.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "nan-male",
+    "mandarin": "男",
+    "traditional": null,
+    "pinyin": "nán",
+    "english": "male",
+    "definition": "Male, man.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "nv",
+    "mandarin": "女",
+    "traditional": null,
+    "pinyin": "nǚ",
+    "english": "female",
+    "definition": "Female, woman.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "fuwuyuan",
+    "mandarin": "服务员",
+    "traditional": "服務員",
+    "pinyin": "fúwùyuán",
+    "english": "waiter/attendant",
+    "definition": "Waiter, attendant, server.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "jidan",
+    "mandarin": "鸡蛋",
+    "traditional": "雞蛋",
+    "pinyin": "jīdàn",
+    "english": "egg",
+    "definition": "Egg (chicken egg).",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "niunnai",
+    "mandarin": "牛奶",
+    "traditional": null,
+    "pinyin": "niúnǎi",
+    "english": "milk",
+    "definition": "Milk.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "xigua",
+    "mandarin": "西瓜",
+    "traditional": null,
+    "pinyin": "xīguā",
+    "english": "watermelon",
+    "definition": "Watermelon.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "yu",
+    "mandarin": "鱼",
+    "traditional": "魚",
+    "pinyin": "yú",
+    "english": "fish",
+    "definition": "Fish.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "rou",
+    "mandarin": "肉",
+    "traditional": null,
+    "pinyin": "ròu",
+    "english": "meat",
+    "definition": "Meat.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "yangrou",
+    "mandarin": "羊肉",
+    "traditional": null,
+    "pinyin": "yángròu",
+    "english": "lamb/mutton",
+    "definition": "Lamb, mutton.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "mianbao",
+    "mandarin": "面包",
+    "traditional": "麵包",
+    "pinyin": "miànbāo",
+    "english": "bread",
+    "definition": "Bread.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "mifan",
+    "mandarin": "米饭",
+    "traditional": "米飯",
+    "pinyin": "mǐfàn",
+    "english": "cooked rice",
+    "definition": "Cooked rice.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "miantiao",
+    "mandarin": "面条",
+    "traditional": "麵條",
+    "pinyin": "miàntiáo",
+    "english": "noodles",
+    "definition": "Noodles.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "gonggongqiche",
+    "mandarin": "公共汽车",
+    "traditional": "公共汽車",
+    "pinyin": "gōnggòng qìchē",
+    "english": "bus",
+    "definition": "Bus (public).",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "zixingche",
+    "mandarin": "自行车",
+    "traditional": "自行車",
+    "pinyin": "zìxíngchē",
+    "english": "bicycle",
+    "definition": "Bicycle.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "chuan-boat",
+    "mandarin": "船",
+    "traditional": null,
+    "pinyin": "chuán",
+    "english": "boat/ship",
+    "definition": "Boat, ship.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "lu",
+    "mandarin": "路",
+    "traditional": null,
+    "pinyin": "lù",
+    "english": "road",
+    "definition": "Road, path, way.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "zou",
+    "mandarin": "走",
+    "traditional": null,
+    "pinyin": "zǒu",
+    "english": "to walk",
+    "definition": "To walk, go.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "pao",
+    "mandarin": "跑",
+    "traditional": null,
+    "pinyin": "pǎo",
+    "english": "to run",
+    "definition": "To run.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "dao",
+    "mandarin": "到",
+    "traditional": null,
+    "pinyin": "dào",
+    "english": "to arrive",
+    "definition": "To arrive, reach.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "li-from",
+    "mandarin": "离",
+    "traditional": "離",
+    "pinyin": "lí",
+    "english": "from/away",
+    "definition": "From, away from.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "jin",
+    "mandarin": "近",
+    "traditional": null,
+    "pinyin": "jìn",
+    "english": "near",
+    "definition": "Near, close.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "yuan",
+    "mandarin": "远",
+    "traditional": "遠",
+    "pinyin": "yuǎn",
+    "english": "far",
+    "definition": "Far, distant.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "fangjian",
+    "mandarin": "房间",
+    "traditional": "房間",
+    "pinyin": "fángjiān",
+    "english": "room",
+    "definition": "Room.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "jiaoshi",
+    "mandarin": "教室",
+    "traditional": null,
+    "pinyin": "jiàoshì",
+    "english": "classroom",
+    "definition": "Classroom.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "gongyuan",
+    "mandarin": "公园",
+    "traditional": "公園",
+    "pinyin": "gōngyuán",
+    "english": "park",
+    "definition": "Park.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "jichang",
+    "mandarin": "机场",
+    "traditional": "機場",
+    "pinyin": "jīchǎng",
+    "english": "airport",
+    "definition": "Airport.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "bangongshi",
+    "mandarin": "办公室",
+    "traditional": "辦公室",
+    "pinyin": "bàngōngshì",
+    "english": "office",
+    "definition": "Office.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "waimian",
+    "mandarin": "外面",
+    "traditional": null,
+    "pinyin": "wàimiàn",
+    "english": "outside",
+    "definition": "Outside.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "shenti",
+    "mandarin": "身体",
+    "traditional": "身體",
+    "pinyin": "shēntǐ",
+    "english": "body",
+    "definition": "Body, health.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "yan-eye",
+    "mandarin": "眼",
+    "traditional": null,
+    "pinyin": "yǎn",
+    "english": "eye",
+    "definition": "Eye.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "yanjing",
+    "mandarin": "眼睛",
+    "traditional": null,
+    "pinyin": "yǎnjing",
+    "english": "eyes",
+    "definition": "Eyes.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "tou",
+    "mandarin": "头",
+    "traditional": "頭",
+    "pinyin": "tóu",
+    "english": "head",
+    "definition": "Head.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "lian-face",
+    "mandarin": "脸",
+    "traditional": "臉",
+    "pinyin": "liǎn",
+    "english": "face",
+    "definition": "Face.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "shou",
+    "mandarin": "手",
+    "traditional": null,
+    "pinyin": "shǒu",
+    "english": "hand",
+    "definition": "Hand.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "jiao-foot",
+    "mandarin": "脚",
+    "traditional": "腳",
+    "pinyin": "jiǎo",
+    "english": "foot",
+    "definition": "Foot.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "tui",
+    "mandarin": "腿",
+    "traditional": null,
+    "pinyin": "tuǐ",
+    "english": "leg",
+    "definition": "Leg.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "bing",
+    "mandarin": "病",
+    "traditional": null,
+    "pinyin": "bìng",
+    "english": "illness/sick",
+    "definition": "Illness, to be sick.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "yao",
+    "mandarin": "药",
+    "traditional": "藥",
+    "pinyin": "yào",
+    "english": "medicine",
+    "definition": "Medicine, drug.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "men",
+    "mandarin": "门",
+    "traditional": "門",
+    "pinyin": "mén",
+    "english": "door",
+    "definition": "Door, gate.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "chuanghu",
+    "mandarin": "窗户",
+    "traditional": "窗戶",
+    "pinyin": "chuānghu",
+    "english": "window",
+    "definition": "Window.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "chuang",
+    "mandarin": "床",
+    "traditional": null,
+    "pinyin": "chuáng",
+    "english": "bed",
+    "definition": "Bed.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "shoubiao",
+    "mandarin": "手表",
+    "traditional": "手錶",
+    "pinyin": "shǒubiǎo",
+    "english": "watch",
+    "definition": "Watch (wristwatch).",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "shouji",
+    "mandarin": "手机",
+    "traditional": "手機",
+    "pinyin": "shǒujī",
+    "english": "cellphone",
+    "definition": "Mobile phone, cellphone.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "hua",
+    "mandarin": "花",
+    "traditional": null,
+    "pinyin": "huā",
+    "english": "flower",
+    "definition": "Flower.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "shu-tree",
+    "mandarin": "树",
+    "traditional": "樹",
+    "pinyin": "shù",
+    "english": "tree",
+    "definition": "Tree.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "mao",
+    "mandarin": "猫",
+    "traditional": "貓",
+    "pinyin": "māo",
+    "english": "cat",
+    "definition": "Cat.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "gou",
+    "mandarin": "狗",
+    "traditional": null,
+    "pinyin": "gǒu",
+    "english": "dog",
+    "definition": "Dog.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "niao",
+    "mandarin": "鸟",
+    "traditional": "鳥",
+    "pinyin": "niǎo",
+    "english": "bird",
+    "definition": "Bird.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "yinwei",
+    "mandarin": "因为",
+    "traditional": "因為",
+    "pinyin": "yīnwèi",
+    "english": "because",
+    "definition": "Because.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "suoyi",
+    "mandarin": "所以",
+    "traditional": null,
+    "pinyin": "suǒyǐ",
+    "english": "therefore",
+    "definition": "Therefore, so.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "yin",
+    "mandarin": "阴",
+    "traditional": "陰",
+    "pinyin": "yīn",
+    "english": "cloudy",
+    "definition": "Cloudy, overcast.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "qing-sunny",
+    "mandarin": "晴",
+    "traditional": null,
+    "pinyin": "qíng",
+    "english": "sunny",
+    "definition": "Sunny, clear.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "xue",
+    "mandarin": "雪",
+    "traditional": null,
+    "pinyin": "xuě",
+    "english": "snow",
+    "definition": "Snow.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "song",
+    "mandarin": "送",
+    "traditional": null,
+    "pinyin": "sòng",
+    "english": "to give/send",
+    "definition": "To send, deliver, give.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "gei",
+    "mandarin": "给",
+    "traditional": "給",
+    "pinyin": "gěi",
+    "english": "to give",
+    "definition": "To give, for.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "wen",
+    "mandarin": "问",
+    "traditional": "問",
+    "pinyin": "wèn",
+    "english": "to ask",
+    "definition": "To ask.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "huida",
+    "mandarin": "回答",
+    "traditional": null,
+    "pinyin": "huídá",
+    "english": "to answer",
+    "definition": "To answer, reply.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "bangzhu",
+    "mandarin": "帮助",
+    "traditional": "幫助",
+    "pinyin": "bāngzhù",
+    "english": "to help",
+    "definition": "To help.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "kaishi",
+    "mandarin": "开始",
+    "traditional": "開始",
+    "pinyin": "kāishǐ",
+    "english": "to begin",
+    "definition": "To begin, start.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "wancheng",
+    "mandarin": "完成",
+    "traditional": null,
+    "pinyin": "wánchéng",
+    "english": "to complete",
+    "definition": "To complete, finish.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "wan-finish",
+    "mandarin": "完",
+    "traditional": null,
+    "pinyin": "wán",
+    "english": "to finish",
+    "definition": "To finish, complete.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "zhao",
+    "mandarin": "找",
+    "traditional": null,
+    "pinyin": "zhǎo",
+    "english": "to look for",
+    "definition": "To look for, find.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "rang",
+    "mandarin": "让",
+    "traditional": "讓",
+    "pinyin": "ràng",
+    "english": "to let/make",
+    "definition": "To let, allow, make.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "juede",
+    "mandarin": "觉得",
+    "traditional": "覺得",
+    "pinyin": "juéde",
+    "english": "to think/feel",
+    "definition": "To think, feel.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "xiwang",
+    "mandarin": "希望",
+    "traditional": null,
+    "pinyin": "xīwàng",
+    "english": "to hope",
+    "definition": "To hope, wish.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "zhunbei",
+    "mandarin": "准备",
+    "traditional": "準備",
+    "pinyin": "zhǔnbèi",
+    "english": "to prepare",
+    "definition": "To prepare.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "jieshao",
+    "mandarin": "介绍",
+    "traditional": "介紹",
+    "pinyin": "jièshào",
+    "english": "to introduce",
+    "definition": "To introduce.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "gaosu",
+    "mandarin": "告诉",
+    "traditional": "告訴",
+    "pinyin": "gàosu",
+    "english": "to tell",
+    "definition": "To tell, inform.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "denghoudeng",
+    "mandarin": "等",
+    "traditional": null,
+    "pinyin": "děng",
+    "english": "to wait",
+    "definition": "To wait.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "xiao-laugh",
+    "mandarin": "笑",
+    "traditional": null,
+    "pinyin": "xiào",
+    "english": "to laugh/smile",
+    "definition": "To laugh, smile.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "ku",
+    "mandarin": "哭",
+    "traditional": null,
+    "pinyin": "kū",
+    "english": "to cry",
+    "definition": "To cry.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "chang-sing",
+    "mandarin": "唱",
+    "traditional": null,
+    "pinyin": "chàng",
+    "english": "to sing",
+    "definition": "To sing.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "tiao",
+    "mandarin": "跳",
+    "traditional": null,
+    "pinyin": "tiào",
+    "english": "to jump/dance",
+    "definition": "To jump, dance.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "wan-play",
+    "mandarin": "玩",
+    "traditional": null,
+    "pinyin": "wán",
+    "english": "to play",
+    "definition": "To play, have fun.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "xi",
+    "mandarin": "洗",
+    "traditional": null,
+    "pinyin": "xǐ",
+    "english": "to wash",
+    "definition": "To wash.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "chuan-wear",
+    "mandarin": "穿",
+    "traditional": null,
+    "pinyin": "chuān",
+    "english": "to wear",
+    "definition": "To wear (clothes).",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "dai",
+    "mandarin": "戴",
+    "traditional": null,
+    "pinyin": "dài",
+    "english": "to wear (accessories)",
+    "definition": "To wear (hat, glasses).",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "kuai-fast",
+    "mandarin": "快",
+    "traditional": null,
+    "pinyin": "kuài",
+    "english": "fast",
+    "definition": "Fast, quick.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "man",
+    "mandarin": "慢",
+    "traditional": null,
+    "pinyin": "màn",
+    "english": "slow",
+    "definition": "Slow.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "gui",
+    "mandarin": "贵",
+    "traditional": "貴",
+    "pinyin": "guì",
+    "english": "expensive",
+    "definition": "Expensive.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "pianyi",
+    "mandarin": "便宜",
+    "traditional": null,
+    "pinyin": "piányi",
+    "english": "cheap",
+    "definition": "Cheap, inexpensive.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "xin-new",
+    "mandarin": "新",
+    "traditional": null,
+    "pinyin": "xīn",
+    "english": "new",
+    "definition": "New.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "jiu-old",
+    "mandarin": "旧",
+    "traditional": "舊",
+    "pinyin": "jiù",
+    "english": "old (things)",
+    "definition": "Old (for objects).",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "chang-long",
+    "mandarin": "长",
+    "traditional": "長",
+    "pinyin": "cháng",
+    "english": "long",
+    "definition": "Long.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "duan",
+    "mandarin": "短",
+    "traditional": null,
+    "pinyin": "duǎn",
+    "english": "short",
+    "definition": "Short (length).",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "hei",
+    "mandarin": "黑",
+    "traditional": null,
+    "pinyin": "hēi",
+    "english": "black",
+    "definition": "Black.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "bai-white",
+    "mandarin": "白",
+    "traditional": null,
+    "pinyin": "bái",
+    "english": "white",
+    "definition": "White.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "hong",
+    "mandarin": "红",
+    "traditional": "紅",
+    "pinyin": "hóng",
+    "english": "red",
+    "definition": "Red.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "huang",
+    "mandarin": "黄",
+    "traditional": "黃",
+    "pinyin": "huáng",
+    "english": "yellow",
+    "definition": "Yellow.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "lan",
+    "mandarin": "蓝",
+    "traditional": "藍",
+    "pinyin": "lán",
+    "english": "blue",
+    "definition": "Blue.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "qingchu",
+    "mandarin": "清楚",
+    "traditional": null,
+    "pinyin": "qīngchu",
+    "english": "clear",
+    "definition": "Clear, distinct.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "zhongyao",
+    "mandarin": "重要",
+    "traditional": null,
+    "pinyin": "zhòngyào",
+    "english": "important",
+    "definition": "Important.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "lei",
+    "mandarin": "累",
+    "traditional": null,
+    "pinyin": "lèi",
+    "english": "tired",
+    "definition": "Tired.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "dan",
+    "mandarin": "但",
+    "traditional": null,
+    "pinyin": "dàn",
+    "english": "but",
+    "definition": "But, however.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "danshi",
+    "mandarin": "但是",
+    "traditional": null,
+    "pinyin": "dànshì",
+    "english": "but/however",
+    "definition": "But, however.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "hai-still",
+    "mandarin": "还",
+    "traditional": "還",
+    "pinyin": "hái",
+    "english": "still/also",
+    "definition": "Still, also, yet.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "ye",
+    "mandarin": "也",
+    "traditional": null,
+    "pinyin": "yě",
+    "english": "also",
+    "definition": "Also, too.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "zui-most",
+    "mandarin": "最",
+    "traditional": null,
+    "pinyin": "zuì",
+    "english": "most",
+    "definition": "Most, -est.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "geng",
+    "mandarin": "更",
+    "traditional": null,
+    "pinyin": "gèng",
+    "english": "more/even more",
+    "definition": "More, even more.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "bijiao-compare",
+    "mandarin": "比较",
+    "traditional": "比較",
+    "pinyin": "bǐjiào",
+    "english": "relatively",
+    "definition": "Relatively, comparatively.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "bi",
+    "mandarin": "比",
+    "traditional": null,
+    "pinyin": "bǐ",
+    "english": "than/compare",
+    "definition": "Than, to compare.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "cong-from",
+    "mandarin": "从",
+    "traditional": "從",
+    "pinyin": "cóng",
+    "english": "from",
+    "definition": "From.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "xiang-toward",
+    "mandarin": "向",
+    "traditional": null,
+    "pinyin": "xiàng",
+    "english": "toward",
+    "definition": "Toward, to.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "wang",
+    "mandarin": "往",
+    "traditional": null,
+    "pinyin": "wǎng",
+    "english": "toward",
+    "definition": "Toward, in the direction of.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "ruguo",
+    "mandarin": "如果",
+    "traditional": null,
+    "pinyin": "rúguǒ",
+    "english": "if",
+    "definition": "If.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "suiran",
+    "mandarin": "虽然",
+    "traditional": "雖然",
+    "pinyin": "suīrán",
+    "english": "although",
+    "definition": "Although.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "mei-each",
+    "mandarin": "每",
+    "traditional": null,
+    "pinyin": "měi",
+    "english": "every/each",
+    "definition": "Every, each.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "bie",
+    "mandarin": "别",
+    "traditional": "別",
+    "pinyin": "bié",
+    "english": "don't",
+    "definition": "Don't, do not.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "keyi",
+    "mandarin": "可以",
+    "traditional": null,
+    "pinyin": "kěyǐ",
+    "english": "can/may",
+    "definition": "Can, may.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "yinggai",
+    "mandarin": "应该",
+    "traditional": "應該",
+    "pinyin": "yīnggāi",
+    "english": "should",
+    "definition": "Should, ought to.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "zhenzheng",
+    "mandarin": "正在",
+    "traditional": null,
+    "pinyin": "zhèngzài",
+    "english": "in progress",
+    "definition": "In the process of, -ing.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "guo",
+    "mandarin": "过",
+    "traditional": "過",
+    "pinyin": "guò",
+    "english": "experience marker",
+    "definition": "Experience marker (have done).",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "zhe-marker",
+    "mandarin": "着",
+    "traditional": "著",
+    "pinyin": "zhe",
+    "english": "continuous marker",
+    "definition": "Continuous action marker.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "kuaiyao",
+    "mandarin": "快要",
+    "traditional": null,
+    "pinyin": "kuàiyào",
+    "english": "about to",
+    "definition": "About to, soon.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "jiuyao",
+    "mandarin": "就要",
+    "traditional": null,
+    "pinyin": "jiùyào",
+    "english": "about to",
+    "definition": "About to, will soon.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "wenti",
+    "mandarin": "问题",
+    "traditional": "問題",
+    "pinyin": "wèntí",
+    "english": "question/problem",
+    "definition": "Question, problem.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "yisi",
+    "mandarin": "意思",
+    "traditional": null,
+    "pinyin": "yìsi",
+    "english": "meaning",
+    "definition": "Meaning.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "shi-matter",
+    "mandarin": "事",
+    "traditional": null,
+    "pinyin": "shì",
+    "english": "matter/thing",
+    "definition": "Matter, thing, affair.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "shiqing",
+    "mandarin": "事情",
+    "traditional": null,
+    "pinyin": "shìqing",
+    "english": "matter/affair",
+    "definition": "Matter, affair, thing.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "youyisi",
+    "mandarin": "有意思",
+    "traditional": null,
+    "pinyin": "yǒu yìsi",
+    "english": "interesting",
+    "definition": "Interesting.",
+    "kind": "phrase",
+    "hskLevel": 2
+  },
+  {
+    "id": "yanse",
+    "mandarin": "颜色",
+    "traditional": "顏色",
+    "pinyin": "yánsè",
+    "english": "color",
+    "definition": "Color.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "youbian",
+    "mandarin": "右边",
+    "traditional": "右邊",
+    "pinyin": "yòubiān",
+    "english": "right side",
+    "definition": "Right side.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "zuobian",
+    "mandarin": "左边",
+    "traditional": "左邊",
+    "pinyin": "zuǒbiān",
+    "english": "left side",
+    "definition": "Left side.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "pangbian",
+    "mandarin": "旁边",
+    "traditional": "旁邊",
+    "pinyin": "pángbiān",
+    "english": "beside",
+    "definition": "Beside, next to.",
+    "kind": "word",
+    "hskLevel": 2
+  },
+  {
+    "id": "wan-ten-thousand",
+    "mandarin": "万",
+    "traditional": "萬",
+    "pinyin": "wàn",
+    "english": "ten thousand",
+    "definition": "Ten thousand.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "chengji",
+    "mandarin": "成绩",
+    "traditional": "成績",
+    "pinyin": "chéngjì",
+    "english": "grade/score",
+    "definition": "Grade, score, result.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "shuzi",
+    "mandarin": "数字",
+    "traditional": "數字",
+    "pinyin": "shùzì",
+    "english": "number/digit",
+    "definition": "Number, digit.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "fen-score",
+    "mandarin": "分",
+    "traditional": null,
+    "pinyin": "fēn",
+    "english": "point/score",
+    "definition": "Point, score.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "shihou",
+    "mandarin": "时候",
+    "traditional": "時候",
+    "pinyin": "shíhou",
+    "english": "time/moment",
+    "definition": "Time, moment.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "gangcai",
+    "mandarin": "刚才",
+    "traditional": "剛才",
+    "pinyin": "gāngcái",
+    "english": "just now",
+    "definition": "Just now.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zuijin",
+    "mandarin": "最近",
+    "traditional": null,
+    "pinyin": "zuìjìn",
+    "english": "recently",
+    "definition": "Recently.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yiqian",
+    "mandarin": "以前",
+    "traditional": null,
+    "pinyin": "yǐqián",
+    "english": "before/ago",
+    "definition": "Before, ago.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yihou",
+    "mandarin": "以后",
+    "traditional": "以後",
+    "pinyin": "yǐhòu",
+    "english": "after/later",
+    "definition": "After, later.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jianglai",
+    "mandarin": "将来",
+    "traditional": "將來",
+    "pinyin": "jiānglái",
+    "english": "future",
+    "definition": "Future.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "guoqu",
+    "mandarin": "过去",
+    "traditional": "過去",
+    "pinyin": "guòqù",
+    "english": "past",
+    "definition": "Past.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jijie",
+    "mandarin": "季节",
+    "traditional": "季節",
+    "pinyin": "jìjié",
+    "english": "season",
+    "definition": "Season.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "chuntian",
+    "mandarin": "春天",
+    "traditional": null,
+    "pinyin": "chūntiān",
+    "english": "spring",
+    "definition": "Spring.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "xiatian",
+    "mandarin": "夏天",
+    "traditional": null,
+    "pinyin": "xiàtiān",
+    "english": "summer",
+    "definition": "Summer.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "qiutian",
+    "mandarin": "秋天",
+    "traditional": null,
+    "pinyin": "qiūtiān",
+    "english": "autumn",
+    "definition": "Autumn, fall.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "dongtian",
+    "mandarin": "冬天",
+    "traditional": null,
+    "pinyin": "dōngtiān",
+    "english": "winter",
+    "definition": "Winter.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zhoumo",
+    "mandarin": "周末",
+    "traditional": "週末",
+    "pinyin": "zhōumò",
+    "english": "weekend",
+    "definition": "Weekend.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jieri",
+    "mandarin": "节日",
+    "traditional": "節日",
+    "pinyin": "jiérì",
+    "english": "holiday/festival",
+    "definition": "Holiday, festival.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yeye",
+    "mandarin": "爷爷",
+    "traditional": "爺爺",
+    "pinyin": "yéye",
+    "english": "grandfather (paternal)",
+    "definition": "Grandfather (paternal).",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "nainai",
+    "mandarin": "奶奶",
+    "traditional": null,
+    "pinyin": "nǎinai",
+    "english": "grandmother (paternal)",
+    "definition": "Grandmother (paternal).",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "shushu",
+    "mandarin": "叔叔",
+    "traditional": null,
+    "pinyin": "shūshu",
+    "english": "uncle",
+    "definition": "Uncle.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "ayi",
+    "mandarin": "阿姨",
+    "traditional": null,
+    "pinyin": "āyí",
+    "english": "aunt",
+    "definition": "Aunt.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "linju",
+    "mandarin": "邻居",
+    "traditional": "鄰居",
+    "pinyin": "línjū",
+    "english": "neighbor",
+    "definition": "Neighbor.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "keren",
+    "mandarin": "客人",
+    "traditional": null,
+    "pinyin": "kèrén",
+    "english": "guest",
+    "definition": "Guest.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jingli",
+    "mandarin": "经理",
+    "traditional": "經理",
+    "pinyin": "jīnglǐ",
+    "english": "manager",
+    "definition": "Manager.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "siji",
+    "mandarin": "司机",
+    "traditional": "司機",
+    "pinyin": "sījī",
+    "english": "driver",
+    "definition": "Driver.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jingcha",
+    "mandarin": "警察",
+    "traditional": null,
+    "pinyin": "jǐngchá",
+    "english": "police",
+    "definition": "Police.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "hushi",
+    "mandarin": "护士",
+    "traditional": "護士",
+    "pinyin": "hùshi",
+    "english": "nurse",
+    "definition": "Nurse.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "niurou",
+    "mandarin": "牛肉",
+    "traditional": null,
+    "pinyin": "niúròu",
+    "english": "beef",
+    "definition": "Beef.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jirou",
+    "mandarin": "鸡肉",
+    "traditional": "雞肉",
+    "pinyin": "jīròu",
+    "english": "chicken meat",
+    "definition": "Chicken meat.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "cong-onion",
+    "mandarin": "葱",
+    "traditional": "蔥",
+    "pinyin": "cōng",
+    "english": "green onion",
+    "definition": "Green onion, scallion.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "tang",
+    "mandarin": "糖",
+    "traditional": null,
+    "pinyin": "táng",
+    "english": "sugar",
+    "definition": "Sugar, candy.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yan-salt",
+    "mandarin": "盐",
+    "traditional": "鹽",
+    "pinyin": "yán",
+    "english": "salt",
+    "definition": "Salt.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "pijiu",
+    "mandarin": "啤酒",
+    "traditional": null,
+    "pinyin": "píjiǔ",
+    "english": "beer",
+    "definition": "Beer.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "putaojiu",
+    "mandarin": "葡萄酒",
+    "traditional": null,
+    "pinyin": "pútaojiǔ",
+    "english": "wine",
+    "definition": "Wine.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yinliao",
+    "mandarin": "饮料",
+    "traditional": "飲料",
+    "pinyin": "yǐnliào",
+    "english": "beverage",
+    "definition": "Beverage, drink.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "caidan",
+    "mandarin": "菜单",
+    "traditional": "菜單",
+    "pinyin": "càidān",
+    "english": "menu",
+    "definition": "Menu.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "wei",
+    "mandarin": "味",
+    "traditional": null,
+    "pinyin": "wèi",
+    "english": "taste/flavor",
+    "definition": "Taste, flavor.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "weidao",
+    "mandarin": "味道",
+    "traditional": null,
+    "pinyin": "wèidao",
+    "english": "taste",
+    "definition": "Taste, flavor.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "tian-sweet",
+    "mandarin": "甜",
+    "traditional": null,
+    "pinyin": "tián",
+    "english": "sweet",
+    "definition": "Sweet.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "xian",
+    "mandarin": "咸",
+    "traditional": "鹹",
+    "pinyin": "xián",
+    "english": "salty",
+    "definition": "Salty.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "suan",
+    "mandarin": "酸",
+    "traditional": null,
+    "pinyin": "suān",
+    "english": "sour",
+    "definition": "Sour.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "la",
+    "mandarin": "辣",
+    "traditional": null,
+    "pinyin": "là",
+    "english": "spicy",
+    "definition": "Spicy.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "ditie",
+    "mandarin": "地铁",
+    "traditional": "地鐵",
+    "pinyin": "dìtiě",
+    "english": "subway",
+    "definition": "Subway, metro.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "ditu",
+    "mandarin": "地图",
+    "traditional": "地圖",
+    "pinyin": "dìtú",
+    "english": "map",
+    "definition": "Map.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "lvxing",
+    "mandarin": "旅行",
+    "traditional": null,
+    "pinyin": "lǚxíng",
+    "english": "travel",
+    "definition": "To travel, trip.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "lvyou",
+    "mandarin": "旅游",
+    "traditional": "旅遊",
+    "pinyin": "lǚyóu",
+    "english": "tourism",
+    "definition": "Tourism, travel.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "huzhao",
+    "mandarin": "护照",
+    "traditional": "護照",
+    "pinyin": "hùzhào",
+    "english": "passport",
+    "definition": "Passport.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "qianzheng",
+    "mandarin": "签证",
+    "traditional": "簽證",
+    "pinyin": "qiānzhèng",
+    "english": "visa",
+    "definition": "Visa.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "xingli",
+    "mandarin": "行李",
+    "traditional": null,
+    "pinyin": "xíngli",
+    "english": "luggage",
+    "definition": "Luggage, baggage.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "guojia",
+    "mandarin": "国家",
+    "traditional": "國家",
+    "pinyin": "guójiā",
+    "english": "country",
+    "definition": "Country, nation.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "chengshi",
+    "mandarin": "城市",
+    "traditional": null,
+    "pinyin": "chéngshì",
+    "english": "city",
+    "definition": "City.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "shiqu",
+    "mandarin": "市区",
+    "traditional": "市區",
+    "pinyin": "shìqū",
+    "english": "urban area",
+    "definition": "Urban area, downtown.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "nongcun",
+    "mandarin": "农村",
+    "traditional": "農村",
+    "pinyin": "nóngcūn",
+    "english": "countryside",
+    "definition": "Countryside, rural area.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "dongfang",
+    "mandarin": "东方",
+    "traditional": "東方",
+    "pinyin": "dōngfāng",
+    "english": "east",
+    "definition": "East, the Orient.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "xifang",
+    "mandarin": "西方",
+    "traditional": null,
+    "pinyin": "xīfāng",
+    "english": "west",
+    "definition": "West, the West.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "nanfang",
+    "mandarin": "南方",
+    "traditional": null,
+    "pinyin": "nánfāng",
+    "english": "south",
+    "definition": "South.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "beifang",
+    "mandarin": "北方",
+    "traditional": null,
+    "pinyin": "běifāng",
+    "english": "north",
+    "definition": "North.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "daxue",
+    "mandarin": "大学",
+    "traditional": "大學",
+    "pinyin": "dàxué",
+    "english": "university",
+    "definition": "University.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "xiaoxue",
+    "mandarin": "小学",
+    "traditional": "小學",
+    "pinyin": "xiǎoxué",
+    "english": "primary school",
+    "definition": "Primary school.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zhongxue",
+    "mandarin": "中学",
+    "traditional": "中學",
+    "pinyin": "zhōngxué",
+    "english": "middle school",
+    "definition": "Middle school.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "tushuguan",
+    "mandarin": "图书馆",
+    "traditional": "圖書館",
+    "pinyin": "túshūguǎn",
+    "english": "library",
+    "definition": "Library.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yinhang",
+    "mandarin": "银行",
+    "traditional": "銀行",
+    "pinyin": "yínháng",
+    "english": "bank",
+    "definition": "Bank.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "chaoshi",
+    "mandarin": "超市",
+    "traditional": null,
+    "pinyin": "chāoshì",
+    "english": "supermarket",
+    "definition": "Supermarket.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jiayou-zhan",
+    "mandarin": "加油站",
+    "traditional": null,
+    "pinyin": "jiāyóuzhàn",
+    "english": "gas station",
+    "definition": "Gas station.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "xinyongka",
+    "mandarin": "信用卡",
+    "traditional": null,
+    "pinyin": "xìnyòngkǎ",
+    "english": "credit card",
+    "definition": "Credit card.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "dazhe",
+    "mandarin": "打折",
+    "traditional": null,
+    "pinyin": "dǎzhé",
+    "english": "discount",
+    "definition": "Discount.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jiage",
+    "mandarin": "价格",
+    "traditional": "價格",
+    "pinyin": "jiàgé",
+    "english": "price",
+    "definition": "Price.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "liwu",
+    "mandarin": "礼物",
+    "traditional": "禮物",
+    "pinyin": "lǐwù",
+    "english": "gift",
+    "definition": "Gift, present.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "wendu",
+    "mandarin": "温度",
+    "traditional": "溫度",
+    "pinyin": "wēndù",
+    "english": "temperature",
+    "definition": "Temperature.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "feng",
+    "mandarin": "风",
+    "traditional": "風",
+    "pinyin": "fēng",
+    "english": "wind",
+    "definition": "Wind.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "guafeng",
+    "mandarin": "刮风",
+    "traditional": "颳風",
+    "pinyin": "guā fēng",
+    "english": "windy",
+    "definition": "To be windy.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "taiyang",
+    "mandarin": "太阳",
+    "traditional": "太陽",
+    "pinyin": "tàiyáng",
+    "english": "sun",
+    "definition": "Sun.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yueliang",
+    "mandarin": "月亮",
+    "traditional": null,
+    "pinyin": "yuèliang",
+    "english": "moon",
+    "definition": "Moon.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "kongqi",
+    "mandarin": "空气",
+    "traditional": "空氣",
+    "pinyin": "kōngqì",
+    "english": "air",
+    "definition": "Air.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "huanjing",
+    "mandarin": "环境",
+    "traditional": "環境",
+    "pinyin": "huánjìng",
+    "english": "environment",
+    "definition": "Environment.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "erduo",
+    "mandarin": "耳朵",
+    "traditional": null,
+    "pinyin": "ěrduo",
+    "english": "ear",
+    "definition": "Ear.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "bizi",
+    "mandarin": "鼻子",
+    "traditional": null,
+    "pinyin": "bízi",
+    "english": "nose",
+    "definition": "Nose.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zui-mouth",
+    "mandarin": "嘴",
+    "traditional": null,
+    "pinyin": "zuǐ",
+    "english": "mouth",
+    "definition": "Mouth.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yachi",
+    "mandarin": "牙齿",
+    "traditional": "牙齒",
+    "pinyin": "yáchǐ",
+    "english": "teeth",
+    "definition": "Teeth.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "toufa",
+    "mandarin": "头发",
+    "traditional": "頭髮",
+    "pinyin": "tóufa",
+    "english": "hair",
+    "definition": "Hair.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "xin-heart",
+    "mandarin": "心",
+    "traditional": null,
+    "pinyin": "xīn",
+    "english": "heart",
+    "definition": "Heart.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jiankang",
+    "mandarin": "健康",
+    "traditional": null,
+    "pinyin": "jiànkāng",
+    "english": "health/healthy",
+    "definition": "Health, healthy.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "ganmao",
+    "mandarin": "感冒",
+    "traditional": null,
+    "pinyin": "gǎnmào",
+    "english": "cold (illness)",
+    "definition": "Cold (illness).",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "fashao",
+    "mandarin": "发烧",
+    "traditional": "發燒",
+    "pinyin": "fāshāo",
+    "english": "fever",
+    "definition": "Fever.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "kesou",
+    "mandarin": "咳嗽",
+    "traditional": null,
+    "pinyin": "késou",
+    "english": "cough",
+    "definition": "Cough.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "shufu",
+    "mandarin": "舒服",
+    "traditional": null,
+    "pinyin": "shūfu",
+    "english": "comfortable",
+    "definition": "Comfortable.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "nanshuo",
+    "mandarin": "难受",
+    "traditional": "難受",
+    "pinyin": "nánshòu",
+    "english": "uncomfortable",
+    "definition": "Uncomfortable.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "xiaoxin",
+    "mandarin": "小心",
+    "traditional": null,
+    "pinyin": "xiǎoxīn",
+    "english": "careful",
+    "definition": "Careful, be careful.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "cesuo",
+    "mandarin": "厕所",
+    "traditional": "廁所",
+    "pinyin": "cèsuǒ",
+    "english": "toilet/bathroom",
+    "definition": "Toilet, bathroom.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "chufang",
+    "mandarin": "厨房",
+    "traditional": "廚房",
+    "pinyin": "chúfáng",
+    "english": "kitchen",
+    "definition": "Kitchen.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "keting",
+    "mandarin": "客厅",
+    "traditional": "客廳",
+    "pinyin": "kètīng",
+    "english": "living room",
+    "definition": "Living room.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "woshi",
+    "mandarin": "卧室",
+    "traditional": "臥室",
+    "pinyin": "wòshì",
+    "english": "bedroom",
+    "definition": "Bedroom.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "bingxiang",
+    "mandarin": "冰箱",
+    "traditional": null,
+    "pinyin": "bīngxiāng",
+    "english": "refrigerator",
+    "definition": "Refrigerator.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "xiyiji",
+    "mandarin": "洗衣机",
+    "traditional": "洗衣機",
+    "pinyin": "xǐyījī",
+    "english": "washing machine",
+    "definition": "Washing machine.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "kongtiao",
+    "mandarin": "空调",
+    "traditional": "空調",
+    "pinyin": "kōngtiáo",
+    "english": "air conditioner",
+    "definition": "Air conditioner.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "dianti",
+    "mandarin": "电梯",
+    "traditional": "電梯",
+    "pinyin": "diàntī",
+    "english": "elevator",
+    "definition": "Elevator.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "loushangi",
+    "mandarin": "楼上",
+    "traditional": "樓上",
+    "pinyin": "lóushàng",
+    "english": "upstairs",
+    "definition": "Upstairs.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "louxia",
+    "mandarin": "楼下",
+    "traditional": "樓下",
+    "pinyin": "lóuxià",
+    "english": "downstairs",
+    "definition": "Downstairs.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "ceng",
+    "mandarin": "层",
+    "traditional": "層",
+    "pinyin": "céng",
+    "english": "floor/layer",
+    "definition": "Floor, layer.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "dongwu",
+    "mandarin": "动物",
+    "traditional": "動物",
+    "pinyin": "dòngwù",
+    "english": "animal",
+    "definition": "Animal.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zhiwu",
+    "mandarin": "植物",
+    "traditional": null,
+    "pinyin": "zhíwù",
+    "english": "plant",
+    "definition": "Plant.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "ma-horse",
+    "mandarin": "马",
+    "traditional": "馬",
+    "pinyin": "mǎ",
+    "english": "horse",
+    "definition": "Horse.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "niu",
+    "mandarin": "牛",
+    "traditional": null,
+    "pinyin": "niú",
+    "english": "cow/ox",
+    "definition": "Cow, ox.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yang",
+    "mandarin": "羊",
+    "traditional": null,
+    "pinyin": "yáng",
+    "english": "sheep",
+    "definition": "Sheep.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zhu-pig",
+    "mandarin": "猪",
+    "traditional": "豬",
+    "pinyin": "zhū",
+    "english": "pig",
+    "definition": "Pig.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "ji-chicken",
+    "mandarin": "鸡",
+    "traditional": "雞",
+    "pinyin": "jī",
+    "english": "chicken",
+    "definition": "Chicken.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "xiongmao",
+    "mandarin": "熊猫",
+    "traditional": "熊貓",
+    "pinyin": "xióngmāo",
+    "english": "panda",
+    "definition": "Panda.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "shan",
+    "mandarin": "山",
+    "traditional": null,
+    "pinyin": "shān",
+    "english": "mountain",
+    "definition": "Mountain.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "he-river",
+    "mandarin": "河",
+    "traditional": null,
+    "pinyin": "hé",
+    "english": "river",
+    "definition": "River.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "hai-sea",
+    "mandarin": "海",
+    "traditional": null,
+    "pinyin": "hǎi",
+    "english": "sea",
+    "definition": "Sea.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "cao",
+    "mandarin": "草",
+    "traditional": null,
+    "pinyin": "cǎo",
+    "english": "grass",
+    "definition": "Grass.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "senlin",
+    "mandarin": "森林",
+    "traditional": null,
+    "pinyin": "sēnlín",
+    "english": "forest",
+    "definition": "Forest.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "biaoshi",
+    "mandarin": "表示",
+    "traditional": null,
+    "pinyin": "biǎoshì",
+    "english": "to express",
+    "definition": "To express, indicate.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "baohu",
+    "mandarin": "保护",
+    "traditional": "保護",
+    "pinyin": "bǎohù",
+    "english": "to protect",
+    "definition": "To protect.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jianchi",
+    "mandarin": "坚持",
+    "traditional": "堅持",
+    "pinyin": "jiānchí",
+    "english": "to persist",
+    "definition": "To persist, insist.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jieshou",
+    "mandarin": "接受",
+    "traditional": null,
+    "pinyin": "jiēshòu",
+    "english": "to accept",
+    "definition": "To accept.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jiejue",
+    "mandarin": "解决",
+    "traditional": "解決",
+    "pinyin": "jiějué",
+    "english": "to solve",
+    "definition": "To solve.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jieshi",
+    "mandarin": "解释",
+    "traditional": "解釋",
+    "pinyin": "jiěshì",
+    "english": "to explain",
+    "definition": "To explain.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "likai",
+    "mandarin": "离开",
+    "traditional": "離開",
+    "pinyin": "líkāi",
+    "english": "to leave",
+    "definition": "To leave.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "liaojie",
+    "mandarin": "了解",
+    "traditional": null,
+    "pinyin": "liǎojiě",
+    "english": "to understand",
+    "definition": "To understand.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "faxian",
+    "mandarin": "发现",
+    "traditional": "發現",
+    "pinyin": "fāxiàn",
+    "english": "to discover",
+    "definition": "To discover.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "fazhan",
+    "mandarin": "发展",
+    "traditional": "發展",
+    "pinyin": "fāzhǎn",
+    "english": "to develop",
+    "definition": "To develop.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "tigao",
+    "mandarin": "提高",
+    "traditional": null,
+    "pinyin": "tígāo",
+    "english": "to improve",
+    "definition": "To improve.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jiaoliu",
+    "mandarin": "交流",
+    "traditional": null,
+    "pinyin": "jiāoliú",
+    "english": "to exchange",
+    "definition": "To exchange, communicate.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "tongyi",
+    "mandarin": "同意",
+    "traditional": null,
+    "pinyin": "tóngyì",
+    "english": "to agree",
+    "definition": "To agree.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "fanyi",
+    "mandarin": "翻译",
+    "traditional": "翻譯",
+    "pinyin": "fānyì",
+    "english": "to translate",
+    "definition": "To translate.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "xuanze",
+    "mandarin": "选择",
+    "traditional": "選擇",
+    "pinyin": "xuǎnzé",
+    "english": "to choose",
+    "definition": "To choose.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jiancha",
+    "mandarin": "检查",
+    "traditional": "檢查",
+    "pinyin": "jiǎnchá",
+    "english": "to inspect",
+    "definition": "To inspect, check.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "canjia",
+    "mandarin": "参加",
+    "traditional": "參加",
+    "pinyin": "cānjiā",
+    "english": "to participate",
+    "definition": "To participate.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "bijiao-match",
+    "mandarin": "比赛",
+    "traditional": "比賽",
+    "pinyin": "bǐsài",
+    "english": "competition",
+    "definition": "Competition, match.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "lianxi",
+    "mandarin": "练习",
+    "traditional": "練習",
+    "pinyin": "liànxí",
+    "english": "to practice",
+    "definition": "To practice.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "fuxi",
+    "mandarin": "复习",
+    "traditional": "復習",
+    "pinyin": "fùxí",
+    "english": "to review",
+    "definition": "To review.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "kaoshi",
+    "mandarin": "考试",
+    "traditional": "考試",
+    "pinyin": "kǎoshì",
+    "english": "exam",
+    "definition": "Exam, test.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "biye",
+    "mandarin": "毕业",
+    "traditional": "畢業",
+    "pinyin": "bìyè",
+    "english": "to graduate",
+    "definition": "To graduate.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jiehun",
+    "mandarin": "结婚",
+    "traditional": "結婚",
+    "pinyin": "jiéhūn",
+    "english": "to marry",
+    "definition": "To marry.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "guanxi",
+    "mandarin": "关系",
+    "traditional": "關係",
+    "pinyin": "guānxi",
+    "english": "relationship",
+    "definition": "Relationship.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "guanxin",
+    "mandarin": "关心",
+    "traditional": "關心",
+    "pinyin": "guānxīn",
+    "english": "to care about",
+    "definition": "To care about.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zhaogu",
+    "mandarin": "照顾",
+    "traditional": "照顧",
+    "pinyin": "zhàogu",
+    "english": "to take care of",
+    "definition": "To take care of.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yingxiang",
+    "mandarin": "影响",
+    "traditional": "影響",
+    "pinyin": "yǐngxiǎng",
+    "english": "influence",
+    "definition": "Influence, affect.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "hua-spend",
+    "mandarin": "花",
+    "traditional": null,
+    "pinyin": "huā",
+    "english": "to spend",
+    "definition": "To spend (time/money).",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "tixi",
+    "mandarin": "替",
+    "traditional": null,
+    "pinyin": "tì",
+    "english": "for/instead of",
+    "definition": "For, instead of.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "dakai",
+    "mandarin": "打开",
+    "traditional": "打開",
+    "pinyin": "dǎkāi",
+    "english": "to open",
+    "definition": "To open.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "guanbi",
+    "mandarin": "关闭",
+    "traditional": "關閉",
+    "pinyin": "guānbì",
+    "english": "to close",
+    "definition": "To close.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "dasuan",
+    "mandarin": "打算",
+    "traditional": null,
+    "pinyin": "dǎsuàn",
+    "english": "to plan",
+    "definition": "To plan, intend.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jihua",
+    "mandarin": "计划",
+    "traditional": "計劃",
+    "pinyin": "jìhuà",
+    "english": "plan",
+    "definition": "Plan.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jueding",
+    "mandarin": "决定",
+    "traditional": "決定",
+    "pinyin": "juédìng",
+    "english": "to decide",
+    "definition": "To decide.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "kefu",
+    "mandarin": "克服",
+    "traditional": null,
+    "pinyin": "kèfú",
+    "english": "to overcome",
+    "definition": "To overcome.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "rongyi",
+    "mandarin": "容易",
+    "traditional": null,
+    "pinyin": "róngyì",
+    "english": "easy",
+    "definition": "Easy.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "nan-difficult",
+    "mandarin": "难",
+    "traditional": "難",
+    "pinyin": "nán",
+    "english": "difficult",
+    "definition": "Difficult.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zhengque",
+    "mandarin": "正确",
+    "traditional": "正確",
+    "pinyin": "zhèngquè",
+    "english": "correct",
+    "definition": "Correct.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "cuowu",
+    "mandarin": "错误",
+    "traditional": "錯誤",
+    "pinyin": "cuòwù",
+    "english": "mistake",
+    "definition": "Mistake, error.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "putong",
+    "mandarin": "普通",
+    "traditional": null,
+    "pinyin": "pǔtōng",
+    "english": "ordinary",
+    "definition": "Ordinary, common.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "teshu",
+    "mandarin": "特殊",
+    "traditional": null,
+    "pinyin": "tèshū",
+    "english": "special",
+    "definition": "Special.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "tebie",
+    "mandarin": "特别",
+    "traditional": "特別",
+    "pinyin": "tèbié",
+    "english": "especially",
+    "definition": "Especially, special.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yiban",
+    "mandarin": "一般",
+    "traditional": null,
+    "pinyin": "yìbān",
+    "english": "general",
+    "definition": "General, ordinary.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "qita",
+    "mandarin": "其他",
+    "traditional": null,
+    "pinyin": "qítā",
+    "english": "other",
+    "definition": "Other.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "suoyou",
+    "mandarin": "所有",
+    "traditional": null,
+    "pinyin": "suǒyǒu",
+    "english": "all",
+    "definition": "All.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zhengge",
+    "mandarin": "整个",
+    "traditional": "整個",
+    "pinyin": "zhěnggè",
+    "english": "whole",
+    "definition": "Whole, entire.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "fengfu",
+    "mandarin": "丰富",
+    "traditional": "豐富",
+    "pinyin": "fēngfù",
+    "english": "rich/abundant",
+    "definition": "Rich, abundant.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zhichi",
+    "mandarin": "支持",
+    "traditional": null,
+    "pinyin": "zhīchí",
+    "english": "to support",
+    "definition": "To support.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "manyi",
+    "mandarin": "满意",
+    "traditional": "滿意",
+    "pinyin": "mǎnyì",
+    "english": "satisfied",
+    "definition": "Satisfied.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "shiwang",
+    "mandarin": "失望",
+    "traditional": null,
+    "pinyin": "shīwàng",
+    "english": "disappointed",
+    "definition": "Disappointed.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jinzhang",
+    "mandarin": "紧张",
+    "traditional": "緊張",
+    "pinyin": "jǐnzhāng",
+    "english": "nervous",
+    "definition": "Nervous.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "ganji",
+    "mandarin": "感激",
+    "traditional": null,
+    "pinyin": "gǎnjī",
+    "english": "grateful",
+    "definition": "Grateful.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "ganxie",
+    "mandarin": "感谢",
+    "traditional": "感謝",
+    "pinyin": "gǎnxiè",
+    "english": "thank",
+    "definition": "Thank.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "lihai",
+    "mandarin": "厉害",
+    "traditional": "厲害",
+    "pinyin": "lìhai",
+    "english": "awesome",
+    "definition": "Awesome, intense.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "youming",
+    "mandarin": "有名",
+    "traditional": null,
+    "pinyin": "yǒumíng",
+    "english": "famous",
+    "definition": "Famous.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "youxiu",
+    "mandarin": "优秀",
+    "traditional": "優秀",
+    "pinyin": "yōuxiù",
+    "english": "excellent",
+    "definition": "Excellent.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "anquan",
+    "mandarin": "安全",
+    "traditional": null,
+    "pinyin": "ānquán",
+    "english": "safe",
+    "definition": "Safe.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "weixian",
+    "mandarin": "危险",
+    "traditional": "危險",
+    "pinyin": "wēixiǎn",
+    "english": "dangerous",
+    "definition": "Dangerous.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "ganjing",
+    "mandarin": "干净",
+    "traditional": "乾淨",
+    "pinyin": "gānjìng",
+    "english": "clean",
+    "definition": "Clean.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zang",
+    "mandarin": "脏",
+    "traditional": "髒",
+    "pinyin": "zāng",
+    "english": "dirty",
+    "definition": "Dirty.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "fangbian",
+    "mandarin": "方便",
+    "traditional": null,
+    "pinyin": "fāngbiàn",
+    "english": "convenient",
+    "definition": "Convenient.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "chule",
+    "mandarin": "除了",
+    "traditional": null,
+    "pinyin": "chúle",
+    "english": "except/besides",
+    "definition": "Except, besides.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "lian-even",
+    "mandarin": "连",
+    "traditional": "連",
+    "pinyin": "lián",
+    "english": "even",
+    "definition": "Even.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zhiyou",
+    "mandarin": "只有",
+    "traditional": null,
+    "pinyin": "zhǐyǒu",
+    "english": "only",
+    "definition": "Only.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zhiyao",
+    "mandarin": "只要",
+    "traditional": null,
+    "pinyin": "zhǐyào",
+    "english": "as long as",
+    "definition": "As long as.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "buduan",
+    "mandarin": "不断",
+    "traditional": "不斷",
+    "pinyin": "búduàn",
+    "english": "continuously",
+    "definition": "Continuously.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "shoudao",
+    "mandarin": "受到",
+    "traditional": null,
+    "pinyin": "shòudào",
+    "english": "to receive",
+    "definition": "To receive.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "genben",
+    "mandarin": "根本",
+    "traditional": null,
+    "pinyin": "gēnběn",
+    "english": "at all",
+    "definition": "At all, fundamental.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "qishi",
+    "mandarin": "其实",
+    "traditional": "其實",
+    "pinyin": "qíshí",
+    "english": "actually",
+    "definition": "Actually.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "dagai",
+    "mandarin": "大概",
+    "traditional": null,
+    "pinyin": "dàgài",
+    "english": "probably",
+    "definition": "Probably.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "keneng",
+    "mandarin": "可能",
+    "traditional": null,
+    "pinyin": "kěnéng",
+    "english": "possible",
+    "definition": "Possible, maybe.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yiding",
+    "mandarin": "一定",
+    "traditional": null,
+    "pinyin": "yídìng",
+    "english": "definitely",
+    "definition": "Definitely.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "bixu",
+    "mandarin": "必须",
+    "traditional": "必須",
+    "pinyin": "bìxū",
+    "english": "must",
+    "definition": "Must.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jiran",
+    "mandarin": "既然",
+    "traditional": null,
+    "pinyin": "jìrán",
+    "english": "since",
+    "definition": "Since.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "buguang",
+    "mandarin": "不光",
+    "traditional": null,
+    "pinyin": "bùguāng",
+    "english": "not only",
+    "definition": "Not only.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "erqie",
+    "mandarin": "而且",
+    "traditional": null,
+    "pinyin": "érqiě",
+    "english": "moreover",
+    "definition": "Moreover.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jiu-then",
+    "mandarin": "就",
+    "traditional": null,
+    "pinyin": "jiù",
+    "english": "then/just",
+    "definition": "Then, just.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "cai-talent",
+    "mandarin": "才",
+    "traditional": null,
+    "pinyin": "cái",
+    "english": "only then",
+    "definition": "Only then.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "youde",
+    "mandarin": "有的",
+    "traditional": null,
+    "pinyin": "yǒude",
+    "english": "some",
+    "definition": "Some.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yuelaiyue",
+    "mandarin": "越来越",
+    "traditional": "越來越",
+    "pinyin": "yuèláiyuè",
+    "english": "more and more",
+    "definition": "More and more.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "haishi",
+    "mandarin": "还是",
+    "traditional": "還是",
+    "pinyin": "háishi",
+    "english": "or/still",
+    "definition": "Or, still.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "daodi",
+    "mandarin": "到底",
+    "traditional": null,
+    "pinyin": "dàodǐ",
+    "english": "after all",
+    "definition": "After all, exactly.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "wulun",
+    "mandarin": "无论",
+    "traditional": "無論",
+    "pinyin": "wúlùn",
+    "english": "no matter",
+    "definition": "No matter.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "renhe",
+    "mandarin": "任何",
+    "traditional": null,
+    "pinyin": "rènhé",
+    "english": "any",
+    "definition": "Any.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "baoming",
+    "mandarin": "报名",
+    "traditional": "報名",
+    "pinyin": "bàomíng",
+    "english": "to sign up",
+    "definition": "To sign up.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "baozhi",
+    "mandarin": "报纸",
+    "traditional": "報紙",
+    "pinyin": "bàozhǐ",
+    "english": "newspaper",
+    "definition": "Newspaper.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zazhi",
+    "mandarin": "杂志",
+    "traditional": "雜誌",
+    "pinyin": "zázhì",
+    "english": "magazine",
+    "definition": "Magazine.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "xinwen",
+    "mandarin": "新闻",
+    "traditional": "新聞",
+    "pinyin": "xīnwén",
+    "english": "news",
+    "definition": "News.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "wenhua",
+    "mandarin": "文化",
+    "traditional": null,
+    "pinyin": "wénhuà",
+    "english": "culture",
+    "definition": "Culture.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "lishi",
+    "mandarin": "历史",
+    "traditional": "歷史",
+    "pinyin": "lìshǐ",
+    "english": "history",
+    "definition": "History.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "kexue",
+    "mandarin": "科学",
+    "traditional": "科學",
+    "pinyin": "kēxué",
+    "english": "science",
+    "definition": "Science.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jishu",
+    "mandarin": "技术",
+    "traditional": "技術",
+    "pinyin": "jìshù",
+    "english": "technology",
+    "definition": "Technology.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yishu",
+    "mandarin": "艺术",
+    "traditional": "藝術",
+    "pinyin": "yìshù",
+    "english": "art",
+    "definition": "Art.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yinyue",
+    "mandarin": "音乐",
+    "traditional": "音樂",
+    "pinyin": "yīnyuè",
+    "english": "music",
+    "definition": "Music.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "tiyu",
+    "mandarin": "体育",
+    "traditional": "體育",
+    "pinyin": "tǐyù",
+    "english": "sports",
+    "definition": "Sports.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zuqiu",
+    "mandarin": "足球",
+    "traditional": null,
+    "pinyin": "zúqiú",
+    "english": "soccer",
+    "definition": "Soccer, football.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "lanqiu",
+    "mandarin": "篮球",
+    "traditional": "籃球",
+    "pinyin": "lánqiú",
+    "english": "basketball",
+    "definition": "Basketball.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "youyong",
+    "mandarin": "游泳",
+    "traditional": null,
+    "pinyin": "yóuyǒng",
+    "english": "to swim",
+    "definition": "To swim.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "duanlian",
+    "mandarin": "锻炼",
+    "traditional": "鍛鍊",
+    "pinyin": "duànliàn",
+    "english": "to exercise",
+    "definition": "To exercise.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "shipin",
+    "mandarin": "视频",
+    "traditional": "視頻",
+    "pinyin": "shìpín",
+    "english": "video",
+    "definition": "Video.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "wangluo",
+    "mandarin": "网络",
+    "traditional": "網絡",
+    "pinyin": "wǎngluò",
+    "english": "internet",
+    "definition": "Internet.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "youxi",
+    "mandarin": "游戏",
+    "traditional": "遊戲",
+    "pinyin": "yóuxì",
+    "english": "game",
+    "definition": "Game.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jingji",
+    "mandarin": "经济",
+    "traditional": "經濟",
+    "pinyin": "jīngjì",
+    "english": "economy",
+    "definition": "Economy.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "shengyi",
+    "mandarin": "生意",
+    "traditional": null,
+    "pinyin": "shēngyi",
+    "english": "business",
+    "definition": "Business.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "shenghuo",
+    "mandarin": "生活",
+    "traditional": null,
+    "pinyin": "shēnghuó",
+    "english": "life",
+    "definition": "Life.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jingyan",
+    "mandarin": "经验",
+    "traditional": "經驗",
+    "pinyin": "jīngyàn",
+    "english": "experience",
+    "definition": "Experience.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "xiguan",
+    "mandarin": "习惯",
+    "traditional": "習慣",
+    "pinyin": "xíguàn",
+    "english": "habit",
+    "definition": "Habit.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "aihao",
+    "mandarin": "爱好",
+    "traditional": "愛好",
+    "pinyin": "àihào",
+    "english": "hobby",
+    "definition": "Hobby.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "xingqu",
+    "mandarin": "兴趣",
+    "traditional": "興趣",
+    "pinyin": "xìngqù",
+    "english": "interest",
+    "definition": "Interest.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jiaoyu",
+    "mandarin": "教育",
+    "traditional": null,
+    "pinyin": "jiàoyù",
+    "english": "education",
+    "definition": "Education.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "nuli",
+    "mandarin": "努力",
+    "traditional": null,
+    "pinyin": "nǔlì",
+    "english": "to work hard",
+    "definition": "To work hard.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "chenggong",
+    "mandarin": "成功",
+    "traditional": null,
+    "pinyin": "chénggōng",
+    "english": "success",
+    "definition": "Success.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "shibai",
+    "mandarin": "失败",
+    "traditional": "失敗",
+    "pinyin": "shībài",
+    "english": "failure",
+    "definition": "Failure.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "mubiao",
+    "mandarin": "目标",
+    "traditional": "目標",
+    "pinyin": "mùbiāo",
+    "english": "goal",
+    "definition": "Goal.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zhuyi",
+    "mandarin": "注意",
+    "traditional": null,
+    "pinyin": "zhùyì",
+    "english": "attention",
+    "definition": "Attention.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "fangfa",
+    "mandarin": "方法",
+    "traditional": null,
+    "pinyin": "fāngfǎ",
+    "english": "method",
+    "definition": "Method.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "banfa",
+    "mandarin": "办法",
+    "traditional": "辦法",
+    "pinyin": "bànfǎ",
+    "english": "solution",
+    "definition": "Solution, way.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "yuanyin",
+    "mandarin": "原因",
+    "traditional": null,
+    "pinyin": "yuányīn",
+    "english": "reason",
+    "definition": "Reason.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "jieguo",
+    "mandarin": "结果",
+    "traditional": "結果",
+    "pinyin": "jiéguǒ",
+    "english": "result",
+    "definition": "Result.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "shiying",
+    "mandarin": "适应",
+    "traditional": "適應",
+    "pinyin": "shìyìng",
+    "english": "to adapt",
+    "definition": "To adapt.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "gaibian",
+    "mandarin": "改变",
+    "traditional": "改變",
+    "pinyin": "gǎibiàn",
+    "english": "to change",
+    "definition": "To change.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "tigong",
+    "mandarin": "提供",
+    "traditional": null,
+    "pinyin": "tígōng",
+    "english": "to provide",
+    "definition": "To provide.",
+    "kind": "word",
+    "hskLevel": 3
+  },
+  {
+    "id": "zhengming",
+    "mandarin": "证明",
+    "traditional": "證明",
+    "pinyin": "zhèngmíng",
+    "english": "to prove",
+    "definition": "To prove.",
+    "kind": "word",
+    "hskLevel": 3
+  }
+]

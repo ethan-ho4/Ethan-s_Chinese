@@ -11,8 +11,14 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.ethanho.ethanschinese",
-      "buildNumber": "2",
+      "buildNumber": "3",
       "deploymentTarget": "16.0",
+      "appleTeamId": "HHPVQ49JWP",
+      "entitlements": {
+        "com.apple.security.application-groups": [
+          "group.com.ethanho.ethanschinese"
+        ]
+      },
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
         "NSCameraUsageDescription": "This app uses the camera to identify objects and unlock Chinese vocabulary words in your Chindex collection."
@@ -36,7 +42,8 @@
         {
           "cameraPermission": "This app uses the camera to identify objects and unlock Chinese vocabulary words in your Chindex collection."
         }
-      ]
+      ],
+      "@bacons/apple-targets"
     ],
     "experiments": {
       "typedRoutes": true
