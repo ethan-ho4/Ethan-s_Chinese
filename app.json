@@ -7,9 +7,11 @@
     "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "scheme": "ethanschinese",
+    "icon": "./assets/icon.png",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.ethanho.ethanschinese",
+      "buildNumber": "2",
       "deploymentTarget": "16.0",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
@@ -18,7 +20,10 @@
     },
     "android": {
       "package": "com.ethanho.ethanschinese",
-      "permissions": ["android.permission.CAMERA"]
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -35,6 +40,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "8c292106-e2cd-45aa-b4e5-bbd7f9b6d010"
+      }
+    },
+    "owner": "galaxy4"
   }
 }

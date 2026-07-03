@@ -9,17 +9,12 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "build:ios": "eas build --platform ios --profile production --auto-submit"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
     "@react-native-async-storage/async-storage": "2.2.0",
-    "@tensorflow-models/mobilenet": "^2.1.1",
-    "@tensorflow/tfjs": "^4.22.0",
-    "@tensorflow/tfjs-backend-cpu": "^4.22.0",
-    "@tensorflow/tfjs-converter": "^4.22.0",
-    "@tensorflow/tfjs-core": "^4.22.0",
-    "@tensorflow/tfjs-react-native": "^1.0.0",
     "expo": "~54.0.0",
     "expo-camera": "~17.0.10",
     "expo-file-system": "~19.0.23",
@@ -30,7 +25,6 @@
     "expo-router": "~6.0.23",
     "expo-speech": "~14.0.8",
     "expo-status-bar": "~3.0.9",
-    "jpeg-js": "^0.4.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-native": "0.81.5",
