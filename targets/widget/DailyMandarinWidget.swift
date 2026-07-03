@@ -5,36 +5,60 @@ struct DailyMandarinWidgetView: View {
   @Environment(\.widgetFamily) private var family
   let snapshot: MandarinSnapshot
 
+  private var isSmall: Bool { family == .systemSmall }
+  private var isMedium: Bool { family == .systemMedium }
+
+  private var mandarinSize: CGFloat {
+    if isSmall { return 28 }
+    if isMedium { return 36 }
+    return 38
+  }
+
+  private var pinyinSize: CGFloat {
+    if isSmall { return 13 }
+    if isMedium { return 16 }
+    return 17
+  }
+
+  private var headerSize: CGFloat {
+    isSmall ? 11 : 12
+  }
+
   var body: some View {
-    WidgetCard {
-      VStack(alignment: .leading, spacing: family == .systemSmall ? 6 : 8) {
-        HStack {
+    WidgetCard(glowStyle: .mandarin, pondVariant: .mandarin) {
+      VStack(alignment: .leading, spacing: isSmall ? 4 : 8) {
+        HStack(alignment: .center, spacing: 6) {
           Text(snapshot.modeLabel)
-            .font(.caption.weight(.bold))
+            .font(.system(size: headerSize, weight: .bold))
             .foregroundStyle(WidgetColors.koiOrange)
             .lineLimit(1)
-          Spacer()
+            .minimumScaleFactor(0.8)
+          Spacer(minLength: 4)
           Text(snapshot.kind.uppercased())
-            .font(.caption2.weight(.bold))
+            .font(.system(size: isSmall ? 10 : 11, weight: .bold))
             .foregroundStyle(WidgetColors.textMuted)
+            .lineLimit(1)
         }
 
         Text(snapshot.mandarin)
-          .font(.system(size: family == .systemSmall ? 30 : 38, weight: .bold))
+          .font(.system(size: mandarinSize, weight: .bold))
           .foregroundStyle(WidgetColors.textOnLight)
-          .minimumScaleFactor(0.7)
-          .lineLimit(family == .systemSmall ? 2 : 3)
+          .minimumScaleFactor(isSmall ? 0.55 : 0.7)
+          .lineLimit(isSmall ? 2 : 3)
+          .fixedSize(horizontal: false, vertical: true)
 
         Text(snapshot.pinyin)
-          .font(.system(size: family == .systemSmall ? 14 : 17, weight: .medium))
+          .font(.system(size: pinyinSize, weight: .medium))
           .foregroundStyle(WidgetColors.koiOrange)
-          .lineLimit(2)
+          .lineLimit(isSmall ? 1 : 2)
+          .minimumScaleFactor(0.85)
 
-        if family != .systemSmall {
+        if !isSmall {
           Text(snapshot.english.capitalized)
-            .font(.system(size: family == .systemMedium ? 18 : 20, weight: .bold))
+            .font(.system(size: isMedium ? 17 : 20, weight: .bold))
             .foregroundStyle(WidgetColors.textOnLight)
-            .lineLimit(family == .systemMedium ? 2 : 3)
+            .lineLimit(isMedium ? 2 : 3)
+            .minimumScaleFactor(0.85)
         }
 
         if family == .systemLarge {
@@ -42,8 +66,10 @@ struct DailyMandarinWidgetView: View {
             .font(.system(size: 14))
             .foregroundStyle(WidgetColors.textMuted)
             .lineLimit(4)
+            .minimumScaleFactor(0.9)
         }
       }
+      .frame(maxWidth: .infinity, alignment: .topLeading)
     }
   }
 }
