@@ -5,7 +5,7 @@ struct DailyMandarinWidgetView: View {
   let snapshot: MandarinSnapshot
 
   var body: some View {
-    WidgetCard(glowStyle: .mandarin) {
+    WidgetCard {
       WidgetLearningContent(
         mandarin: snapshot.mandarin,
         pinyin: snapshot.pinyin,
@@ -21,7 +21,7 @@ struct DailyMandarinWidget: Widget {
   var body: some WidgetConfiguration {
     StaticConfiguration(kind: kind, provider: MandarinProvider()) { entry in
       DailyMandarinWidgetView(snapshot: entry.snapshot)
-        .widgetContainerChrome()
+        .widgetContainerChrome(glowStyle: .mandarin)
     }
     .configurationDisplayName("Daily Mandarin")
     .description("Today's Mandarin word or phrase with pinyin and English.")

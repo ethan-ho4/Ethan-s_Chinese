@@ -29,6 +29,28 @@ enum WidgetGlowStyle {
   case proverb
 }
 
+enum WidgetDecoration {
+  static func level(for family: WidgetFamily) -> PondDecorationLevel {
+    switch family {
+    case .systemSmall: return .small
+    case .systemLarge: return .large
+    default: return .medium
+    }
+  }
+
+  static func glowScale(for level: PondDecorationLevel) -> CGFloat {
+    level == .large ? 1.4 : 1.0
+  }
+
+  static func waterLineCount(for level: PondDecorationLevel) -> Int {
+    switch level {
+    case .small: return 1
+    case .medium: return 2
+    case .large: return 3
+    }
+  }
+}
+
 struct WidgetGlow: View {
   var style: WidgetGlowStyle
   var scale: CGFloat = 1.0
@@ -100,42 +122,20 @@ struct WidgetPondBackground: View {
   }
 }
 
-struct WidgetCard<Content: View>: View {
+struct WidgetFullBackground: View {
   @Environment(\.widgetFamily) private var family
   var glowStyle: WidgetGlowStyle
-  let content: Content
-
-  init(glowStyle: WidgetGlowStyle, @ViewBuilder content: () -> Content) {
-    self.glowStyle = glowStyle
-    self.content = content()
-  }
 
   private var decorationLevel: PondDecorationLevel {
-    switch family {
-    case .systemSmall: return .small
-    case .systemLarge: return .large
-    default: return .medium
-    }
-  }
-
-  private var contentPadding: CGFloat {
-    decorationLevel == .small ? 10 : 12
-  }
-
-  private var textHeightRatio: CGFloat {
-    decorationLevel == .small ? 0.70 : 0.65
+    WidgetDecoration.level(for: family)
   }
 
   private var glowScale: CGFloat {
-    decorationLevel == .large ? 1.4 : 1.0
+    WidgetDecoration.glowScale(for: decorationLevel)
   }
 
   private var waterLineCount: Int {
-    switch decorationLevel {
-    case .small: return 1
-    case .medium: return 2
-    case .large: return 3
-    }
+    WidgetDecoration.waterLineCount(for: decorationLevel)
   }
 
   var body: some View {
@@ -143,7 +143,6 @@ struct WidgetCard<Content: View>: View {
       ZStack(alignment: .topLeading) {
         WidgetPondBackground(level: decorationLevel)
         WidgetNatureScenery(level: decorationLevel)
-
         WidgetGlow(style: glowStyle, scale: glowScale)
 
         if waterLineCount >= 1 {
@@ -157,27 +156,52 @@ struct WidgetCard<Content: View>: View {
         }
 
         WidgetPondDepth(level: decorationLevel)
-
-        content
-          .padding(contentPadding)
-          .frame(
-            maxWidth: geo.size.width - contentPadding * 2,
-            maxHeight: geo.size.height * textHeightRatio,
-            alignment: .topLeading
-          )
-          .layoutPriority(1)
       }
       .frame(width: geo.size.width, height: geo.size.height)
+    }
+  }
+}
+
+struct WidgetCard<Content: View>: View {
+  @Environment(\.widgetFamily) private var family
+  let content: Content
+
+  init(@ViewBuilder content: () -> Content) {
+    self.content = content()
+  }
+
+  private var decorationLevel: PondDecorationLevel {
+    WidgetDecoration.level(for: family)
+  }
+
+  private var contentPadding: CGFloat {
+    decorationLevel == .small ? 10 : 12
+  }
+
+  private var textHeightRatio: CGFloat {
+    decorationLevel == .small ? 0.70 : 0.65
+  }
+
+  var body: some View {
+    GeometryReader { geo in
+      content
+        .padding(contentPadding)
+        .frame(
+          maxWidth: geo.size.width - contentPadding * 2,
+          maxHeight: geo.size.height * textHeightRatio,
+          alignment: .topLeading
+        )
+        .frame(width: geo.size.width, height: geo.size.height, alignment: .topLeading)
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
   }
 }
 
 extension View {
-  func widgetContainerChrome() -> some View {
+  func widgetContainerChrome(glowStyle: WidgetGlowStyle) -> some View {
     frame(maxWidth: .infinity, maxHeight: .infinity)
       .containerBackground(for: .widget) {
-        WidgetColors.cobaltBlue
+        WidgetFullBackground(glowStyle: glowStyle)
           .overlay {
             ContainerRelativeShape()
               .strokeBorder(WidgetColors.warmWhiteBorder, lineWidth: 1.8)

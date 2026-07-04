@@ -5,7 +5,7 @@ struct DailyProverbWidgetView: View {
   let snapshot: ProverbSnapshot
 
   var body: some View {
-    WidgetCard(glowStyle: .proverb) {
+    WidgetCard {
       WidgetLearningContent(
         mandarin: snapshot.mandarin,
         pinyin: snapshot.pinyin,
@@ -21,7 +21,7 @@ struct DailyProverbWidget: Widget {
   var body: some WidgetConfiguration {
     StaticConfiguration(kind: kind, provider: ProverbProvider()) { entry in
       DailyProverbWidgetView(snapshot: entry.snapshot)
-        .widgetContainerChrome()
+        .widgetContainerChrome(glowStyle: .proverb)
     }
     .configurationDisplayName("Daily Proverb")
     .description("A daily Chinese proverb with pinyin and English meaning.")
