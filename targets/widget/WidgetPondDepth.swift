@@ -1,79 +1,102 @@
 import SwiftUI
 
 enum PondDecorationLevel {
-  case compact
-  case rich
+  case small
+  case medium
+  case large
 }
 
 struct WidgetPondDepth: View {
   var level: PondDecorationLevel
-  var isLarge: Bool
 
   var body: some View {
     GeometryReader { geo in
       let widthRatio: CGFloat = {
         switch level {
-        case .compact: return 0.55
-        case .rich: return isLarge ? 0.70 : 0.65
+        case .small: return 0.55
+        case .medium: return 0.65
+        case .large: return 0.75
         }
       }()
       let decorationWidth = geo.size.width * widthRatio
       let decorationHeight = decorationWidth * (220.0 / 320.0)
-      let inset: CGFloat = level == .compact ? 4 : (isLarge ? 8 : 6)
+      let inset: CGFloat = {
+        switch level {
+        case .small: return 4
+        case .medium: return 6
+        case .large: return 8
+        }
+      }()
 
       Canvas { context, size in
         let scale = min(size.width / 320, size.height / 220)
         context.scaleBy(x: scale, y: scale)
 
-        let isCompact = level == .compact
-        let isRich = level == .rich
-        let aquaOpacity = isCompact ? 0.30 : 0.42
-        let whiteOpacity = isCompact ? 0.22 : 0.34
-        let goldOpacity = isCompact ? 0.18 : 0.30
-        let bodyOpacity = isCompact ? 0.34 : 0.58
-        let patchOpacity = isCompact ? 0.46 : 0.72
-        let tailOpacity = isCompact ? 0.28 : 0.48
-        let eyeOpacity = isCompact ? 0.44 : 0.68
+        let isSmall = level == .small
+        let isLarge = level == .large
+        let aquaOpacity = isSmall ? 0.36 : (isLarge ? 0.50 : 0.44)
+        let whiteOpacity = isSmall ? 0.26 : (isLarge ? 0.40 : 0.34)
+        let goldOpacity = isSmall ? 0.20 : (isLarge ? 0.34 : 0.28)
+        let bodyOpacity = isSmall ? 0.40 : (isLarge ? 0.68 : 0.58)
+        let patchOpacity = isSmall ? 0.52 : (isLarge ? 0.80 : 0.72)
+        let tailOpacity = isSmall ? 0.32 : (isLarge ? 0.54 : 0.48)
+        let eyeOpacity = isSmall ? 0.50 : (isLarge ? 0.74 : 0.68)
 
-        if isRich {
+        if !isSmall {
           strokeEllipse(
             context: &context,
             cx: 180, cy: 168,
             rx: 48, ry: 14,
-            color: WidgetColors.lotusGold.opacity(0.22),
+            color: WidgetColors.lotusGold.opacity(0.24),
             lineWidth: 1.4
           )
           strokeEllipse(
             context: &context,
             cx: 260, cy: 178,
             rx: 36, ry: 10,
-            color: WidgetColors.rippleAqua.opacity(0.26),
+            color: WidgetColors.rippleAqua.opacity(0.30),
             lineWidth: 1.2
+          )
+        }
+
+        if isLarge {
+          strokeEllipse(
+            context: &context,
+            cx: 200, cy: 182,
+            rx: 58, ry: 16,
+            color: WidgetColors.cobaltRipple.opacity(0.32),
+            lineWidth: 1.2
+          )
+          strokePath(
+            context: &context,
+            path: wavePath3(),
+            color: WidgetColors.rippleAqua.opacity(0.28),
+            lineWidth: 2.2
           )
         }
 
         strokeEllipse(
           context: &context,
           cx: 235, cy: 132,
-          rx: isCompact ? 62 : 92,
-          ry: isCompact ? 18 : 28,
+          rx: isSmall ? 62 : (isLarge ? 100 : 92),
+          ry: isSmall ? 18 : (isLarge ? 30 : 28),
           color: WidgetColors.rippleAqua.opacity(aquaOpacity),
           lineWidth: 3
         )
 
-        if !isCompact {
+        if !isSmall {
           strokeEllipse(
             context: &context,
             cx: 230, cy: 132,
-            rx: 56, ry: 17,
-            color: Color(red: 1, green: 248 / 255, blue: 234 / 255).opacity(whiteOpacity),
+            rx: isLarge ? 62 : 56, ry: isLarge ? 19 : 17,
+            color: WidgetColors.warmWhite.opacity(whiteOpacity),
             lineWidth: 2
           )
 
           strokeEllipse(
             context: &context,
             cx: 214, cy: 146,
-            rx: 112, ry: 34,
+            rx: isLarge ? 124 : 112, ry: isLarge ? 38 : 34,
             color: WidgetColors.lotusGold.opacity(goldOpacity),
             lineWidth: 1.6
           )
@@ -81,18 +104,18 @@ struct WidgetPondDepth: View {
           strokePath(
             context: &context,
             path: wavePath1(),
-            color: WidgetColors.rippleAqua.opacity(0.34),
+            color: WidgetColors.rippleAqua.opacity(isLarge ? 0.40 : 0.34),
             lineWidth: 3
           )
           strokePath(
             context: &context,
             path: wavePath2(),
-            color: Color(red: 1, green: 248 / 255, blue: 234 / 255).opacity(0.24),
+            color: WidgetColors.warmWhite.opacity(isLarge ? 0.30 : 0.24),
             lineWidth: 1.8
           )
         }
 
-        if isRich {
+        if !isSmall {
           drawKoi(
             context: &context,
             bodyOpacity: bodyOpacity * 0.35,
@@ -106,6 +129,20 @@ struct WidgetPondDepth: View {
           )
         }
 
+        if isLarge {
+          drawKoi(
+            context: &context,
+            bodyOpacity: bodyOpacity * 0.22,
+            patchOpacity: patchOpacity * 0.22,
+            tailOpacity: tailOpacity * 0.22,
+            eyeOpacity: eyeOpacity * 0.22,
+            transform: { ctx in
+              ctx.translateBy(x: -18, y: 42)
+              ctx.scaleBy(x: 0.48, y: 0.48)
+            }
+          )
+        }
+
         drawKoi(
           context: &context,
           bodyOpacity: bodyOpacity,
@@ -115,13 +152,18 @@ struct WidgetPondDepth: View {
           transform: { _ in }
         )
 
-        if !isCompact {
-          fillCircle(context: &context, cx: 286, cy: 92, r: 3.8, color: WidgetColors.rippleAqua.opacity(0.44))
-          fillCircle(context: &context, cx: 300, cy: 82, r: 2.8, color: Color(red: 1, green: 248 / 255, blue: 234 / 255).opacity(0.36))
-          fillCircle(context: &context, cx: 304, cy: 108, r: 3.2, color: WidgetColors.lotusGold.opacity(0.40))
-          fillCircle(context: &context, cx: 244, cy: 88, r: 2.4, color: WidgetColors.rippleAqua.opacity(0.34))
+        if !isSmall {
+          fillCircle(context: &context, cx: 286, cy: 92, r: 3.8, color: WidgetColors.rippleAqua.opacity(0.48))
+          fillCircle(context: &context, cx: 300, cy: 82, r: 2.8, color: WidgetColors.warmWhite.opacity(0.38))
+          fillCircle(context: &context, cx: 304, cy: 108, r: 3.2, color: WidgetColors.lotusGold.opacity(0.42))
+          fillCircle(context: &context, cx: 244, cy: 88, r: 2.4, color: WidgetColors.rippleAqua.opacity(0.36))
+          if isLarge {
+            fillCircle(context: &context, cx: 268, cy: 76, r: 2.2, color: WidgetColors.warmWhite.opacity(0.34))
+            fillCircle(context: &context, cx: 312, cy: 118, r: 2.6, color: WidgetColors.rippleAqua.opacity(0.32))
+          }
         } else {
-          fillCircle(context: &context, cx: 286, cy: 92, r: 3.8, color: WidgetColors.rippleAqua.opacity(0.30))
+          fillCircle(context: &context, cx: 286, cy: 92, r: 3.8, color: WidgetColors.rippleAqua.opacity(0.34))
+          fillCircle(context: &context, cx: 300, cy: 82, r: 2.4, color: WidgetColors.warmWhite.opacity(0.28))
         }
       }
       .frame(width: decorationWidth, height: decorationHeight)
@@ -246,6 +288,17 @@ struct WidgetPondDepth: View {
       to: CGPoint(x: 320, y: 170),
       control1: CGPoint(x: 122, y: 166),
       control2: CGPoint(x: 230, y: 166)
+    )
+    return path
+  }
+
+  private func wavePath3() -> Path {
+    var path = Path()
+    path.move(to: CGPoint(x: 40, y: 162))
+    path.addCurve(
+      to: CGPoint(x: 310, y: 128),
+      control1: CGPoint(x: 120, y: 118),
+      control2: CGPoint(x: 220, y: 132)
     )
     return path
   }
