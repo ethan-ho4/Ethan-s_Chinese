@@ -144,11 +144,17 @@ struct WidgetCard<Content: View>: View {
           )
           .layoutPriority(1)
       }
-      .clipShape(ContainerRelativeShape())
-      .overlay {
-        ContainerRelativeShape()
-          .strokeBorder(WidgetColors.warmWhiteBorder, lineWidth: 1.8)
-      }
+      .frame(width: geo.size.width, height: geo.size.height)
+    }
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+  }
+}
+
+extension View {
+  func widgetEdgeBorder() -> some View {
+    overlay {
+      ContainerRelativeShape()
+        .strokeBorder(WidgetColors.warmWhiteBorder, lineWidth: 1.8)
     }
   }
 }

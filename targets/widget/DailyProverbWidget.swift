@@ -21,9 +21,11 @@ struct DailyProverbWidget: Widget {
   var body: some WidgetConfiguration {
     StaticConfiguration(kind: kind, provider: ProverbProvider()) { entry in
       DailyProverbWidgetView(snapshot: entry.snapshot)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .containerBackground(for: .widget) {
           WidgetColors.surface
         }
+        .widgetEdgeBorder()
     }
     .configurationDisplayName("Daily Proverb")
     .description("A daily Chinese proverb with pinyin and English meaning.")
