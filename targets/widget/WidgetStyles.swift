@@ -17,6 +17,7 @@ enum WidgetColors {
   static let proverbGlow = Color(red: 126 / 255, green: 159 / 255, blue: 61 / 255, opacity: 0.12)
   static let waterLine = Color(red: 14 / 255, green: 90 / 255, blue: 96 / 255, opacity: 0.18)
   static let vignetteGold = Color(red: 216 / 255, green: 182 / 255, blue: 90 / 255, opacity: 0.08)
+  static let warmWhiteBorder = Color(red: 255 / 255, green: 248 / 255, blue: 234 / 255, opacity: 0.68)
 }
 
 enum WidgetGlowStyle {
@@ -142,6 +143,11 @@ struct WidgetCard<Content: View>: View {
             alignment: .topLeading
           )
           .layoutPriority(1)
+      }
+      .clipShape(ContainerRelativeShape())
+      .overlay {
+        ContainerRelativeShape()
+          .strokeBorder(WidgetColors.warmWhiteBorder, lineWidth: 1.8)
       }
     }
   }
