@@ -1,115 +1,127 @@
 import SwiftUI
 
-enum PondDecorationVariant {
-  case mandarin
-  case proverb
+enum PondDecorationLevel {
+  case compact
+  case rich
 }
 
 struct WidgetPondDepth: View {
-  var compact: Bool
-  var variant: PondDecorationVariant
+  var level: PondDecorationLevel
+  var isLarge: Bool
 
   var body: some View {
     GeometryReader { geo in
-      let widthRatio: CGFloat = compact ? 0.55 : (geo.size.height > 200 ? 0.45 : 0.50)
+      let widthRatio: CGFloat = {
+        switch level {
+        case .compact: return 0.55
+        case .rich: return isLarge ? 0.70 : 0.65
+        }
+      }()
       let decorationWidth = geo.size.width * widthRatio
       let decorationHeight = decorationWidth * (220.0 / 320.0)
-      let inset: CGFloat = compact ? 4 : (geo.size.height > 200 ? 8 : 6)
+      let inset: CGFloat = level == .compact ? 4 : (isLarge ? 8 : 6)
 
       Canvas { context, size in
         let scale = min(size.width / 320, size.height / 220)
         context.scaleBy(x: scale, y: scale)
 
-        let isSmall = compact
-        let aquaOpacity = isSmall ? 0.30 : 0.38
-        let whiteOpacity = isSmall ? 0.22 : 0.30
-        let goldOpacity = isSmall ? 0.18 : 0.25
-        let bodyOpacity = isSmall ? 0.34 : 0.48
-        let patchOpacity = isSmall ? 0.46 : 0.64
-        let tailOpacity = isSmall ? 0.28 : 0.40
-        let eyeOpacity = isSmall ? 0.44 : 0.62
+        let isCompact = level == .compact
+        let isRich = level == .rich
+        let aquaOpacity = isCompact ? 0.30 : 0.42
+        let whiteOpacity = isCompact ? 0.22 : 0.34
+        let goldOpacity = isCompact ? 0.18 : 0.30
+        let bodyOpacity = isCompact ? 0.34 : 0.58
+        let patchOpacity = isCompact ? 0.46 : 0.72
+        let tailOpacity = isCompact ? 0.28 : 0.48
+        let eyeOpacity = isCompact ? 0.44 : 0.68
 
-        // Outer ripple
+        if isRich {
+          strokeEllipse(
+            context: &context,
+            cx: 180, cy: 168,
+            rx: 48, ry: 14,
+            color: WidgetColors.lotusGold.opacity(0.22),
+            lineWidth: 1.4
+          )
+          strokeEllipse(
+            context: &context,
+            cx: 260, cy: 178,
+            rx: 36, ry: 10,
+            color: WidgetColors.rippleAqua.opacity(0.26),
+            lineWidth: 1.2
+          )
+        }
+
         strokeEllipse(
           context: &context,
           cx: 235, cy: 132,
-          rx: isSmall ? 62 : 92,
-          ry: isSmall ? 18 : 28,
+          rx: isCompact ? 62 : 92,
+          ry: isCompact ? 18 : 28,
           color: WidgetColors.rippleAqua.opacity(aquaOpacity),
           lineWidth: 3
         )
 
-        if variant == .mandarin {
-          // Inner ripple
+        if !isCompact {
           strokeEllipse(
             context: &context,
             cx: 230, cy: 132,
-            rx: isSmall ? 34 : 56,
-            ry: isSmall ? 10 : 17,
+            rx: 56, ry: 17,
             color: Color(red: 1, green: 248 / 255, blue: 234 / 255).opacity(whiteOpacity),
             lineWidth: 2
           )
 
-          // Gold ripple
           strokeEllipse(
             context: &context,
             cx: 214, cy: 146,
-            rx: isSmall ? 78 : 112,
-            ry: isSmall ? 23 : 34,
+            rx: 112, ry: 34,
             color: WidgetColors.lotusGold.opacity(goldOpacity),
             lineWidth: 1.6
           )
 
-          // Wave paths
           strokePath(
             context: &context,
             path: wavePath1(),
-            color: WidgetColors.rippleAqua.opacity(isSmall ? 0.24 : 0.32),
+            color: WidgetColors.rippleAqua.opacity(0.34),
             lineWidth: 3
           )
           strokePath(
             context: &context,
             path: wavePath2(),
-            color: Color(red: 1, green: 248 / 255, blue: 234 / 255).opacity(isSmall ? 0.16 : 0.22),
+            color: Color(red: 1, green: 248 / 255, blue: 234 / 255).opacity(0.24),
             lineWidth: 1.8
           )
         }
 
-        // Koi body
-        fillPath(
+        if isRich {
+          drawKoi(
+            context: &context,
+            bodyOpacity: bodyOpacity * 0.35,
+            patchOpacity: patchOpacity * 0.35,
+            tailOpacity: tailOpacity * 0.35,
+            eyeOpacity: eyeOpacity * 0.35,
+            transform: { ctx in
+              ctx.translateBy(x: 28, y: 18)
+              ctx.scaleBy(x: 0.62, y: 0.62)
+            }
+          )
+        }
+
+        drawKoi(
           context: &context,
-          path: koiBodyPath(),
-          color: WidgetColors.mistyIvory.opacity(bodyOpacity)
+          bodyOpacity: bodyOpacity,
+          patchOpacity: patchOpacity,
+          tailOpacity: tailOpacity,
+          eyeOpacity: eyeOpacity,
+          transform: { _ in }
         )
 
-        // Koi orange patch
-        fillPath(
-          context: &context,
-          path: koiPatchPath(),
-          color: WidgetColors.koiOrange.opacity(patchOpacity)
-        )
-
-        // Koi tail
-        fillPath(
-          context: &context,
-          path: koiTailPath(),
-          color: WidgetColors.inkBlack.opacity(tailOpacity)
-        )
-
-        // Koi eye
-        fillCircle(
-          context: &context,
-          cx: 274, cy: 118, r: 2.4,
-          color: WidgetColors.inkBlack.opacity(eyeOpacity)
-        )
-
-        if variant == .mandarin {
-          fillCircle(context: &context, cx: 286, cy: 92, r: 3.8, color: WidgetColors.rippleAqua.opacity(isSmall ? 0.30 : 0.42))
-          fillCircle(context: &context, cx: 300, cy: 82, r: 2.8, color: Color(red: 1, green: 248 / 255, blue: 234 / 255).opacity(isSmall ? 0.24 : 0.34))
-          fillCircle(context: &context, cx: 304, cy: 108, r: 3.2, color: WidgetColors.lotusGold.opacity(isSmall ? 0.26 : 0.38))
-          fillCircle(context: &context, cx: 244, cy: 88, r: 2.4, color: WidgetColors.rippleAqua.opacity(isSmall ? 0.22 : 0.32))
+        if !isCompact {
+          fillCircle(context: &context, cx: 286, cy: 92, r: 3.8, color: WidgetColors.rippleAqua.opacity(0.44))
+          fillCircle(context: &context, cx: 300, cy: 82, r: 2.8, color: Color(red: 1, green: 248 / 255, blue: 234 / 255).opacity(0.36))
+          fillCircle(context: &context, cx: 304, cy: 108, r: 3.2, color: WidgetColors.lotusGold.opacity(0.40))
+          fillCircle(context: &context, cx: 244, cy: 88, r: 2.4, color: WidgetColors.rippleAqua.opacity(0.34))
         } else {
-          fillCircle(context: &context, cx: 286, cy: 92, r: 3.8, color: WidgetColors.rippleAqua.opacity(isSmall ? 0.30 : 0.42))
+          fillCircle(context: &context, cx: 286, cy: 92, r: 3.8, color: WidgetColors.rippleAqua.opacity(0.30))
         }
       }
       .frame(width: decorationWidth, height: decorationHeight)
@@ -118,6 +130,23 @@ struct WidgetPondDepth: View {
       .padding(.bottom, inset)
     }
     .allowsHitTesting(false)
+  }
+
+  private func drawKoi(
+    context: inout GraphicsContext,
+    bodyOpacity: Double,
+    patchOpacity: Double,
+    tailOpacity: Double,
+    eyeOpacity: Double,
+    transform: (inout GraphicsContext) -> Void
+  ) {
+    var koiContext = context
+    transform(&koiContext)
+
+    fillPath(context: &koiContext, path: koiBodyPath(), color: WidgetColors.mistyIvory.opacity(bodyOpacity))
+    fillPath(context: &koiContext, path: koiPatchPath(), color: WidgetColors.koiOrange.opacity(patchOpacity))
+    fillPath(context: &koiContext, path: koiTailPath(), color: WidgetColors.inkBlack.opacity(tailOpacity))
+    fillCircle(context: &koiContext, cx: 274, cy: 118, r: 2.4, color: WidgetColors.inkBlack.opacity(eyeOpacity))
   }
 
   private func strokeEllipse(
