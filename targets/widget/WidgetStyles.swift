@@ -151,10 +151,14 @@ struct WidgetCard<Content: View>: View {
 }
 
 extension View {
-  func widgetEdgeBorder() -> some View {
-    overlay {
-      ContainerRelativeShape()
-        .strokeBorder(WidgetColors.warmWhiteBorder, lineWidth: 1.8)
-    }
+  func widgetContainerChrome() -> some View {
+    frame(maxWidth: .infinity, maxHeight: .infinity)
+      .containerBackground(for: .widget) {
+        WidgetColors.surface
+          .overlay {
+            ContainerRelativeShape()
+              .strokeBorder(WidgetColors.warmWhiteBorder, lineWidth: 1.8)
+          }
+      }
   }
 }

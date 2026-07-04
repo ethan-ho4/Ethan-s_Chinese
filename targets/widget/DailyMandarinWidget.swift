@@ -21,15 +21,12 @@ struct DailyMandarinWidget: Widget {
   var body: some WidgetConfiguration {
     StaticConfiguration(kind: kind, provider: MandarinProvider()) { entry in
       DailyMandarinWidgetView(snapshot: entry.snapshot)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .containerBackground(for: .widget) {
-          WidgetColors.surface
-        }
-        .widgetEdgeBorder()
+        .widgetContainerChrome()
     }
     .configurationDisplayName("Daily Mandarin")
     .description("Today's Mandarin word or phrase with pinyin and English.")
     .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
+    .contentMarginsDisabled()
   }
 }
 
