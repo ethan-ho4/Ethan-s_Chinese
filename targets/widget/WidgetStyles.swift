@@ -21,6 +21,7 @@ enum WidgetColors {
   static let proverbGlow = Color(red: 126 / 255, green: 159 / 255, blue: 61 / 255, opacity: 0.12)
   static let waterLine = Color(red: 64 / 255, green: 140 / 255, blue: 220 / 255, opacity: 0.28)
   static let warmWhiteBorder = Color(red: 255 / 255, green: 248 / 255, blue: 234 / 255, opacity: 0.68)
+  static let textOnDark = warmWhite
 }
 
 enum WidgetGlowStyle {
@@ -67,32 +68,15 @@ struct WidgetWaterLine: View {
   }
 }
 
-struct WidgetLandSeaBackground: View {
+struct WidgetPondBackground: View {
   var level: PondDecorationLevel
-
-  private var seaOpacity: Double {
-    switch level {
-    case .small: return 0.38
-    case .medium: return 0.58
-    case .large: return 0.72
-    }
-  }
 
   var body: some View {
     GeometryReader { geo in
       LinearGradient(
-        colors: [WidgetColors.surfaceTop, WidgetColors.surfaceBottom],
+        colors: [WidgetColors.cobaltBlue, WidgetColors.cobaltDeep],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
-      )
-
-      LinearGradient(
-        colors: [
-          WidgetColors.cobaltBlue.opacity(seaOpacity),
-          WidgetColors.cobaltDeep.opacity(seaOpacity * 0.92)
-        ],
-        startPoint: .bottomTrailing,
-        endPoint: UnitPoint(x: 0.25, y: 0.45)
       )
 
       Ellipse()
@@ -111,29 +95,6 @@ struct WidgetLandSeaBackground: View {
           .frame(width: geo.size.width * 0.45, height: geo.size.height * 0.22)
           .offset(x: -geo.size.width * 0.08, y: geo.size.height * 0.72)
       }
-    }
-    .allowsHitTesting(false)
-  }
-}
-
-struct WidgetTextScrim: View {
-  var heightRatio: CGFloat
-
-  var body: some View {
-    GeometryReader { geo in
-      LinearGradient(
-        colors: [
-          WidgetColors.mistyIvory.opacity(0.42),
-          WidgetColors.mistyIvory.opacity(0.18),
-          Color.clear
-        ],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-      )
-      .frame(
-        width: geo.size.width * 0.88,
-        height: geo.size.height * heightRatio
-      )
     }
     .allowsHitTesting(false)
   }
@@ -180,7 +141,7 @@ struct WidgetCard<Content: View>: View {
   var body: some View {
     GeometryReader { geo in
       ZStack(alignment: .topLeading) {
-        WidgetLandSeaBackground(level: decorationLevel)
+        WidgetPondBackground(level: decorationLevel)
         WidgetNatureScenery(level: decorationLevel)
 
         WidgetGlow(style: glowStyle, scale: glowScale)
@@ -196,10 +157,6 @@ struct WidgetCard<Content: View>: View {
         }
 
         WidgetPondDepth(level: decorationLevel)
-
-        if decorationLevel != .small {
-          WidgetTextScrim(heightRatio: textHeightRatio)
-        }
 
         content
           .padding(contentPadding)
@@ -220,7 +177,7 @@ extension View {
   func widgetContainerChrome() -> some View {
     frame(maxWidth: .infinity, maxHeight: .infinity)
       .containerBackground(for: .widget) {
-        WidgetColors.surface
+        WidgetColors.cobaltBlue
           .overlay {
             ContainerRelativeShape()
               .strokeBorder(WidgetColors.warmWhiteBorder, lineWidth: 1.8)

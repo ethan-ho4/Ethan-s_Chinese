@@ -39,7 +39,7 @@ struct WidgetLearningContent: View {
     VStack(alignment: .leading, spacing: isSmall ? 4 : 8) {
       Text(mandarin)
         .font(.system(size: mandarinSize, weight: .bold))
-        .foregroundStyle(WidgetColors.textOnLight)
+        .foregroundStyle(WidgetColors.textOnDark)
         .minimumScaleFactor(isSmall ? 0.5 : 0.65)
         .lineLimit(isSmall ? 2 : 3)
         .fixedSize(horizontal: false, vertical: true)
@@ -52,7 +52,7 @@ struct WidgetLearningContent: View {
 
       Text(displayEnglish.capitalized)
         .font(.system(size: englishSize, weight: isSmall ? .medium : .semibold))
-        .foregroundStyle(WidgetColors.textOnLight)
+        .foregroundStyle(WidgetColors.textOnDark)
         .lineLimit(isSmall ? 2 : (isMedium ? 2 : 3))
         .minimumScaleFactor(0.85)
     }
