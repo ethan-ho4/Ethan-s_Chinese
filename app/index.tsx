@@ -25,7 +25,7 @@ import { useCollection } from '@/store/collection';
 import { usePreferences } from '@/store/preferences';
 import { COLORS, FONTS, RADIUS, SHADOWS, SPACING } from '@/theme';
 
-type NavTarget = '/modes' | '/flashcards' | '/widget-preview' | '/chindex' | '/sentences';
+type NavTarget = '/modes' | '/flashcards' | '/chindex' | '/sentences';
 
 type NavCardProps = {
   description: string;
@@ -54,23 +54,16 @@ const HOME_ACTIONS: HomeAction[] = [
     route: '/modes',
   },
   {
-    description: "Preview how today's Chinese will look in your future iOS widgets.",
-    icon: 'albums',
-    index: 2,
-    title: 'Widgets',
-    route: '/widget-preview',
-  },
-  {
     description: 'Review saved words and phrases with flashcards by topic.',
     icon: 'school',
-    index: 3,
+    index: 2,
     title: 'Practice',
     route: '/flashcards',
   },
   {
     description: 'Drag words into order to build Mandarin sentences by HSK level.',
     icon: 'text',
-    index: 4,
+    index: 3,
     title: 'Sentences',
     route: '/sentences',
   },
