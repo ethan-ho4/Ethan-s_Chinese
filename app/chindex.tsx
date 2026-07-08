@@ -7,6 +7,7 @@ import ConfettiCannon from 'react-native-confetti-cannon';
 import { AppScaffold } from '@/components/AppScaffold';
 import { ChindexCard } from '@/components/ChindexCard';
 import { CHINESE_ENTRIES, TOPIC_GROUPS } from '@/data/chineseEntries';
+import { playCelebrationSound } from '@/services/celebrationSound';
 import { useCollection } from '@/store/collection';
 import { COLORS, FONTS, RADIUS, SHADOWS, SPACING } from '@/theme';
 import { EntryTopic, HskLevel } from '@/types';
@@ -125,7 +126,10 @@ export default function ChindexScreen() {
 
     const chainEnd = INITIAL_DELAY + unlockedIds.length * WORD_DURATION;
 
-    schedule(() => setShowConfetti(true), chainEnd);
+    schedule(() => {
+      setShowConfetti(true);
+      playCelebrationSound();
+    }, chainEnd);
     schedule(() => setHighlightedId(null), chainEnd + 300);
 
     return () => {
@@ -150,8 +154,8 @@ export default function ChindexScreen() {
     return chindexEntries.filter((entry) => isUnlocked(entry.id)).length;
   }, [chindexEntries, isUnlocked]);
 
-  const navigateToCapture = () => {
-    router.push('/capture');
+  const navigateToFlashcards = (topic: EntryTopic) => {
+    router.push({ pathname: '/flashcards', params: { topic } });
   };
 
   const navigateToWordDetail = (entryId: string) => {
@@ -172,9 +176,9 @@ export default function ChindexScreen() {
   return (
     <View style={styles.screenContainer}>
       <AppScaffold
-        eyebrow="Chindex"
-        title="Chinese Word Collection"
-        subtitle="Discover and collect HSK vocabulary by photographing real-world objects."
+        eyebrow="Vocabulary"
+        title="Your Mandarin Vocabulary"
+        subtitle="Discover and collect HSK vocabulary through flashcards and daily practice."
         scrollViewRef={scrollViewRef}
       >
         <TouchableOpacity style={styles.backButton} onPress={() => router.back()} activeOpacity={0.8}>
@@ -203,14 +207,6 @@ export default function ChindexScreen() {
               <View style={styles.progressBarBg}>
                 <View style={[styles.progressBarFill, { width: `${progressPercentage}%` }]} />
               </View>
-              <TouchableOpacity
-                style={styles.captureButton}
-                onPress={navigateToCapture}
-                activeOpacity={0.8}
-              >
-                <Ionicons name="camera" size={20} color={COLORS.warmWhite} />
-                <Text style={styles.captureButtonText}>Capture to Discover</Text>
-              </TouchableOpacity>
             </View>
 
             {/* Filter Mode Toggle */}
@@ -362,7 +358,11 @@ export default function ChindexScreen() {
                       entry={entry}
                       isUnlocked={unlocked}
                       isHighlighted={isHighlighted}
-                      onPress={unlocked ? () => navigateToWordDetail(entry.id) : navigateToCapture}
+                      onPress={
+                        unlocked
+                          ? () => navigateToWordDetail(entry.id)
+                          : () => navigateToFlashcards(entry.topic)
+                      }
                       onUndiscover={unlocked ? () => lockEntry(entry.id) : undefined}
                     />
                   </View>
@@ -463,22 +463,6 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.lotusLeafGreen,
     borderRadius: RADIUS.full,
     height: '100%',
-  },
-  captureButton: {
-    alignItems: 'center',
-    backgroundColor: COLORS.sealOrange,
-    borderColor: 'rgba(232,176,93,0.75)',
-    borderRadius: RADIUS.md,
-    borderWidth: 1.5,
-    flexDirection: 'row',
-    gap: SPACING.sm,
-    justifyContent: 'center',
-    paddingVertical: 14,
-  },
-  captureButtonText: {
-    color: COLORS.warmWhite,
-    fontFamily: FONTS.bold,
-    fontSize: 16,
   },
   filterModeRow: {
     flexDirection: 'row',

@@ -14,8 +14,8 @@ struct WidgetPondDepth: View {
       let widthRatio: CGFloat = {
         switch level {
         case .small: return 0.55
-        case .medium: return 0.65
-        case .large: return 0.75
+        case .medium: return 0.90
+        case .large: return 1.0
         }
       }()
       let decorationWidth = geo.size.width * widthRatio
@@ -27,6 +27,7 @@ struct WidgetPondDepth: View {
         case .large: return 8
         }
       }()
+      let sceneAlignment: Alignment = level == .small ? .bottomTrailing : .center
 
       Canvas { context, size in
         let scale = min(size.width / 320, size.height / 220)
@@ -34,6 +35,10 @@ struct WidgetPondDepth: View {
 
         let isSmall = level == .small
         let isLarge = level == .large
+
+        if !isSmall {
+          context.translateBy(x: 0, y: -size.height * 0.06)
+        }
         let aquaOpacity = isSmall ? 0.36 : (isLarge ? 0.50 : 0.44)
         let whiteOpacity = isSmall ? 0.26 : (isLarge ? 0.40 : 0.34)
         let goldOpacity = isSmall ? 0.20 : (isLarge ? 0.34 : 0.28)
@@ -167,9 +172,9 @@ struct WidgetPondDepth: View {
         }
       }
       .frame(width: decorationWidth, height: decorationHeight)
-      .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
-      .padding(.trailing, inset)
-      .padding(.bottom, inset)
+      .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: sceneAlignment)
+      .padding(.trailing, level == .small ? inset : 0)
+      .padding(.bottom, level == .small ? inset : 0)
     }
     .allowsHitTesting(false)
   }

@@ -116,15 +116,17 @@ export default function WordDetailScreen() {
           <Ionicons name="lock-closed" size={48} color={COLORS.textMuted} />
           <Text style={styles.lockedTitle}>Word Not Yet Discovered</Text>
           <Text style={styles.lockedText}>
-            Use the camera scanner to photograph real-world objects and unlock this word.
+            Practice flashcards in this topic to discover this word.
           </Text>
           <TouchableOpacity
-            style={styles.scanButton}
-            onPress={() => router.push('/capture')}
+            style={styles.flashcardsButton}
+            onPress={() =>
+              router.push({ pathname: '/flashcards', params: { topic: entry.topic } })
+            }
             activeOpacity={0.8}
           >
-            <Ionicons name="camera" size={20} color={COLORS.warmWhite} />
-            <Text style={styles.scanButtonText}>Open Scanner</Text>
+            <Ionicons name="albums" size={20} color={COLORS.warmWhite} />
+            <Text style={styles.flashcardsButtonText}>Go to Flashcards</Text>
           </TouchableOpacity>
         </View>
       </AppScaffold>
@@ -274,7 +276,7 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     textAlign: 'center',
   },
-  scanButton: {
+  flashcardsButton: {
     alignItems: 'center',
     backgroundColor: COLORS.sealOrange,
     borderRadius: RADIUS.md,
@@ -284,7 +286,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: SPACING.lg,
     paddingVertical: 14,
   },
-  scanButtonText: {
+  flashcardsButtonText: {
     color: COLORS.warmWhite,
     fontFamily: FONTS.bold,
     fontSize: 16,

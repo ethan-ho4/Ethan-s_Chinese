@@ -14,6 +14,7 @@ import {
 
 import { AppScaffold } from '@/components/AppScaffold';
 import { SentenceBuilder } from '@/components/SentenceBuilder';
+import { playCelebrationSound } from '@/services/celebrationSound';
 import {
   createExerciseTiles,
   getDisplayTokens,
@@ -126,6 +127,7 @@ export default function SentencesScreen() {
   const handleCheck = () => {
     if (!currentExercise || checkState === 'correct' || !isAnswerComplete) return;
     if (isCorrectOrder(tilesToTokens(answerTiles), currentExercise, script)) {
+      playCelebrationSound();
       setSuccessMessage(pickSuccessMessage());
       setCheckState('correct');
     } else {
@@ -144,7 +146,7 @@ export default function SentencesScreen() {
   };
 
   const scaffoldTitle =
-    phase === 'practice' ? 'Sentences' : 'Build Mandarin sentences.';
+    phase === 'practice' ? 'Sentence Builder' : 'Build Mandarin sentences by HSK level.';
   const subtitle =
     phase === 'setup'
       ? 'Choose an HSK level, then tap words to build each sentence.'
@@ -154,7 +156,7 @@ export default function SentencesScreen() {
 
   return (
     <AppScaffold
-      eyebrow="Sentence Creation"
+      eyebrow="Sentence Builder"
       title={scaffoldTitle}
       subtitle={subtitle}
       scrollEnabled={phase !== 'practice'}
@@ -370,7 +372,7 @@ export default function SentencesScreen() {
               onPress={practiceAgain}
               activeOpacity={0.8}
             >
-              <Text style={styles.secondaryActionText}>Practice again</Text>
+              <Text style={styles.secondaryActionText}>Build again</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.primaryAction, SHADOWS.seal]}

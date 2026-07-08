@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
-import { useMemo, useState } from 'react';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useEffect, useMemo, useState } from 'react';
 import {
   ActivityIndicator,
   Modal,
@@ -38,14 +38,25 @@ const TOPIC_ICONS: Record<EntryTopic, keyof typeof Ionicons.glyphMap> = {
   grammar: 'book',
 };
 
+function isEntryTopic(value: string | undefined): value is EntryTopic {
+  return TOPIC_GROUPS.some((group) => group.id === value);
+}
+
 export default function FlashcardsScreen() {
   const router = useRouter();
+  const { topic } = useLocalSearchParams<{ topic?: string }>();
   const { isLoaded, unlockMultiple } = useCollection();
   const [phase, setPhase] = useState<Phase>('setup');
   const [sessionTopic, setSessionTopic] = useState<EntryTopic>('numbers');
   const [cardIndex, setCardIndex] = useState(0);
   const [isRevealed, setIsRevealed] = useState(false);
   const [isTopicPickerOpen, setIsTopicPickerOpen] = useState(false);
+
+  useEffect(() => {
+    if (isEntryTopic(topic)) {
+      setSessionTopic(topic);
+    }
+  }, [topic]);
 
   const setupEntries = useMemo(
     () => CHINESE_ENTRIES.filter((entry) => entry.topic === sessionTopic),
@@ -122,13 +133,13 @@ export default function FlashcardsScreen() {
     phase === 'setup'
       ? 'Tap a topic, then start the deck.'
       : phase === 'practice'
-        ? 'Tap the card to reveal the meaning. Finish the deck to add words to your Chindex.'
+        ? 'Tap the card to reveal the meaning. Finish the deck to add words to your vocabulary.'
         : 'Great work! Your progress has been saved.';
 
   return (
     <AppScaffold
       eyebrow="Flashcards"
-      title="Practice Mandarin by topic."
+      title="Review Mandarin flashcards by topic."
       subtitle={subtitle}
       showHeader={phase !== 'practice'}
     >
@@ -304,7 +315,7 @@ export default function FlashcardsScreen() {
           </View>
           <Text style={styles.completeTitle}>Deck complete!</Text>
           <Text style={styles.completeMessage}>
-            All words in this deck were already in your Chindex.
+            All words in this deck were already in your vocabulary.
           </Text>
           <Text style={styles.completeTopic}>
             {sessionTopicLabel} · {topicEntries.length}{' '}
@@ -317,14 +328,14 @@ export default function FlashcardsScreen() {
               onPress={practiceAgain}
               activeOpacity={0.8}
             >
-              <Text style={styles.secondaryActionText}>Practice again</Text>
+              <Text style={styles.secondaryActionText}>Review again</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.primaryAction, SHADOWS.seal]}
               onPress={viewChindex}
               activeOpacity={0.85}
             >
-              <Text style={styles.primaryActionText}>View Chindex</Text>
+              <Text style={styles.primaryActionText}>View Vocabulary</Text>
             </TouchableOpacity>
           </View>
         </View>

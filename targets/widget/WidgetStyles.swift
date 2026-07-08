@@ -53,6 +53,7 @@ enum WidgetDecoration {
 
 struct WidgetGlow: View {
   var style: WidgetGlowStyle
+  var level: PondDecorationLevel
   var scale: CGFloat = 1.0
 
   private var glowColor: Color {
@@ -67,7 +68,10 @@ struct WidgetGlow: View {
           width: geo.size.width * 0.55 * scale,
           height: geo.size.height * 0.45 * scale
         )
-        .offset(x: -geo.size.width * 0.12, y: geo.size.height * 0.55)
+        .offset(
+          x: level == .small ? -geo.size.width * 0.12 : geo.size.width * 0.08,
+          y: level == .small ? geo.size.height * 0.55 : geo.size.height * 0.32
+        )
     }
     .allowsHitTesting(false)
   }
@@ -104,18 +108,27 @@ struct WidgetPondBackground: View {
       Ellipse()
         .fill(WidgetColors.lotusGreen.opacity(level == .large ? 0.10 : 0.06))
         .frame(width: geo.size.width * 0.55, height: geo.size.height * 0.32)
-        .offset(x: geo.size.width * 0.42, y: -geo.size.height * 0.06)
+        .offset(
+          x: level == .small ? geo.size.width * 0.42 : geo.size.width * 0.18,
+          y: level == .small ? -geo.size.height * 0.06 : geo.size.height * 0.08
+        )
 
       Ellipse()
         .fill(WidgetColors.cobaltRipple.opacity(0.12))
         .frame(width: geo.size.width * 0.7, height: geo.size.height * 0.38)
-        .offset(x: geo.size.width * 0.18, y: geo.size.height * 0.58)
+        .offset(
+          x: level == .small ? geo.size.width * 0.18 : geo.size.width * 0.02,
+          y: level == .small ? geo.size.height * 0.58 : geo.size.height * 0.38
+        )
 
       if level != .small {
         Ellipse()
           .fill(WidgetColors.rippleAqua.opacity(0.08))
           .frame(width: geo.size.width * 0.45, height: geo.size.height * 0.22)
-          .offset(x: -geo.size.width * 0.08, y: geo.size.height * 0.72)
+          .offset(
+            x: level == .medium ? geo.size.width * 0.04 : geo.size.width * 0.08,
+            y: level == .medium ? geo.size.height * 0.52 : geo.size.height * 0.48
+          )
       }
     }
     .allowsHitTesting(false)
@@ -143,16 +156,27 @@ struct WidgetFullBackground: View {
       ZStack(alignment: .topLeading) {
         WidgetPondBackground(level: decorationLevel)
         WidgetNatureScenery(level: decorationLevel)
-        WidgetGlow(style: glowStyle, scale: glowScale)
+        WidgetGlow(style: glowStyle, level: decorationLevel, scale: glowScale)
 
         if waterLineCount >= 1 {
-          WidgetWaterLine()
+          WidgetWaterLine(
+            xOffsetRatio: decorationLevel == .small ? 0.35 : 0.10,
+            yOffsetRatio: decorationLevel == .small ? 0.18 : 0.26
+          )
         }
         if waterLineCount >= 2 {
-          WidgetWaterLine(rotation: 18, xOffsetRatio: 0.08, yOffsetRatio: 0.42)
+          WidgetWaterLine(
+            rotation: 18,
+            xOffsetRatio: decorationLevel == .small ? 0.08 : 0.04,
+            yOffsetRatio: decorationLevel == .small ? 0.42 : 0.44
+          )
         }
         if waterLineCount >= 3 {
-          WidgetWaterLine(rotation: -24, xOffsetRatio: 0.22, yOffsetRatio: 0.58)
+          WidgetWaterLine(
+            rotation: -24,
+            xOffsetRatio: decorationLevel == .small ? 0.22 : 0.08,
+            yOffsetRatio: decorationLevel == .small ? 0.58 : 0.56
+          )
         }
 
         WidgetPondDepth(level: decorationLevel)
@@ -175,11 +199,23 @@ struct WidgetCard<Content: View>: View {
   }
 
   private var contentPadding: CGFloat {
-    decorationLevel == .small ? 10 : 12
+    switch decorationLevel {
+    case .small: return 10
+    case .medium: return 14
+    case .large: return 16
+    }
   }
 
   private var textHeightRatio: CGFloat {
-    decorationLevel == .small ? 0.70 : 0.65
+    switch decorationLevel {
+    case .small: return 0.70
+    case .medium: return 0.88
+    case .large: return 0.90
+    }
+  }
+
+  private var contentAlignment: Alignment {
+    .topLeading
   }
 
   var body: some View {
@@ -189,9 +225,9 @@ struct WidgetCard<Content: View>: View {
         .frame(
           maxWidth: geo.size.width - contentPadding * 2,
           maxHeight: geo.size.height * textHeightRatio,
-          alignment: .topLeading
+          alignment: contentAlignment
         )
-        .frame(width: geo.size.width, height: geo.size.height, alignment: .topLeading)
+        .frame(width: geo.size.width, height: geo.size.height, alignment: contentAlignment)
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
   }

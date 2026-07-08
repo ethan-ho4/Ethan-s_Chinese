@@ -25,7 +25,7 @@ import { useCollection } from '@/store/collection';
 import { usePreferences } from '@/store/preferences';
 import { COLORS, FONTS, RADIUS, SHADOWS, SPACING } from '@/theme';
 
-type NavTarget = '/modes' | '/flashcards' | '/chindex' | '/sentences';
+type NavTarget = '/flashcards' | '/chindex' | '/sentences';
 
 type NavCardProps = {
   description: string;
@@ -40,32 +40,25 @@ type HomeAction = Omit<NavCardProps, 'scrollY'>;
 
 const HOME_ACTIONS: HomeAction[] = [
   {
-    description: 'Photograph objects to discover and collect Chinese vocabulary.',
-    icon: 'grid',
-    index: 0,
-    title: 'Chindex',
-    route: '/chindex',
-  },
-  {
-    description: 'Choose whether your daily Mandarin shows words, phrases, or topics.',
-    icon: 'options',
-    index: 1,
-    title: 'Mode',
-    route: '/modes',
-  },
-  {
     description: 'Review saved words and phrases with flashcards by topic.',
     icon: 'school',
-    index: 2,
-    title: 'Practice',
+    index: 0,
+    title: 'Flashcards',
     route: '/flashcards',
   },
   {
     description: 'Drag words into order to build Mandarin sentences by HSK level.',
     icon: 'text',
-    index: 3,
-    title: 'Sentences',
+    index: 1,
+    title: 'Sentence Builder',
     route: '/sentences',
+  },
+  {
+    description: 'Collect and review Chinese vocabulary by topic.',
+    icon: 'grid',
+    index: 2,
+    title: 'Vocabulary',
+    route: '/chindex',
   },
 ];
 
@@ -212,9 +205,8 @@ function NavCard({ description, icon, index, scrollY, title, route }: NavCardPro
             pointerEvents="none"
             style={[
               styles.navMotif,
-              index === 0 && styles.navMotifMode,
-              index === 1 && styles.navMotifWidgets,
-              index === 2 && styles.navMotifPractice,
+              route === '/chindex' && styles.navMotifMode,
+              route === '/flashcards' && styles.navMotifPractice,
             ]}
           />
           <Animated.View

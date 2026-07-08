@@ -12,20 +12,20 @@ struct WidgetLearningContent: View {
 
   private var mandarinSize: CGFloat {
     if isSmall { return 24 }
-    if isMedium { return 32 }
-    return 36
+    if isMedium { return 34 }
+    return 38
   }
 
   private var pinyinSize: CGFloat {
     if isSmall { return 11 }
-    if isMedium { return 15 }
-    return 16
+    if isMedium { return 16 }
+    return 17
   }
 
   private var englishSize: CGFloat {
     if isSmall { return 11 }
-    if isMedium { return 15 }
-    return 17
+    if isMedium { return 16 }
+    return 18
   }
 
   private var displayEnglish: String {
@@ -42,18 +42,21 @@ struct WidgetLearningContent: View {
         .foregroundStyle(WidgetColors.textOnDark)
         .minimumScaleFactor(isSmall ? 0.5 : 0.65)
         .lineLimit(isSmall ? 2 : 3)
+        .multilineTextAlignment(.leading)
         .fixedSize(horizontal: false, vertical: true)
 
       Text(pinyin)
         .font(.system(size: pinyinSize, weight: .medium))
         .foregroundStyle(WidgetColors.koiOrange)
         .lineLimit(isSmall ? 1 : 2)
+        .multilineTextAlignment(.leading)
         .minimumScaleFactor(0.8)
 
       Text(displayEnglish.capitalized)
         .font(.system(size: englishSize, weight: isSmall ? .medium : .semibold))
         .foregroundStyle(WidgetColors.textOnDark)
         .lineLimit(isSmall ? 2 : (isMedium ? 2 : 3))
+        .multilineTextAlignment(.leading)
         .minimumScaleFactor(0.85)
     }
     .frame(maxWidth: .infinity, alignment: .topLeading)

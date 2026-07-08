@@ -20,32 +20,34 @@ struct WidgetNatureScenery: View {
           drawSparkle(context: &context, cx: 292, cy: 244, r: 1.8)
 
         case .medium:
-          drawLilyPad(context: &context, cx: 48, cy: 222, r: 26, opacity: 0.58)
-          drawLilyPad(context: &context, cx: 318, cy: 210, r: 20, opacity: 0.48)
-          drawLilyPad(context: &context, cx: 290, cy: 238, r: 16, opacity: 0.42)
-          drawLeaf(context: &context, cx: 22, cy: 188, w: 22, h: 12, rotation: -22, opacity: 0.42)
-          drawLeaf(context: &context, cx: 334, cy: 178, w: 16, h: 9, rotation: 28, opacity: 0.34)
-          drawSparkle(context: &context, cx: 308, cy: 196, r: 2.4)
-          drawSparkle(context: &context, cx: 326, cy: 226, r: 2.0)
-          drawSparkle(context: &context, cx: 278, cy: 248, r: 1.8)
-          drawSparkle(context: &context, cx: 340, cy: 248, r: 2.2)
+          drawLilyPad(context: &context, cx: 48, cy: 198, r: 26, opacity: 0.58)
+          drawLilyPad(context: &context, cx: 318, cy: 186, r: 20, opacity: 0.48)
+          drawLilyPad(context: &context, cx: 290, cy: 214, r: 16, opacity: 0.42)
+          drawLilyPad(context: &context, cx: 180, cy: 168, r: 14, opacity: 0.36)
+          drawLeaf(context: &context, cx: 22, cy: 166, w: 22, h: 12, rotation: -22, opacity: 0.42)
+          drawLeaf(context: &context, cx: 334, cy: 156, w: 16, h: 9, rotation: 28, opacity: 0.34)
+          drawSparkle(context: &context, cx: 308, cy: 174, r: 2.4)
+          drawSparkle(context: &context, cx: 326, cy: 202, r: 2.0)
+          drawSparkle(context: &context, cx: 278, cy: 224, r: 1.8)
+          drawSparkle(context: &context, cx: 340, cy: 224, r: 2.2)
 
         case .large:
-          drawLilyPad(context: &context, cx: 42, cy: 224, r: 30, opacity: 0.62)
-          drawLilyPad(context: &context, cx: 78, cy: 238, r: 18, opacity: 0.48)
-          drawLilyPad(context: &context, cx: 322, cy: 204, r: 24, opacity: 0.54)
-          drawLilyPad(context: &context, cx: 296, cy: 232, r: 18, opacity: 0.46)
-          drawLilyPad(context: &context, cx: 338, cy: 236, r: 14, opacity: 0.40)
-          drawLotusFlower(context: &context, cx: 48, cy: 210)
-          drawLeaf(context: &context, cx: 18, cy: 182, w: 24, h: 13, rotation: -24, opacity: 0.44)
-          drawLeaf(context: &context, cx: 342, cy: 172, w: 18, h: 10, rotation: 32, opacity: 0.36)
-          drawWillowStrand(context: &context, start: CGPoint(x: 350, y: 28), end: CGPoint(x: 310, y: 200))
-          drawWillowStrand(context: &context, start: CGPoint(x: 330, y: 48), end: CGPoint(x: 268, y: 220))
-          drawPebble(context: &context, cx: 318, cy: 252, r: 3.2)
-          drawPebble(context: &context, cx: 332, cy: 248, r: 2.4)
-          drawPebble(context: &context, cx: 304, cy: 254, r: 2.8)
-          drawPebble(context: &context, cx: 326, cy: 256, r: 2.0)
-          for (i, point) in [(306, 188), (328, 214), (284, 236), (346, 222), (268, 248), (338, 192)].enumerated() {
+          drawLilyPad(context: &context, cx: 42, cy: 200, r: 30, opacity: 0.62)
+          drawLilyPad(context: &context, cx: 78, cy: 214, r: 18, opacity: 0.48)
+          drawLilyPad(context: &context, cx: 322, cy: 180, r: 24, opacity: 0.54)
+          drawLilyPad(context: &context, cx: 296, cy: 208, r: 18, opacity: 0.46)
+          drawLilyPad(context: &context, cx: 338, cy: 212, r: 14, opacity: 0.40)
+          drawLilyPad(context: &context, cx: 168, cy: 158, r: 16, opacity: 0.38)
+          drawLotusFlower(context: &context, cx: 48, cy: 186)
+          drawLeaf(context: &context, cx: 18, cy: 158, w: 24, h: 13, rotation: -24, opacity: 0.44)
+          drawLeaf(context: &context, cx: 342, cy: 148, w: 18, h: 10, rotation: 32, opacity: 0.36)
+          drawWillowStrand(context: &context, start: CGPoint(x: 350, y: 28), end: CGPoint(x: 310, y: 176))
+          drawWillowStrand(context: &context, start: CGPoint(x: 330, y: 48), end: CGPoint(x: 268, y: 196))
+          drawPebble(context: &context, cx: 318, cy: 228, r: 3.2)
+          drawPebble(context: &context, cx: 332, cy: 224, r: 2.4)
+          drawPebble(context: &context, cx: 304, cy: 230, r: 2.8)
+          drawPebble(context: &context, cx: 326, cy: 232, r: 2.0)
+          for (i, point) in [(306, 164), (328, 190), (284, 212), (346, 198), (268, 224), (338, 168)].enumerated() {
             drawSparkle(context: &context, cx: CGFloat(point.0), cy: CGFloat(point.1), r: 1.8 + CGFloat(i % 2) * 0.4)
           }
         }
@@ -64,20 +66,74 @@ struct WidgetNatureScenery: View {
       }
     }()
 
-    strokeEllipse(context: &context, cx: 280, cy: 210, rx: 72, ry: 20, color: WidgetColors.rippleAqua.opacity(waveOpacity), lineWidth: 2.2)
-    strokeEllipse(context: &context, cx: 300, cy: 228, rx: 48, ry: 14, color: WidgetColors.warmWhite.opacity(waveOpacity * 0.8), lineWidth: 1.4)
+    let rippleYOffset: CGFloat = level == .small ? 0 : (level == .medium ? 18 : 22)
+
+    strokeEllipse(
+      context: &context,
+      cx: level == .small ? 280 : 200,
+      cy: 210 - rippleYOffset,
+      rx: level == .small ? 72 : 88,
+      ry: level == .small ? 20 : 24,
+      color: WidgetColors.rippleAqua.opacity(waveOpacity),
+      lineWidth: 2.2
+    )
+    strokeEllipse(
+      context: &context,
+      cx: level == .small ? 300 : 260,
+      cy: 228 - rippleYOffset,
+      rx: level == .small ? 48 : 56,
+      ry: level == .small ? 14 : 16,
+      color: WidgetColors.warmWhite.opacity(waveOpacity * 0.8),
+      lineWidth: 1.4
+    )
 
     if level != .small {
-      strokeEllipse(context: &context, cx: 250, cy: 196, rx: 90, ry: 26, color: WidgetColors.cobaltRipple.opacity(0.28), lineWidth: 1.8)
-      drawWave(context: &context, from: CGPoint(x: 120, y: 230), to: CGPoint(x: 360, y: 200), opacity: waveOpacity)
+      strokeEllipse(
+        context: &context,
+        cx: 180,
+        cy: 178 - rippleYOffset,
+        rx: 90,
+        ry: 26,
+        color: WidgetColors.cobaltRipple.opacity(0.28),
+        lineWidth: 1.8
+      )
+      drawWave(
+        context: &context,
+        from: CGPoint(x: 40, y: 212 - rippleYOffset),
+        to: CGPoint(x: 360, y: 182 - rippleYOffset),
+        opacity: waveOpacity
+      )
     }
 
     if level == .large {
-      strokeEllipse(context: &context, cx: 220, cy: 218, rx: 110, ry: 32, color: WidgetColors.lotusGold.opacity(0.18), lineWidth: 1.4)
-      drawWave(context: &context, from: CGPoint(x: 80, y: 248), to: CGPoint(x: 360, y: 218), opacity: waveOpacity * 0.85)
-      drawWave(context: &context, from: CGPoint(x: 160, y: 256), to: CGPoint(x: 360, y: 238), opacity: waveOpacity * 0.7)
+      strokeEllipse(
+        context: &context,
+        cx: 180,
+        cy: 196 - rippleYOffset,
+        rx: 110,
+        ry: 32,
+        color: WidgetColors.lotusGold.opacity(0.18),
+        lineWidth: 1.4
+      )
+      drawWave(
+        context: &context,
+        from: CGPoint(x: 40, y: 226 - rippleYOffset),
+        to: CGPoint(x: 360, y: 196 - rippleYOffset),
+        opacity: waveOpacity * 0.85
+      )
+      drawWave(
+        context: &context,
+        from: CGPoint(x: 100, y: 234 - rippleYOffset),
+        to: CGPoint(x: 360, y: 216 - rippleYOffset),
+        opacity: waveOpacity * 0.7
+      )
     } else if level == .medium {
-      drawWave(context: &context, from: CGPoint(x: 140, y: 244), to: CGPoint(x: 360, y: 224), opacity: waveOpacity * 0.75)
+      drawWave(
+        context: &context,
+        from: CGPoint(x: 60, y: 224 - rippleYOffset),
+        to: CGPoint(x: 360, y: 204 - rippleYOffset),
+        opacity: waveOpacity * 0.75
+      )
     } else {
       drawWave(context: &context, from: CGPoint(x: 180, y: 246), to: CGPoint(x: 360, y: 232), opacity: waveOpacity * 0.65)
     }
