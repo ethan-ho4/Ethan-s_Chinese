@@ -11,7 +11,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.ethanho.ethanschinese",
-      "buildNumber": "18",
+      "buildNumber": "19",
       "deploymentTarget": "16.0",
       "appleTeamId": "HHPVQ49JWP",
       "entitlements": {
