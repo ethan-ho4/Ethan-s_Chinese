@@ -1,0 +1,15 @@
+App Store Resolution Center reply (copy/paste)
+
+Hello App Review Team,
+
+Thank you for the feedback regarding Guideline 5.1.1.
+
+We have removed the camera / capture feature entirely. The new build no longer includes a capture screen, does not request camera access, and does not include camera permission usage strings.
+
+Our privacy policy has been updated to match the current app behavior: learning progress and preferences are stored on-device only. We do not collect account information, photos, camera/microphone data, or advertising/analytics identifiers.
+
+Please review the newly submitted build. We are happy to provide any additional clarification.
+
+Thank you,
+Ethan Ho
+ethan.wm.ho@gmail.com

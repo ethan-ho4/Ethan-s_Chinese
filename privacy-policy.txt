@@ -1,0 +1,38 @@
+Privacy Policy for Ethan’s Chinese
+
+Last updated: July 14, 2026
+
+Ethan’s Chinese (“the App”) is a Mandarin learning app. This policy explains what information the App handles and how it is used.
+
+Contact
+If you have questions about this policy, contact: ethan.wm.ho@gmail.com
+
+Information the App Stores
+The App stores learning progress and preferences on your device only, including:
+- Vocabulary words you have unlocked
+- Practice preferences (such as script choice and topic selections)
+
+This information stays on your device using on-device storage. We do not create user accounts, and we do not upload your learning progress to our servers.
+
+Information We Do Not Collect
+The App does not collect:
+- Name, email, phone number, or other account identifiers
+- Location data
+- Photos, camera input, or microphone recordings
+- Advertising identifiers
+- Analytics or tracking data for advertising
+
+Third Parties
+The App does not sell personal information and does not share learning progress with third-party analytics or advertising services.
+
+Children’s Privacy
+The App is intended for general language learning use. We do not knowingly collect personal information from children.
+
+Changes
+We may update this privacy policy from time to time. The “Last updated” date at the top will change when we do.
+
+How to Use This Document
+1. Paste this text into a Google Doc (or host it as a public webpage).
+2. Make the document viewable by anyone with the link (or publish to the web).
+3. Copy that public URL into App Store Connect → App Information → Privacy Policy URL.
+4. In App Privacy, do not declare Camera, Photos, or Microphone. For this app’s on-device-only progress, “Data Not Collected” is typically accurate unless you later add cloud/analytics features.
